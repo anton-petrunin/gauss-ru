@@ -5,7 +5,6 @@ lib/*
 *.dvi
 *.gz
 *.idx
-*.ind
 *.out
 *.ilg
 *.toc
