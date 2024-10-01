@@ -16,12 +16,16 @@
 
 \emph{Метрика} --- это функция, которая возвращает вещественное значение $\Dist(x,y)$ для любой пары элементов $x,y$ данного множества $\spc{X}$ и удовлетворяет следующим свойствам для любой тройки $x,y,z\in\spc{X}$: \label{page:def:metric}
 \begin{enumerate}[(a)]
-\item\label{def:metric-space:a} Положительность: 
+\item\label{def:metric-space:a}
+Положительность: 
 $$\Dist(x,y)\ge 0.$$
-\item\label{def:metric-space:b} $x=y$ тогда и только тогда, когда 
+\item\label{def:metric-space:b}
+$x=y$ тогда и только тогда, когда 
 $$\Dist(x,y)=0.$$
-\item\label{def:metric-space:c} Симметричность: $$\Dist(x, y) = \Dist(y, x).$$
-\item\label{def:metric-space:d} Неравенство треугольника: 
+\item\label{def:metric-space:c}
+Симметричность: $$\Dist(x, y) = \Dist(y, x).$$
+\item\label{def:metric-space:d}
+Неравенство треугольника: 
 $$\Dist(x, z) \le \Dist(x, y) + \Dist(y, z).$$
 \end{enumerate}
 
@@ -112,7 +116,7 @@ $$\dist{f(x)}{f(y)}{\spc{Y}}
 \subsection*{Непрерывность}
 
 \begin{thm}{Определение}
- Пусть ${\spc{X}}$ --- метрическое пространство.
+Пусть ${\spc{X}}$ --- метрическое пространство.
 Последовательность точек $x_1, x_2, \ldots$ в ${\spc{X}}$ \emph{сходится}, 
 если существует точка $x_\infty\in {\spc{X}}$, такая что $\dist{x_\infty}{x_n}{}\to 0$ при $n\to\infty$.  
 То есть для любого $\epsilon > 0$ существует натуральное число $N$, такое что 
