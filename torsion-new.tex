@@ -1,0 +1,426 @@
+\chapter{Кручение}
+\label{chap:torsion}
+
+Эта глава в основном предоставляет практику в вычислениях.
+За исключением определений в разделе~\ref{sec:frenet-frame}, она не будет использоваться в дальнейшем.
+
+Так же как кривизна показывает, насколько кривая отклоняется от прямой линии, кручение показывает, насколько пространственная кривая отклоняется от плоской (см. \ref{ex:lancret}).
+
+\section{Базис Френе}\label{sec:frenet-frame}
+
+Пусть $\gamma$ --- гладкая пространственная кривая.
+Будем считать, что $\gamma$ параметризована длиной,
+так что вектор скорости $\tan(s)\z=\gamma'(s)$ единичный.
+
+Предположим, что $\gamma$ имеет ненулевую кривизну в момент времени~$s$;
+другими словами, $\gamma''(s)\z\ne 0$.
+Тогда \index{нормальный!вектор}\emph{нормальный вектор} при $s$ определяется как
+\[\norm(s)=\frac{\gamma''(s)}{|\gamma''(s)|}.\]
+Заметим, что \index{10tnb@$\tan$, $\norm$, $\bi$ (базис Френе)}
+\[\tan'(s)=\gamma''(s)=\kur(s)\cdot\norm(s).\]
+
+Согласно \ref{prop:a'-pertp-a''}, $\norm(s)\perp \tan(s)$.
+Поэтому векторное произведение 
+\[\bi(s)=\tan(s)\times \norm(s)\]
+является единичным вектором.
+Более того, тройка векторов $\tan(s)$, $\norm(s)$, $\bi(s)$ образует ориентированный ортонормированный базис в $\mathbb{R}^3$;
+он называется \index{базис Френе}\emph{базис Френе} кривой $\gamma$ при~$s$.
+В частности, 
+\[\begin{aligned}
+\langle\tan,\tan\rangle&=1,
+&
+\langle\norm,\norm\rangle&=1,
+&\langle\bi,\bi\rangle&=1,
+\\
+\langle\tan,\norm\rangle&=0,
+&
+\langle\norm,\bi\rangle&=0,
+&
+\langle\bi,\tan\rangle&=0.
+\end{aligned}
+\eqlbl{eq:orthornomal}
+\]
+Векторы $\tan(s)$, $\norm(s)$ и $\bi(s)$ называются \index{касательный}\emph{касательным}, \index{нормальный}\emph{нормальным} и \index{бинормальный}\emph{бинормальным} базиса Френе, соответственно.
+Отметим, что базис Френе определён только если $\kur(s)\z\ne 0$.
+
+Плоскость $\Pi_s$ через $\gamma(s)$, натянутая на $\tan(s)$ и $\norm(s)$, называется \index{соприкасающаяся!плоскость}\emph{соприкасающейся плоскостью} при $s$;
+она может определяться и как плоскость через $\gamma(s)$, перпендикулярная бинормальному вектору $\bi(s)$.
+Это единственная плоскость, имеющая \index{порядок касания}\emph{второй порядок касания} с $\gamma$ при $s$;
+то есть $\rho(\ell)=o(\ell^2)$, где $\rho(\ell)$ --- расстояние от $\gamma(s+\ell)$ до~$\Pi_s$.
+
+
+\section{Кручение}
+
+Пусть $\gamma$ --- гладкая пространственная кривая с единичной скоростью,
+и $\tan,\norm,\bi$ --- её базис Френе.
+Величина \index{10tau@$\tor$ (кручение)}
+\[\tor(s)=\langle \norm'(s),\bi(s)\rangle\]
+называется \index{кручение}\emph{кручением} $\gamma$ при~$s$.
+
+Отметим, что кручение $\tor(s_0)$ определено, только если $\kur(s_0)\z\ne0$.
+Действительно, поскольку функция $s\mapsto \kur(s)$ является непрерывной, 
+$\kur(s_0)\z\ne 0$ означает, что $\kur(s)\z\ne 0$ для всех $s$ около $s_0$.
+Следовательно, базис Френе также определён на открытом интервале, содержащем~$s_0$.
+Ясно, что $\tan(s)$, $\norm(s)$ и $\bi(s)$ гладко зависят от $s$ в своих областях определения.
+Поэтому производная $\norm'(s_0)$ определена, а, значит, определено и кручение.
+
+\begin{thm}{Упражнение}\label{ex:helix-torsion}
+По данным $a$ и $b$,
+вычислите кривизну и кручение винтовой линии
+$\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$.
+
+Выведите отсюда, что для данных $\kur>0$ и $\tor$
+существует винтовая линия с постоянной кривизной $\kur$ и постоянным кручением~$\tor$.
+\end{thm}
+
+
+
+\section{Формулы Френе}
+
+Предположим, что базис Френе $\tan(s),\norm(s),\bi(s)$ кривой $\gamma$ определён в точке~$s$.
+Напомним, что 
+\[\tan'=\kur\cdot \norm.
+\eqlbl{eq:frenet-tau}\]
+Давайте выразим оставшиеся производные $\norm'$ и $\bi'$ в базисе $\tan,\norm,\bi$.
+
+Сначала покажем, что
+\[\norm'=-\kur\cdot\tan+\tor\cdot\bi.\eqlbl{eq:frenet-nu}\]
+
+Действительно, поскольку базис $\tan,\norm,\bi$ ортонормирован, приведённая выше формула эквивалентна следующим трём тождествам:
+\[\begin{aligned}
+\langle \norm',\tan\rangle&=-\kur,
+&
+\langle \norm',\norm\rangle&=0,
+&
+\langle \norm',\bi\rangle&=\tor,
+\end{aligned}\eqlbl{eq:<N',?>}\]
+Последнее тождество следует из определения кручения.
+Второе следует из тождества $\langle \norm,\norm\rangle\z=1$ в \ref{eq:orthornomal}. 
+Продифференцировав тождество $\langle\tan,\norm\rangle\z=0$ в \ref{eq:orthornomal}, получим 
+\[\langle\tan',\norm\rangle+\langle\tan,\norm'\rangle=0.\]
+Применив \ref{eq:frenet-tau}, получим первое тождество в \ref{eq:<N',?>}.
+
+Дифференцируя третье тождество в \ref{eq:orthornomal}, получаем, что $\bi'\perp\bi$.
+Продифференцировав остальные две тождества с $\bi$ в \ref{eq:orthornomal}, получим
+\begin{align*}
+\langle\bi',\tan\rangle&=-\langle\bi,\tan'\rangle=-\kur\cdot\langle\bi,\norm\rangle=0,
+\\
+\langle\bi',\norm\rangle&=-\langle\bi,\norm'\rangle=\tor.
+\end{align*}
+И поскольку базис $\tan,\norm,\bi$ ортонормирован, получаем, что
+\[\bi'=-\tor\cdot\norm.\eqlbl{eq:frenet-beta}\]
+
+Уравнения \ref{eq:frenet-tau}, \ref{eq:frenet-nu}, и \ref{eq:frenet-beta} называются \index{формулы Френе}\emph{формулами Френе}.
+Все три можно записать в виде одного матричного тождества:
+\[
+\begin{pmatrix}
+\tan'
+\\
+\norm'
+\\
+\bi'
+\end{pmatrix}
+=
+\begin{pmatrix}
+0&\kur&0
+\\
+-\kur&0&\tor
+\\
+0&-\tor&0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\tan
+\\
+\norm
+\\
+\bi
+\end{pmatrix}.
+\]
+
+Напомним, что бинормаль $\bi$ ортогональна соприкасающейся плоскости.
+Поэтому уравнение \ref{eq:frenet-beta} означает, что кручение мерит, как быстро крутится соприкасающаяся плоскость при движении вдоль~$\gamma$.
+
+\begin{thm}{Упражнение}\label{ex:beta-from-tau+nu}
+Выведите формулу \ref{eq:frenet-beta} из \ref{eq:frenet-tau} и \ref{eq:frenet-nu}, дифференцируя тождество
+$\bi=\tan\times \norm$.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:torsion=0}
+Пусть $\gamma$ --- гладкая пространственная кривая с ненулевой кривизной.
+Докажите, что $\gamma$ лежит в плоскости тогда и только тогда, когда её кручение тождественно равно нулю.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:+B}
+Пусть $\gamma_0\:[a,b]\to \mathbb{R}^3$ --- гладкая пространственная кривая, и $\tan,\norm,\bi$ --- её базис Френе.
+Рассмотрим кривую $\gamma_1(t)\z\df\gamma_0(t)\z+\bi(t)$.
+Докажите, что
+\[\length\gamma_1\ge\length\gamma_0.\]
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:frenet}
+Пусть $\gamma$ --- гладкая пространственная кривая,
+$\tan,\norm,\bi$ --- её базис Френе, и $\tor$ --- её кручение.
+Выведите равенства
+\[\bi=\frac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}
+\quad\text{и}\quad
+\tor=\frac{\langle\gamma'\times\gamma'',\gamma'''\rangle}{|\gamma'\times\gamma''|^2}.
+\]
+
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:moment-curve}
+Найдите кривизну $\kur(t)$ и кручение $\tor(t)$ \index{кривая моментнов}\emph{кривой моментнов} $\gamma\:t\z\mapsto (t,t^2,t^3)$ в точке $\gamma(t)$.
+\end{thm}
+
+Следующее упражнение тесно связано с леммой о луке (\ref{lem:bow}).
+
+\begin{thm}{Упражнение}\label{ex:bow-converse}
+Пусть $\gamma_1,\gamma_2\:[a,b]\to\mathbb{R}^3$ --- две гладкие кривые с единичной скоростью.
+Предположим, что 
+\[\dist{\gamma_1(t_1)}{\gamma_1(t_2)}{}\ge \dist{\gamma_2(t_1)}{\gamma_2(t_2)}{}\]
+для любых $t_1$ и $t_2$.
+Покажите, что $\kur(t_0)_{\gamma_1}\le \kur(t_0)_{\gamma_2}$ для любого $t_0$.
+\end{thm}
+
+
+\begin{thm}{Продвинутое упражнение}\label{ex:torsion-indicatrix}
+Пусть $\gamma$ --- замкнутая гладкая пространственная кривая с положительным кручением.
+Докажите, что её касательная индикатриса имеет самопересечение.
+\end{thm}
+
+
+\section{Линии откоса}
+
+Гладкая пространственная кривая $\gamma$ называется \index{линия откоса}\emph{линией откоса}, если она идёт под постоянным углом к фиксированному направлению.
+Следующую теорему доказал Мишель Анж Ланкре~\cite{lancret}.
+
+\begin{thm}{Теорема}\label{thm:const-slope}
+Пусть $\gamma$ --- гладкая кривая с кривизной и кручением $\kur$ и $\tor$.
+Предположим, что $\kur(s)>0$ для всех~$s$.
+Тогда $\gamma$ --- линия откоса тогда и только тогда, когда отношение $\tfrac\tor\kur$ постоянно.
+\end{thm}
+
+
+\begin{thm}{Доказательство и упражнение}\label{ex:lancret}
+{\sloppy
+Пусть $\gamma$ --- гладкая пространственная кривая с ненулевой кривизной, $\tan,\norm,\bi$ --- её базис Френе, а $\kur$ и $\tor$ --- её кривизна и кручение.
+
+}
+
+\begin{subthm}{ex:lancret:a}
+Предположим, что для некоторого фиксированного ненулевого вектора $\vec w$ значение $\langle \vec w,\tan\rangle$ постоянно.
+Докажите, что $\langle \vec w, \norm\rangle \z=0$.
+Выведите, что $\langle \vec w,\bi\rangle$ постоянно.
+Докажите, что \[\tor\cdot\langle \vec w,\bi\rangle -\kur\cdot\langle \vec w,\tan\rangle =0.\]
+Выведите отсюда, что отношение $\tfrac\tor\kur$ постоянно.
+\end{subthm}
+
+{\sloppy
+
+\begin{subthm}{ex:lancret:b}
+Предположим, что отношение $\tfrac\tor\kur$ не меняется.
+Докажите, что вектор $\vec w\z=\tfrac\tor\kur\cdot \tan+\bi$ также не меняется.
+Выведите отсюда, что $\gamma$ --- линия откоса.
+\end{subthm}
+
+}
+
+\end{thm}
+
+Пусть $\gamma$ --- гладкая кривая с единичной скоростью и $s_0$ --- фиксированное значение её параметра. 
+Тогда кривая 
+\[\alpha(s)=\gamma(s)+(s_0-s)\cdot \gamma'(s)\]
+называется \index{эвольвента}\emph{эвольвеной}~$\gamma$.
+Заметим, что если $\ell(s)$ обозначает касательную к $\gamma$ в точке $s$,
+то $\alpha(s)\in \ell(s)$ и $\alpha'(s)\perp \ell$ для всех~$s$.
+
+\begin{thm}{Упражнение}\label{ex:evolvent-constant-slope}
+Докажите, что эвольвента линии откоса лежит на плоскости.
+\end{thm}
+
+\section{Сферические кривые}
+
+\begin{thm}{Теорема}
+Пусть $\gamma$ --- гладкая пространственная кривая с ненулевым кручением $\tor$ (и следовательно с ненулевой кривизной $\kur$).
+Тогда $\gamma$ лежит в единичной сфере тогда и только тогда, когда выполняется тождество
+\[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
+\end{thm}
+
+\begin{thm}{Доказательство и упражнение}\label{ex:spherical-frenet}
+Предположим, что $\gamma$ --- гладкая пространственная кривая с единичной скоростью,
+$\tan,\norm,\bi$ --- её базис Френе,
+и $\kur$, $\tor$ --- её кривизна и кручение.
+
+\smallskip
+
+Предположим, что $\gamma$ сферическая; то есть $|\gamma(s)|=1$ для любого~$s$.
+Покажите, что
+
+\begin{subthm}{ex:spherical-frenet:tau} $\langle\tan,\gamma\rangle=0$ и $\langle\norm,\gamma\rangle^2+\langle\bi,\gamma\rangle^2=1$.
+\end{subthm}
+
+\begin{subthm}{ex:spherical-frenet:nu} $\langle\norm,\gamma\rangle=-\tfrac1\kur$.
+\end{subthm}
+
+\begin{subthm}{ex:spherical-frenet:beta} $\langle\bi,\gamma\rangle'=\tfrac\tor\kur$.
+\end{subthm}
+
+\begin{subthm}{ex:spherical-frenet:beta+}
+Воспользовавшись \ref{SHORT.ex:spherical-frenet:beta}, докажите, что если $\gamma$ замкнута, то $\tor(s)=0$ для некоторого~$s$.
+\end{subthm}
+
+\begin{subthm}{ex:spherical-frenet:kur-tor} Предположим, что кручение $\gamma$ не равно нулю.
+Используйте \ref{SHORT.ex:spherical-frenet:tau}--\ref{SHORT.ex:spherical-frenet:beta}, чтобы показать, что
+\[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
+\end{subthm}
+Пусть теперь $\gamma$ удовлетворяет тождеству в \ref{SHORT.ex:spherical-frenet:kur-tor}.
+\begin{subthm}{ex:spherical-frenet:f}
+Покажите, что точка $p=\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi$ не меняется.
+Выведите, что $\gamma$ лежит на единичной сфере с центром в~$p$.
+\end{subthm}
+
+\end{thm}
+
+Для кривой $\gamma$ с единичной скоростью и ненулевой кривизной и кручением при~$s$,
+сфера $\Sigma_s$, проходящая через $\gamma(s)$ с центром в
+\[p(s)=\gamma(s)+\tfrac1{\kur(s)}\cdot \norm(s)+\tfrac{\kur'(s)}{\kur^2(s)\cdot\tor(s)}\cdot\bi(s)\]
+называется \index{соприкасающаяся!сфера}\emph{соприкасающейся сферой} кривой $\gamma$ при~$s$.
+Это единственная сфера, которая имеет \index{порядок касания}\emph{касание третьего порядка} с $\gamma$ при~$s$;
+то есть $\rho(\ell)=o(\ell^3)$, где $\rho(\ell)$ обозначает расстояние от $\gamma(s+\ell)$ до $\Sigma_s$.
+ 
+\section{Основная теорема}
+
+\begin{thm}{Теорема}\label{thm:fund-curves}
+Пусть $s\mapsto \kur(s)$ и $s\mapsto \tor(s)$ --- две гладкие функции, определённые на интервале $\mathbb{I}$.
+Предположим, что $\kur(s)>0$ для всех~$s$.
+Тогда существует гладкая кривая $\gamma\:\mathbb{I}\to\mathbb{R}^3$ с единичной скоростью, кривизной $\kur(s)$ и кручением $\tor(s)$ при любом~$s\in \mathbb{I}$.
+Более того, $\gamma$ однозначно определена с точностью до движения пространства, сохраняющего ориентацию.
+\end{thm}
+
+В доказательстве является применяется теорема о существовании и единственности решений дифференциальных уравнений (\ref{thm:ODE}).
+
+\parbf{Доказательство.}
+Выберем значение параметра $s_0$, точку $\gamma(s_0)$ и ориентированный ортонормированный базис $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
+Рассмотрим следующую систему дифференциальных уравнений
+\[
+\begin{cases}
+\gamma'=\tan,
+\\
+\tan'=\kur\cdot\norm,
+\\
+\norm'=-\kur\cdot\tan+\tor\cdot\bi,
+\\
+\bi'=-\tor\cdot\norm
+\end{cases}
+\eqlbl{eq:gamma'tan'norm'bi'}
+\]
+с начальными данными $\gamma(s_0)$, $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
+(Наша система уравнений состоит из четырёх векторных уравнений, так что её можно переписать как систему из 12-и скалярных.)
+
+Согласно \ref{thm:ODE}, эта система имеет единственное решение, которое определено на максимальном подинтервале $\mathbb{J}\subset \mathbb{I}$, содержащем $s_0$.
+Покажем, что $\mathbb{J}=\mathbb{I}$.
+
+Сначала заметим, что 
+\[\begin{aligned}
+\langle\tan,\tan\rangle&=1,
+&
+\langle\norm,\norm\rangle&=1,
+&
+\langle\bi,\bi\rangle&=1,
+\\
+\langle\tan,\norm\rangle&=0,&
+\langle\tan,\norm\rangle&=0,&
+\langle\bi,\tan\rangle&=0
+\end{aligned}
+\eqlbl{eq:111000}
+\]
+для любого значения параметра $s$.
+
+Действительно, из \ref{eq:gamma'tan'norm'bi'} получаем следующую систему:
+\[
+\begin{cases}
+\langle\tan,\tan\rangle'
+&=
+2\cdot\langle\tan,\tan'\rangle
+=
+2\cdot\kur\cdot \langle\tan,\norm\rangle,
+\\
+\langle\norm,\norm\rangle'
+&=
+2\cdot\langle\norm,\norm'\rangle
+=
+-
+2\cdot\kur\cdot\langle\norm,\tan\rangle
++
+2\cdot\tor\cdot\langle\norm,\bi\rangle,
+\\
+\langle\bi,\bi\rangle'
+&=
+2\cdot\langle\bi,\bi'\rangle
+=
+-2\cdot\tor\langle\bi,\norm\rangle,
+\\
+\langle\tan,\norm\rangle'
+&=
+\langle\tan',\norm\rangle
++
+\langle\tan,\norm'\rangle
+=
+\kur\cdot\langle\norm,\norm\rangle
+-
+\kur\cdot\langle\tan,\tan\rangle
++
+\tor\cdot\langle\tan,\bi\rangle,
+\\
+\langle\norm,\bi\rangle'
+&=
+\langle\norm',\bi\rangle+\langle\norm,\bi'\rangle
+=\kur\cdot\langle\tan,\bi\rangle+\tor\cdot\langle\bi,\bi\rangle-\tor\cdot\langle\norm,\norm\rangle,
+\\
+\langle\bi,\tan\rangle'
+&=
+\langle\bi',\tan\rangle+\langle\bi,\tan'\rangle
+=
+-\tor\cdot \langle\norm,\tan\rangle
++\kur\cdot\langle\bi,\norm\rangle.
+\end{cases}
+\eqlbl{eq:<gamma'tan'norm'bi'>}
+\]
+
+Константы в \ref{eq:111000} удовлетворяют этой системе.
+Более того, поскольку базис $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ ориентирован и ортонормирован,
+\ref{eq:111000} решает нашу задачу Коши для системы \ref{eq:<gamma'tan'norm'bi'>}.
+
+Допустим, что $\mathbb{J} \varsubsetneq \mathbb{I}$.
+Тогда один из концов $\mathbb{J}$, скажем $b$, лежит во внутренней части $\mathbb{I}$.
+Теорема \ref{thm:ODE} применима для $\Omega=\mathbb{R}^{12}\times \mathbb{I}$.
+Значит, одно из значений $\gamma(s)$, $\tan(s)$, $\norm(s)$, $\bi(s)$
+устремляется к бесконечности при $s\to b$.
+Но это невозможно --- векторы $\tan(s)$, $\norm(s)$, $\bi(s)$ остаются единичными, и $|\gamma'(s)|=|\tan(s)|=1$;
+так что $\gamma$ проходит лишь конечное расстояние при $s\to b$ --- противоречие.
+Таким образом, $\mathbb{J}= \mathbb{I}$, и первая часть теоремы доказана.
+
+Теперь предположим, что есть две кривые $\gamma_1$ и $\gamma_2$ с заданными функциями кривизны и кручения.
+Применив движение пространства, можно добиться чтобы $\gamma_1(s_0)=\gamma_2(s_0)$ и базисы Френе кривых совпали при $s_0$.
+Тогда $\gamma_1=\gamma_2$ по единственности решений системы (\ref{thm:ODE}), что завершает доказательство.
+\qeds
+
+
+\begin{thm}{Упражнение}\label{ex:cur+tor=helix}
+Предположим, что кривая $\gamma\:\mathbb{R}\to\mathbb{R}^3$ с постоянной скоростью, кривизной и кручением.
+Покажите, что $\gamma$ является винтовой линией, возможно, вырождающейся в окружность;
+то есть в подходящей системе координат 
+$\gamma(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$
+для некоторых констант $a$ и~$b$.
+\end{thm}
+
+
+\begin{thm}{Продвинутое упражнение}\label{ex:const-dist}
+Пусть $\gamma$ --- гладкая пространственная кривая такая, что расстояние $|\gamma(t)-\gamma(t+\ell)|$ зависит только от $\ell$.
+Покажите, что $\gamma$ является винтовой линией, возможно, вырождающуюся в прямую или окружность.
+\end{thm}
+
+
+
+

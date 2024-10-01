@@ -1,0 +1,642 @@
+\chapter{Теоремы сравнения}
+\label{chap:comparison}
+
+Теоремы сравнения --- мощный инструмент.
+Они дают возможность применять евклидову интуицию в дифференциальной геометрии.
+
+\section{Треугольники и створки}
+
+Напомним, что $[x,y]$ и $[x,y]_\Sigma$ обозначают кратчайшую между точками $x$ и $y$ на поверхности $\Sigma$, а
+$\dist{x}{y}\Sigma$ --- \index{внутренняя метрика}\emph{внутреннее расстояние} от $x$ до $y$ на~$\Sigma$.
+
+\index{геодезический треугольник}\emph{Геодезический треугольник} на поверхности $\Sigma$ определяется как тройка точек $x,y,z\z\in \Sigma$ с выбранными кратчайшими $[x,y]_\Sigma$, $[y,z]_\Sigma$ и $[z,x]_\Sigma$.
+Точки $x,y,z$ называются {}\emph{вершинами} треугольника,
+а кратчайшие $[x,y]$, $[y,z]$ и $[z,x]$ --- его {}\emph{сторонами};
+сам треугольник обозначается как $[xyz]$ или $[xyz]_\Sigma$;
+как всегда, последнее обозначение используется, если хочется подчеркнуть, что треугольник лежит на поверхности~$\Sigma$.\index{10aad@$[xyz]$, $[xyz]_\Sigma$ (геодезический треугольник)}
+
+Треугольник $[\tilde x\tilde y\tilde z]$ на плоскости $\mathbb{R}^2$ называется \index{модельный!треугольник}\emph{модельным треугольником} треугольника $[xyz]$,
+если их соответствующие стороны равны;
+то есть
+\[\dist{\tilde x}{\tilde y}{\mathbb{R}^2}=\dist{x}{y}\Sigma,
+\quad
+\dist{\tilde y}{\tilde z}{\mathbb{R}^2}=\dist{y}{z}\Sigma,
+\quad
+\dist{\tilde z}{\tilde x}{\mathbb{R}^2}=\dist{z}{x}\Sigma.
+\]
+В этом случае пишут $[\tilde x\tilde y\tilde z]=\tilde\triangle xyz$.
+\index{10aae@$\tilde\triangle$ (модельный треугольник)}
+
+
+Пара кратчайших $[x,y]$ и $[x,z]$, исходящих из одной точки $x$, называется \index{створка}\emph{створкой} и обозначается как $\hinge xyz$.\index{10aac@$\hinge yxz$ (створка)}
+Угол между этими геодезическими в точке $x$ обозначается как $\measuredangle\hinge xyz$.
+Величина угла $\measuredangle\hinge {\tilde x}{\tilde y}{\tilde z}$ модельного треугольника $[\tilde x\tilde y\tilde z]=\tilde\triangle xyz$ обозначается через $\modangle xyz$,
+\index{10aab@$\modangle yxz$ (модельный угол)}
+и называется \index{модельный!треугольник}\emph{модельным углом} треугольника $[xyz]$ при~$x$.
+
+Согласно признаку равенства треугольников по трём сторонам,
+модельный треугольник $[\tilde x\tilde y\tilde z]$ определён с точностью до конгруэнтности.
+Поэтому модельный угол $\tilde\theta=\modangle xyz$ однозначно определён.
+По теореме косинусов, 
+\[\cos \tilde\theta=\frac{a^2+b^2-c^2}{2\cdot a \cdot b},\]
+где $a=\dist{x}{y}{\Sigma}$, $b=\dist{x}{z}{\Sigma}$, и $c=\dist{y}{z}{\Sigma}$.
+
+\begin{thm}{Упражнение}\label{ex:wide-hinges}
+Пусть $[x_ny_nz_n]$ --- последовательность треугольников на гладкой поверхности~$\Sigma$ 
+со сторонами $a_n=\dist{x_n}{y_n}{\Sigma}$,
+$b_n=\dist{x_n}{з_n}{\Sigma}$,
+$c_n=\dist{y_n}{з_n}{\Sigma}$, и пусть $\tilde\theta_n=\modangle {x_n}{y_n}{z_n}$.
+Предположим, что последовательности $a_n$ и $b_n$ отделена от нуля;
+то есть $a_n>\epsilon$ и $b_n>\epsilon$ для фиксированного $\epsilon>0$ и любого~$n$.
+Покажите, что
+\[(a_n+b_n-c_n)\to 0\qquad\iff\qquad \tilde\theta_n\to \pi\]
+при $n\to\infty$.
+\end{thm}
+
+\section{Формулировки}
+
+Часть \ref{SHORT.thm:comp:cat} следующей теоремы называется {}\emph{теоремой Картана--Адамара};
+она доказана 
+Гансом фон Мангольдтом \cite{mangoldt} и обобщена 
+Эли Картаном \cite{cartan} и
+Жаком Адамаром \cite{hadamard}.
+Часть \ref{SHORT.thm:comp:toponogov} называется {}\emph{теоремой сравнения Топоногова} и иногда {}\emph{теоремой сравнения Александрова};
+она доказана Паоло Пиццетти \cite{pizzetti}, переоткрыта Александром Александровым \cite{aleksandrov}, и 
+обобщена Виктором Топоноговым \cite{toponogov1957}.%, Михаилом Громовым, Юрием Бураго и Григорием Перельманом~\cite{burago-gromov-perelman}.
+
+Напомним, что поверхность называется \index{односвязная поверхность}\emph{односвязной}, если любая простая замкнутая кривая на ней ограничивает диск.
+
+\begin{thm}{Теоремы сравнения}
+\label{thm:comp}
+\index{теорема сравнения}
+\ 
+
+\begin{subthm}{thm:comp:cat}
+Пусть $\Sigma$ --- открытая односвязная гладкая поверхность с неположительной гауссовой кривизной.
+Тогда 
+\[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
+для любого геодезического треугольника $[xyz]$ на $\Sigma$.
+\end{subthm}
+
+\begin{subthm}{thm:comp:toponogov}
+Пусть $\Sigma$ --- замкнутая (или открытая) гладкая поверхность с неотрицательной гауссовой кривизной.
+Тогда 
+ \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
+для любого геодезического треугольника $[xyz]$ на $\Sigma$.
+\end{subthm}
+
+\end{thm}
+
+Доказательства частей \ref{SHORT.thm:comp:cat} и \ref{SHORT.thm:comp:toponogov} даны в разделах~\ref{sec:nonpos-comp} и~\ref{sec:nonneg-comp} соответственно.
+
+\begin{thm}{Упражнение}\label{ex:thm:comp:cat:nsc}
+Покажите, что неравенство в \ref{thm:comp:cat} не выполняется для гиперболоида $\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2-z^2=1}$.
+В частности, \ref{thm:comp:cat} не верно без предположения об односвязности.
+\end{thm}
+
+Давайте сравним формулу Гаусса --- Бонне с теоремами сравнения.
+Рассмотрим диск $\Delta$ ограниченный геодезическим треугольником $[xyz]$ с внутренними углами $\alpha$, $\beta$ и~$\gamma$.
+По формуле Гаусса --- Бонне, 
+\[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
+в частности, у обоих сторон уравнения тот же знак.
+Значит,
+\begin{itemize}
+\item если $K_\Sigma\ge 0$, то $\alpha+\beta+\gamma\ge\pi$, и
+\item если $K_\Sigma\le 0$, то $\alpha+\beta+\gamma\le\pi$.
+\end{itemize}
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-10mm
+\includegraphics{mppics/pic-2307}
+\end{wrapfigure}
+
+Теперь пусть 
+$\hat\alpha\z=\measuredangle\hinge {x}{y}{z}$,
+$\hat\beta\z=\measuredangle\hinge {y}{z}{x}$,
+и $\hat\gamma\z=\measuredangle\hinge {z}{x}{y}$.
+Заметим, что $\hat\alpha,\hat\beta,\hat\gamma\in[0,\pi]$.
+Так как сумма углов любого плоского треугольника равна $\pi$, то из теорем сравнения вытекает, что
+\begin{itemize}
+\item если $K_\Sigma\ge 0$, то $\hat\alpha+\hat\beta+\hat\gamma\ge\pi$, и
+\item если $K_\Sigma\le 0$, то $\hat\alpha+\hat\beta+\hat\gamma\le\pi$.
+\end{itemize}
+
+Получается, что формула Гаусса --- Бонне и теоремы сравнения тесно связаны,
+однако эта связь не столь прямолинейна.
+
+Например, допустим, что $K\ge 0$.
+Тогда формула Гаусса --- Бонне не запрещает внутренним углам $\alpha$, $\beta$ и $\gamma$ одновременно быть близкими к $2\cdot\pi$.
+Однако $\hat \alpha=\alpha$ если $\alpha\le \pi$, а если нет, то $\hat \alpha=\pi-\alpha$;
+то есть
+\begin{align*}
+\hat \alpha&=\min\{\,\alpha,2\cdot\pi-\alpha\,\},
+&
+\hat\beta &=\min\{\,\beta,2\cdot\pi-\beta\,\},
+&
+\hat\gamma&=\min\{\,\gamma,2\cdot\pi-\gamma\,\}.
+\end{align*}
+Значит если $\alpha$, $\beta$ и $\gamma$ близки к $2\cdot\pi$, то $\hat\alpha$, $\hat\beta$ и $\hat\gamma$ будут близки к $0$,
+ну а последнее невозможно по теореме сравнения.
+
+
+
+
+
+
+\begin{thm}{Упражнение}\label{ex:diam-angle}
+Пусть точки $p$ и $q$ максимизируют расстояние на гладкой замкнутой выпуклой поверхности $\Sigma$;
+то есть $\dist{p}{q}\Sigma\z\ge\dist{x}{y}\Sigma$ для любых $x,y\in \Sigma$.
+Покажите, что $\measuredangle\hinge xpq\ge \tfrac\pi3$
+для любой точки $x\z\in \Sigma\setminus\{p,q\}$.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:sum=<2pi}
+Пусть $\Sigma$ --- замкнутая (или открытая) поверхность неотрицательной гауссовой кривизной.
+Покажите, что 
+\[\modangle pxy+\modangle pyz+\modangle pzx\le2\cdot \pi\]
+для любых четырёх различных точек $p,x,y,z$ на~$\Sigma$.
+\end{thm}
+
+
+\section{Локальные теоремы}\label{sec:loc-comp}
+
+Следующая теорема --- первый шаг в доказательстве теорем сравнения (\ref{thm:comp});
+она будет выведена из теоремы сравнения Рауха (\ref{prop:rauch}).
+
+\begin{thm}{Теорема}\label{thm:loc-comp}
+Теоремы сравнения (\ref{thm:comp}) выполняются в малой окрестности любой точки.
+
+Более того, если $\Sigma$ --- гладкая поверхность без границы,
+то для любой точки $p\in \Sigma$ существует такое $r>0$, что если $\dist{p}{x}\Sigma<r$, то $\inj(x)_\Sigma>r$, и справедливы следующие утверждения:
+
+\begin{subthm}{thm:loc-comp:cba}
+Если $\Sigma$ имеет неположительную гауссову кривизну, то
+\[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
+для любого геодезического треугольника $[xyz]$ в $B(p,\tfrac r4)_\Sigma$.
+\end{subthm}
+
+\begin{subthm}{thm:loc-comp:cbb}
+Если $\Sigma$ имеет неотрицательную гауссову кривизну, то 
+\[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
+для любого геодезического треугольника $[xyz]$ в $B(p,\tfrac r4)_\Sigma$.
+\end{subthm}
+
+\end{thm}
+
+\parbf{Доказательство.}
+Существование $r>0$ вытекает из \ref{prop:exp}.
+Пусть $[xyz]$ --- геодезический треугольник в $B(p,\tfrac{r}4)$.
+
+Поскольку $r<\inj(x)_\Sigma$, найдутся такие векторы $\vec v,\vec w\in\T_x$, что 
+\begin{align*}
+y&=\exp_x\vec v,
+& 
+z&=\exp_x\vec w,
+\\
+|\vec v|_{\T_x}&=\dist{x}{y}\Sigma,
+&
+|\vec w|_{\T_x}&=\dist{x}{z}\Sigma,
+&
+\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}&=\measuredangle\hinge xyz_\Sigma;
+\end{align*}
+в частности, $|\vec v|, |\vec w|< \tfrac r2$.
+
+\parit{\ref{SHORT.thm:loc-comp:cba}.}
+Пусть $\gamma$ --- минимизирующая геодезическая из $y$ в $z$.
+Поскольку $\dist{x}{y}{\Sigma},\dist{x}{z}{\Sigma}\z<\tfrac r2$, по неравенству треугольника, $\gamma$ лежит в $r$-окрестности~$x$.
+В частности, кривая
+$\tilde \gamma\df\log_x\circ\gamma$ определена и лежит в $r$-окрестности нуля в $\T_x$.
+Заметим, что $\tilde\gamma$ соединяет $\vec v$ и $\vec w$ в~$\T_x$.
+
+По теореме сравнения Рауха (\ref{prop:rauch:K=<0}),
+\[\length \tilde \gamma\le \length\gamma.\]
+Так как $\dist{\vec v}{\vec w}{\T_x}\le\length\tilde \gamma$ и $\length\gamma=\dist{y}{z}{\Sigma}$, получаем 
+\[\dist{\vec v}{\vec w}{\T_x}\le \dist{y}{z}\Sigma.\]
+По монотонности угла (\ref{lem:angle-monotonicity}), 
+\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\le \modangle xzy,\]
+и результат следует.
+
+\parit{\ref{SHORT.thm:loc-comp:cbb}.}
+Рассмотрим отрезок прямой $\tilde \gamma$, соединяющий $\vec v$ и $\vec w$ в касательной плоскости $\T_x$, и пусть $\gamma\df\exp_x\circ\tilde \gamma$.
+По теореме Рауха (\ref{prop:rauch:K>=0}), 
+\[\length \tilde \gamma\ge\length\gamma.\]
+Поскольку $\dist{\vec v}{\vec w}{\T_x}=\length\tilde \gamma$ и $\length\gamma\ge\dist{y}{z}\Sigma$, 
+\[\dist{\vec v}{\vec w}{\T_x}\ge \dist{y}{z}\Sigma.\]
+По монотонности угла (\ref{lem:angle-monotonicity}), 
+\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\ge\modangle xzy,\]
+отсюда результат.
+\qeds
+
+
+\section{Неположительная кривизна}\label{sec:nonpos-comp}
+
+\parbf{Доказательство \ref{thm:comp:cat}.}
+Так как $\Sigma$  односвязна, из \ref{ex:unique-geod} получаем, что 
+\[\inj(p)_\Sigma=\infty\]
+для любой точки $p\in\Sigma$.
+Следовательно, \ref{thm:loc-comp:cba} влечёт \ref{thm:comp:cat}.
+\qeds
+
+\section{Неотрицательная кривизна}\label{sec:nonneg-comp}
+
+Сейчас мы докажем \ref{thm:comp:toponogov} для компактных поверхностей.
+Общий случай требует лишь незначительных изменений; они приводятся в упражнении \ref{ex:open-comparison} в конце раздела.
+Доказательство взято из \cite{alexander-kapovitch-petrunin2027}, похожее доказательство независимо нашли Урс Лэнг и Виктор Шрёдер \cite{lang-schroeder}.
+
+\parbf{Доказательство \ref{thm:comp:toponogov} в компактном случае.}\label{proof(thm:comp:toponogov)}
+Предположим, что $\Sigma$ компактна.
+По \ref{thm:loc-comp} найдётся такое $\epsilon>0$, что неравенство 
+\[\measuredangle\hinge {x}{p}{q}\ge\modangle xpq\]
+выполняется если  
+$\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\epsilon$.
+Следующая лемма утверждает, что в этом случае то же верно и если $\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\tfrac32\cdot\epsilon$.
+Применив эту лемму несколько раз, получаем, сравнение для любой створки, что и доказывает \mbox{\ref{thm:comp:toponogov}}.
+\qeds
+
+\begin{thm}{Основная лемма}\label{key-lem:globalization}
+Пусть $\Sigma$ --- гладкая открытая или замкнутая поверхность.
+Предположим, что на $\Sigma$ выполняется сравнение
+\[\measuredangle\hinge x y z
+\ge\modangle x y z\eqlbl{eq:key-lem:globalization}\]
+если 
+$\dist{x}{y}\Sigma+\dist{x}{z}\Sigma
+<
+\frac{2}{3}\cdot\ell$.
+Тогда \ref{eq:key-lem:globalization} выполняется и если $\dist{x}{y}\Sigma+\dist{x}{z}\Sigma<\ell$.
+\end{thm}
+
+
+{
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-2308}
+\end{wrapfigure}
+
+Для данной створки $\hinge x p q$,
+рассмотрим треугольник на плоскости с углом $\measuredangle\hinge x p q$ и двумя прилежащими сторонами $\dist{x}{p}\Sigma$ и $\dist{x}{q}\Sigma$.
+Обозначим через $\side \hinge x p q$ третью сторону этого треугольника; она будет называться \index{модельная сторона}\emph{модельной стороной} створки.
+
+Следующее вычислительное упражнение сыграет роль в доказательстве леммы.
+
+
+}
+
+\begin{thm}{Упражнение}\label{ex:s-r}
+Предположим, что створки $\hinge xpq$ и $\hinge xpy$ имеют общую сторону $[x,p]$, и $[x,y]\subset [x,q]$.
+Покажите, что
+\[\frac{\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq}{\dist{x}{q}{}}
+\le
+\frac{\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy}{\dist{x}{y}{}}.\]
+\end{thm}
+
+
+\parbf{Доказательство.} 
+По монотонности угла (\ref{lem:angle-monotonicity})
+\[\measuredangle\hinge x p q\ge \modangle x p q\quad\iff\quad\side \hinge x p q
+\ge\dist{p}{q}\Sigma.\]
+Следовательно, достаточно доказать, что
+\[\side \hinge x p q
+\ge\dist{p}{q}\Sigma
+\eqlbl{eq:thm:=def-loc}\]
+при условии, что $\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\ell$.
+
+Опишем построение новой створки $\hinge{x'}p q$ по данной створке $\hinge x p q$, для которой 
+\[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}\Sigma+\dist{x}{q}\Sigma< \ell.\]
+
+\begin{wrapfigure}{r}{32mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-2310}
+\end{wrapfigure}
+
+Будем считать, что $\dist{x}{q}\Sigma\ge\dist{x}{p}\Sigma$; иначе поменяем $p$ и $q$ ролями.
+Выберем $x'\in [x, q]$ так, что 
+\[\dist{p}{x}\Sigma+3\cdot\dist{x}{x'}\Sigma
+=\tfrac{2}{3}\cdot\ell
+\eqlbl{3|xx'|}\]
+Выберите геодезическую $[x', p]$ и рассмотрите створку $\hinge{x'}p q$, образованную $[x',p]$ и $[x',q]\z\subset [x,q]$.
+
+По неравенству треугольника,
+\[
+\dist{p}{x}\Sigma+\dist{x}{q}\Sigma\ge\dist{p}{x'}\Sigma+\dist{x'}{q}\Sigma.
+\eqlbl{eq:thm:=def-loc-fourstar}\]
+Покажем, что
+\[\side \hinge x p q
+\ge\side \hinge{x'}p q
+\eqlbl{eq:thm:=def-loc-fivestar}\]
+
+
+Из \ref{3|xx'|},
+\[
+\begin{aligned}
+\dist{p}{x}{\Sigma}\z+\dist{x}{x'}{\Sigma}&<\tfrac{2}{3}\cdot\ell,
+\\
+\dist{p}{x'}{\Sigma}\z+\dist{x'}{x}{\Sigma}&<\tfrac{2}{3}\cdot\ell.
+\end{aligned}
+\]
+Значит, по предположению 
+\[\begin{aligned}
+\measuredangle\hinge x p{x'}
+\ge\modangle x p{x'}
+\quad\text{и}\quad
+\measuredangle\hinge {x'}p x
+\ge\modangle {x'}p x.
+  \end{aligned}
+\eqlbl{eq:thm:=def-loc-threestar}
+\]
+
+Рассмотрим модельный треугольник $[\tilde x\tilde x'\tilde p]\z=\modtrig xx'p$. 
+Выберем такую точку $\tilde q$ на продолжении отрезка $[\tilde x,\tilde x']$ за $x'$, что $\dist{\tilde x}{\tilde q}\Sigma=\dist{x}{q}\Sigma$, и, значит, $\dist{\tilde x'}{\tilde q}\Sigma\z=\dist{x'}{q}\Sigma$.
+
+Из \ref{eq:thm:=def-loc-threestar}
+\[\measuredangle\hinge x p q
+=\measuredangle\hinge x p{x'}\ge\modangle x p{x'}.\]
+Следовательно,
+\[
+\side\hinge x q p
+\ge
+\dist{\tilde p}{\tilde q}{\mathbb{R}^2}.
+\]
+Далее, так как $\measuredangle\hinge{x'}p x+\measuredangle\hinge{x'}p q= \pi$,
+неравенства в \ref{eq:thm:=def-loc-threestar} означают, что
+\[
+\pi
+-\modangle{x'}p x
+\ge
+\pi-\measuredangle\hinge{x'}p x
+\ge
+\measuredangle\hinge{x'}p q.
+\]
+Следовательно,
+\[\dist{\tilde p}{\tilde q}{\mathbb{R}^2}\ge\side \hinge{x'}q p \]
+и из этого следует \ref{eq:thm:=def-loc-fivestar}.
+
+Пусть $x_0=x$; применяя построение выше, получаем последовательность створок $\hinge{x_n}p q$, где $x_{n+1}=x_n'$.
+Согласно \ref{eq:thm:=def-loc-fivestar} и \ref{eq:thm:=def-loc-fourstar}, обе последовательности
+\[s_n=\side \hinge{x_n}pq\quad\text{и}\quad r_n=\dist{p}{x_n}\Sigma+\dist{x_n}{q}\Sigma\]
+невозрастающие.
+
+Последовательность может закончится на $x_n$ только если $r_n< \tfrac{2}{3}\cdot\ell$.
+Тогда, по предположению леммы, 
+\[s_n=\side \hinge{x_n}p q\ge\dist{p}{q}\Sigma.\]
+А так как последовательность $s_n$ не возрастает, получаем, что
+\[\side \hinge{x}p q=s_0\ge s_n\ge\dist{p}{q}\Sigma;\]
+откуда следует \ref{eq:thm:=def-loc}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics{mppics/pic-2315}
+\end{figure}
+
+Осталось доказать \ref{eq:thm:=def-loc} в случае если последовательностью $x_n$ бесконечна.
+Из \ref{3|xx'|}
+\[
+\dist{x_n}{x_{n-1}}\Sigma
+\ge 
+\tfrac1{100}\cdot \ell.
+\eqlbl{eq:|x-x|><l}
+\]
+Согласно \ref{eq:thm:=def-loc-fourstar}, $\dist{x_n}{p}{},\dist{x_n}{q}{}<
+\ell$ для любого~$n$.
+В случае, если $x_{n+1}\z\in [x_n,q]$, применим \ref{ex:s-r} к створокам $\hinge{x_n}pq$ и $\hinge{x_n}p{x_{n+1}}$.
+Согласно \ref{eq:thm:=def-loc-threestar}, $\dist{p}{x_{n+1}}{}\le \side \hinge{x_n}{x_{n+1}}{p}$.
+Следовательно,
+\[r_n-s_n\le 100\cdot (r_n-r_{n+1})\eqlbl{eq:r-s<100(r-r)}\]
+В случае, если $x_{n+1}\in [x_n,p]$, неравенство \ref{eq:r-s<100(r-r)} следует, если применить \ref{ex:s-r} к створкам $\hinge{x_n}pq$ и $\hinge{x_n}{x_{n+1}}q$.
+
+Последовательности $r_n$ и $s_n$ являются невозрастающими и неотрицательными;
+поэтому они обязаны сходиться.
+В частности, $(r_n\z-r_{n+1})\to0$ при $n\to \infty$.
+Следовательно, из \ref{eq:r-s<100(r-r)} следует, что
+\[\lim_{n\to\infty}s_n=\lim_{n\to\infty}r_n.\]
+По неравенству треугольника, $r_n\ge \dist{p}{q}\Sigma$ для любого~$n$.
+Поскольку последовательность $s_n$ невозрастающая, получаем
+\[\side \hinge{x}p q=s_0\ge \lim_{n\to\infty}s_n=\lim_{n\to\infty}r_n\ge \dist{p}{q}\Sigma,\]
+что завершает доказательство \ref{eq:thm:=def-loc}.
+\qeds
+
+\begin{thm}{Упражнение}\label{ex:open-comparison}
+Пусть $\Sigma$ --- открытая поверхность с неотрицательной гауссовой кривизной.
+Для данного $p\in\Sigma$ обозначим $R_p$ 
+(\emph{радиус сравнения} в точке $p$) 
+максимальное значение (возможно, $\infty$), при котором сравнение 
+\[\measuredangle\hinge x p y
+\ge\modangle x p y\]
+выполняется для любой створки $\hinge x p y$ если $\dist{p}{x}\Sigma+\dist{x}{y}\Sigma<R_p$.
+
+\begin{subthm}{ex:open-comparison:positive}
+Покажите, что для любого компактного подмножества $K\z\subset \Sigma$ существует такое $\epsilon>0$, что $R_p>\epsilon$ для любой точки $p\in K$.
+\end{subthm}
+
+\begin{subthm}{ex:open-comparison:almost-min}
+Используя часть \ref{SHORT.ex:open-comparison:positive}, покажите, что 
+существует точка $p\z\in\Sigma$, такая что 
+\[R_q>(1-\tfrac1{100})\cdot R_p,\]
+для любой точки $q\in B(p,100\cdot R_p)_\Sigma$.
+\end{subthm}
+
+\begin{subthm}{ex:open-comparison:proof}
+Объясните как, используя \ref{SHORT.ex:open-comparison:almost-min}, можно распространить доказательство \ref{thm:comp:toponogov} (страница \pageref{proof(thm:comp:toponogov)}) на открытые поверхности. 
+(То есть доказать, что $R_p=\infty$ для любой точки $p\in\Sigma$.) 
+\end{subthm}
+
+\end{thm}
+
+\section{Лемма Александрова}
+\index{лемма Александрова}
+
+Следующая лемма (\ref{lem:alex-reformulation}) позволит получить несколько полезных переформулировок теорем сравнения.
+
+\begin{thm}{Лемма}
+\label{lem:alex}
+Пусть $pxyz$ и $p'x'y'z'$ --- два четырехугольника на евклидовой плоскости с равными соответствующими сторонами.
+Предположим, что стороны $[x',y']$ и $[y',z']$ являются продолжениями друг друга; то есть точка $y'$ лежит на отрезке $[x',z']$.
+Тогда следующие выражения имеют одинаковые знаки:
+\begin{enumerate}[(i)]
+ \item $|p-y|-|p'-y'|$;
+ \item $\measuredangle\hinge xpy-\measuredangle\hinge {x'}{p'}{y'}$;
+ \item $\pi-\measuredangle\hinge ypx-\measuredangle\hinge ypz$.
+\end{enumerate}
+\end{thm}
+
+\parbf{Доказательство.} 
+Рассмотрим точку $\bar z$ на продолжении отрезка 
+$[x,y]$ за точкой $y$ так, что $\dist{y}{\bar z}{}=\dist{y}{z}{}$ (и, следовательно, $\dist{x}{\bar z}{}=\dist{x'}{z'}{}$).
+
+\begin{figure}[!ht]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-50}
+\vskip-0mm
+\end{figure}
+
+По монотонности угла (\ref{lem:angle-monotonicity}), следующие выражения одного знака:
+\begin{enumerate}[(i)]
+\item $|p-y|-|p'-y'|$;
+\item $\measuredangle\hinge{x}{y}{p}-\measuredangle\hinge{x'}{y'}{p'}=\measuredangle\hinge{x}{\bar z}{p}-\measuredangle\hinge{x'}{z'}{p'}$;
+\item $|p-\bar z|-|p'-z'| = | p - \bar z | - | p-z | $;
+\item $\measuredangle\hinge{y}{\bar z}{p}-\measuredangle\hinge{y}{z}{p}$.
+\end{enumerate}
+Поскольку
+\[\measuredangle\hinge{y'}{z'}{p'}+\measuredangle\hinge{y'}{x'}{p'}=\pi
+\quad\text{и}\quad
+\measuredangle\hinge{y}{\bar z}{p}+\measuredangle\hinge{y}{x}{p}=\pi,\]
+утверждение следует.
+\qeds
+
+\section{Переформулировки}
+
+Для любого треугольника $[xyz]$ на поверхности $\Sigma$ и его модельного треугольника $[\tilde x \tilde y \tilde z]$, существует естественное отображение $p\mapsto \tilde p$, которое изометрически отображает геодезические $[x,y]$, $[y,z]$, $[z,x]$ на отрезки $[\tilde x,\tilde y]$, $[\tilde y, \tilde z]$, $[\tilde z, \tilde x]$ соответственно.
+Треугольник $[xyz]$ называется \index{толстый/тонкий треугольник}\emph{толстым} (или {}\emph{тонким}), если неравенство
+\[\dist{p}{q}{\Sigma}\ge |\tilde p- \tilde q|_{\mathbb{R}^2}\qquad \text{(или, соответственно,}\quad \dist{p}{q}{\Sigma}\le |\tilde p- \tilde q|_{\mathbb{R}^2})\]
+выполняется для любых двух точек $p$ и $q$ на сторонах треугольника $[xyz]$.
+
+\begin{thm}{Предложение}\label{prop:comp-reformulations}
+Пусть $\Sigma$ --- открытая или замкнутая гладкая поверхность.
+Тогда следующие три условия эквивалентны:
+
+\begin{subthm}{mang>angk}
+Для любого геодезического треугольника $[xyz]$ на $\Sigma$ выполняется неравенство
+ \[\measuredangle\hinge{x}{y}{z}\ge\modangle xyz.\]
+\end{subthm}
+
+\begin{subthm}{angk>angk} Для любого геодезического треугольника $[pxz]$ на $\Sigma$ и точки $y$ на стороне $[x,z]$ выполняется неравенство
+ \[\modangle xpy \ge \modangle xpz.\]
+ 
+\end{subthm}
+
+\begin{subthm}{fat}
+Любой геодезический треугольник на $\Sigma$ является толстым.
+\end{subthm}
+
+\medskip
+
+Аналогично, следующие три условия эквивалентны:
+
+\begin{subthmA}{mang<angk}
+Для любого геодезического треугольника $[xyz]$ на $\Sigma$ выполняется неравенство
+ \[\measuredangle\hinge{x}{y}{z}\le\modangle xyz.\]
+\end{subthmA}
+
+\begin{subthmA}{angk<angk} Для любого геодезического треугольника $[pxz]$ на $\Sigma$ и точки $y$ на стороне $[x,z]$ выполняется неравенство
+ \[\modangle xpy \le \modangle xpz.\]
+\end{subthmA}
+
+\begin{subthmA}{thin}
+Любой геодезический треугольник на $\Sigma$ является тонким.
+\end{subthmA}
+
+\end{thm}
+
+Давайте перепишем лемму Александрова (\ref{lem:alex}) на языке модельных треугольников и углов.
+
+\begin{thm}{Переформулировка леммы Александрова}\label{lem:alex-reformulation}
+Пусть $[pxz]$ --- треугольник на поверхности $\Sigma$, 
+и $y\in[x,z]$. 
+Рассмотрим его модельный треугольник $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$, и пусть $\tilde y$ будет соответствующей точкой на стороне $[\tilde x,\tilde z]$.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-2305}
+\end{wrapfigure}
+
+Тогда следующие выражения имеют одинаковые знаки:
+\begin{enumerate}[(i)]
+ \item $\dist{p}{y}\Sigma-\dist{\tilde p}{\tilde y}{\mathbb{R}^2}$;
+ \item $\modangle xpy-\modangle {x}{p}{z}$;
+ \item $\pi-\modangle ypx-\modangle ypz$;
+\end{enumerate}
+\end{thm}
+
+\parbf{Доказательство \ref{prop:comp-reformulations}.}
+Мы докажем последовательность импликаций \ref{SHORT.mang>angk}$\Rightarrow$\ref{SHORT.angk>angk}$\Rightarrow$\ref{SHORT.fat}$\Rightarrow$\ref{SHORT.mang>angk}.
+Импликации \ref{SHORT.mang<angk}$\Rightarrow$\ref{SHORT.angk<angk}$\Rightarrow$\ref{SHORT.thin}$\Rightarrow$\ref{SHORT.mang<angk} доказываются также, заменяя знаки в неравенствах.
+
+\parit{\ref{SHORT.mang>angk}$\Rightarrow$\ref{SHORT.angk>angk}.}
+Заметим, что $\measuredangle\hinge ypx+\measuredangle\hinge ypz=\pi$.
+По \ref{SHORT.mang>angk}, 
+\[\modangle ypx+\modangle ypz\le \pi.\]
+Остаётся применить лемму Александрова (\ref{lem:alex-reformulation}).
+
+\parit{\ref{SHORT.angk>angk}$\Rightarrow$\ref{SHORT.fat}.}
+Применив \ref{SHORT.angk>angk} дважды, сначала для $y\in [x,z]$, а затем для $w\in [p,x]$, получим
+\[\modangle xwy \ge \modangle xpy \ge \modangle xpz.\]
+Следовательно,
+\[\dist{w}{y}\Sigma\ge \dist{\tilde w}{\tilde y}{\mathbb{R}^2},\]
+где $\tilde w$ и $\tilde y$ --- точки, соответствующие $w$ и $y$ на сторонах модельного треугольника. 
+
+\parit{\ref{SHORT.fat}$\Rightarrow$\ref{SHORT.mang>angk}.}
+Поскольку треугольник толстый, имеем
+\[\modangle xwy \ge \modangle xpz\]
+для любого $w\in [x,p]\setminus \{x\}$ и $y\in [x,z]\setminus \{x\}$.
+Заметим, что $\modangle xwy\z\to \measuredangle\hinge xpz$ при $w,y\to x$,
+и импликация следует.
+\qeds
+
+\begin{thm}{Упражнение}\label{ex:geod-convexity}
+Пусть $\gamma$ --- геодезическая с единичной скоростью на гладкой открытой поверхности
+$\Sigma$, и $p\in\Sigma$.
+
+Рассмотрим функцию
+\[h(t)=\dist{p}{\gamma(t)}\Sigma^2-t^2.\]
+
+\begin{subthm}{}
+Покажите, что если $\Sigma$ односвязна и её гауссова кривизна неположительна, то функция $h$ является вогнутой.
+\end{subthm}
+
+\begin{subthm}{} Покажите, что если гауссова кривизна $\Sigma$ неотрицательна, то функция $h$ является выпуклой.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:midpoints}
+Пусть $\bar x$ и $\bar y$ --- середины кратчайших $[p,x]$ и $[p,y]$ на гладкой открытой поверхности~$\Sigma$.
+
+\begin{subthm}{}
+Покажите, что если $\Sigma$ является односвязной и её гауссова кривизна неположительна, то 
+\[2\cdot \dist{\bar x}{\bar y}\Sigma\le \dist{x}{y}\Sigma.\]
+\end{subthm}
+
+\begin{subthm}{} Покажите, что если гауссова кривизна $\Sigma$ неотрицательна, то 
+ \[2\cdot \dist{\bar x}{\bar y}\Sigma\ge \dist{x}{y}\Sigma.\]
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:convex-dist}
+Пусть $\gamma_1$ и $\gamma_2$ --- две геодезические на односвязной открытой гладкой поверхности $\Sigma$ с неположительной гауссовой кривизной.
+Покажите, что функция $h(t)\df\dist{\gamma_1(t)}{\gamma_2(t)}\Sigma$
+является выпуклой.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:disc+}
+Пусть $\Sigma$ --- открытая или замкнутая гладкая поверхность с неотрицательной гауссовой кривизной.
+Докажите, что площадь любого $R$-круга во внутренней метрике $\Sigma$ не превышает $\pi\cdot R^2$.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:disc-}
+Пусть $\Delta$ --- $R$-шар во внутренней метрике открытой, односвязной, гладкой поверхности $\Sigma$ неположительной гауссовой кривизной.
+
+\begin{subthm}{ex:disc-:kg}
+Докажите, что граница $\Delta$ является гладкой кривой с геодезической кривизной не менее $\tfrac1R$.
+\end{subthm}
+
+\begin{subthm}{ex:disc-:area}
+Докажите, что площадь $\Delta$ не меньше $\pi\cdot R^2$.
+\end{subthm}
+
+\end{thm}
+
+Следующее упражнение обобщает задачу о луне в луже (\ref{thm:moon-orginal}).
+
+\begin{thm}{Продвинутое упражнение}\label{ex:moon-}
+Пусть $\Delta$ --- диск на гладкой поверхности $\Sigma$ с неположительной гауссовой кривизной.
+Предположим, что $\Delta$ ограничен гладкой кривой $\gamma$ с геодезической кривизной, не превышающей 1 по абсолютному значению.
+Докажите, что $\Delta$ содержит единичный круг во внутренней метрике $\Sigma$.
+
+Выведите отсюда, что площадь $\Delta$ не меньше $\pi$.
+\end{thm}

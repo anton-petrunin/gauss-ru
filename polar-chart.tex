@@ -1,0 +1,795 @@
+\chapter{Полугeодезичeские координаты}
+\label{chap:semigeodesic}
+
+Это вычислительная глава, в ней выводятся нескольких утверждений, обсуждавшихся выше, включая 
+эквивалентное определение радиуса инъективности (\ref{prop:inj-rad}),
+то, что кратчайшие являются геодезическими (\ref{prop:gamma''})
+и формулу Гаусса --- Бонне (\ref{thm:gb}).
+Кроме того, мы обсудим внутренние изометрии между поверхностями и докажем 
+замечательную теорему Гаусса, о том, что \textit{гауссова кривизна является внутренним инвариантом}.
+
+\section{Полярные координаты}\label{sec:Polar coordinates}
+
+{\sloppy
+
+Свойство экспоненциального отображения, описанное в \ref{prop:exp}, можно использовать для задания \index{полярные координаты}\emph{полярных координат} на гладкой поверхности.
+
+}
+
+А именно, пусть $p$ --- точка на гладкой поверхности $\Sigma$ и
+$(r,\theta) \z\in \mathbb{R}_{\ge0} \times \mathbb{S}^1$ --- полярные координаты на касательной плоскости $\T_p$.
+Если $\vec v\in \T_p$ имеет координаты $(r,\theta)$,
+то будем говорить, что $s(r,\theta)\z=\exp_p\vec v$ --- это точка на $\Sigma$ с полярными координатами $(r,\theta)$.
+
+Из точки $p$ в данную точку $x$ может идти много геодезических, а может их вовсе не быть.
+Поэтому одна точка может иметь несколько представлений в полярных координатах, а может и не иметь их вовсе.
+Однако из~\ref{prop:exp} получаем следующее.
+
+\begin{thm}{Наблюдение}\label{obs:polar}
+Пусть $s\:(r,\theta)\mapsto s(r,\theta)$ задаёт полярные координаты на гладкой поверхности~$\Sigma$ с началом в точке $p$.
+Тогда существует такое $r_0>0$, что $s$ является регулярным для любой пары $(r,\theta)$ при $0<r<r_0$.
+
+Более того, если $0\le r_1,r_2<r_0$, то $s(r_1,\theta_1) \z= s(r_2,\theta_2)$ тогда и только тогда, когда
+$r_1=r_2=0$ или $r_1=r_2$ и $\theta_1\z=\theta_2+2\cdot n\cdot\pi$ для некоторого целого числа~$n$.
+\end{thm}
+
+Далее мы всегда будем предполагать, что полярные координаты на поверхности определены только при $r<r_0$,
+а значит, они ведут себя обычным образом.
+
+Следующее утверждение сыграет основную роль в строгом доказательстве того, что кратчайшие являются геодезическими, см.~\ref{sec:proof-of-gamma''}.
+
+\begin{thm}{Лемма Гаусса}\label{lem:palar-perp}
+Пусть $(r,\theta)\mapsto s(r,\theta)$ --- полярные координаты на гладкой поверхности с началом в точке $p$.
+Тогда
+$s_\theta\perp s_r$
+для любых $r$ и~$\theta$.
+\end{thm}
+
+\parbf{Доказательство.}
+Выберем $\theta \in \mathbb{S}^1$.
+По определению экспоненциального отображения, кривая $\gamma(t)\z=s(t,\theta)$ --- геодезическая с единичной скоростью, исходящая из $p$.
+\begin{enumerate}[(i)]
+\item Поскольку у $\gamma$ единичная скорость, $|s_r|=|\gamma'|=1$, и в частности,
+ \[
+ \tfrac{\partial}{\partial \theta}
+ \langle s_r,s_r\rangle=0.\]
+\item Поскольку $\gamma$ --- геодезическая, $s_{rr}(r,\theta)=\gamma''(r)\perp\T_{\gamma(r)}$,
+и следовательно, 
+\[
+\langle s_\theta, s_{rr}\rangle=0.\]
+\end{enumerate}
+Отсюда вытекает, что
+\[
+\begin{aligned}
+\tfrac{\partial}{\partial r}
+\langle s_\theta, s_r\rangle
+&=
+\langle s_{\theta r},s_r\rangle
++
+\cancel{\langle s_\theta,s_{rr}\rangle}=
+\\
+&=
+\tfrac12
+\cdot 
+\tfrac{\partial}{\partial \theta}
+\langle s_r, s_r\rangle=
+\\
+&=0.
+\end{aligned}
+\eqlbl{eq:<s',s'>'=0}
+\]
+
+Далее, $s_\theta(0,\theta)=0$, ведь $s(0,\theta)=p$ для любого $\theta$.
+В частности,
+$\langle s_\theta, s_r\rangle=0$
+при $r=0$.
+Согласно \ref{eq:<s',s'>'=0}, значение 
+$\langle  s_\theta, s_r\rangle$ не зависит от~$r$ при фиксированном~$\theta$.
+А значит,
+\[\langle s_\theta, s_r\rangle=0\]
+для любых $r$ и $\theta$.
+\qeds
+
+
+\section{Снова кратчайшие и геодезические}
+\label{sec:proof-of-gamma''}
+
+В этом разделе мы воспользуемся полярными координатами и леммой Гаусса (\ref{lem:palar-perp}) для доказательства предложения~\ref{prop:gamma''}.
+
+
+\parbf{Доказательство \ref{prop:gamma''}.}
+Пусть $\gamma\:[0,\ell]\to\Sigma$ --- кратчайшая, параметризованная длиной, и $p=\gamma(0)$.
+Предположим, что длина $\ell=\length\gamma$ достаточно мала, так, что $\gamma$ описывается в полярных координатах с началом в $p$;
+скажем $\gamma(t)=s(r(t),\theta(t))$ для функций $t\mapsto \theta(t)$ и $t\mapsto r(t)$, где $r(0)=0$.
+
+По правилу дифференцирования сложной функции,
+\[\gamma'= s_\theta\cdot \theta'+ s_r\cdot r'
+\eqlbl{eq:chain(gamma)}\]
+если левая часть определена и $t>0$.
+По лемме Гаусса \ref{lem:palar-perp}, $s_\theta\perp s_r$, и по определению полярных координат, $|s_r|=1$.
+Следовательно, из \ref{eq:chain(gamma)} следует
+\[|\gamma'(t)|\ge r'(t).\eqlbl{eq:|gamma'|=r'}\]
+для любого $t>0$, где $\gamma'(t)$ определена.
+
+Поскольку $\gamma$ параметризована длиной, 
+\[|\gamma(t_2)-\gamma(t_1)|\le |t_2-t_1|.\]
+В частности, $\gamma$ липшицева, и, по теореме Радемахера (\ref{thm:rademacher}), производная $\gamma'$ определена почти везде.
+Из \ref{adex:integral-length:a} получаем
+\begin{align*}
+\length\gamma&=\int_0^\ell|\gamma'(t)|\cdot dt\ge
+\\
+&\ge\int_0^\ell r'(t)\cdot dt=
+\\
+&=r(\ell).
+\end{align*}
+
+По построению полярных координат, найдётся геодезическая длины $r(\ell)$ из $p=\gamma(0)$ в $q=\gamma(\ell)$.
+Поскольку $\gamma$ --- кратчайшая, $r(\ell)=\ell$, и, более того, $r(t)=t$ для любого~$t$.
+Это равенство выполняется, тогда и только тогда, когда в \ref{eq:|gamma'|=r'} достигается равенство при почти всех~$t$.
+Последнее означает, что $\gamma$ --- геодезическая.
+
+Остаётся проверить верность почти обратного.
+
+Зафиксируем точку $p\in\Sigma$.
+Пусть $\epsilon>0$, как в \ref{prop:exp}.
+Предположим, что короткая геодезическая $\gamma$ (короче чем $\epsilon$) от $p$ до $q$ не минимизирует длину между своими концами.
+Тогда существует кратчайшая от $p$ до $q$ отличная от $\gamma$.
+Если пропараметризовать её длиной, то получим другую геодезическую.
+То есть, существуют две геодезические от $p$ до $q$ длины меньше $\epsilon$.
+Иными словами, найдутся такие два вектора ${\vec v},\vec w\in\T_p$, что $|{\vec v}|<\epsilon$, $|\vec w|<\epsilon$ и 
+$q=\exp_p\vec v\z=\exp_p\vec w$.
+Однако, по \ref{prop:exp}, экспоненциальное отображение $\T_p \to \Sigma$  инъективно в $\epsilon$-окрестности нуля --- противоречие.
+\qeds
+
+
+\section{Гауссова кривизна}\label{sec:jacobi-formula}
+
+Пусть $s$ --- гладкое отображение из (возможно, неограниченного) координатного прямоугольника на плоскости $(u,v)$ в гладкую поверхность~$\Sigma$.
+Отображение $s$ называется \index{полугеодезические}\emph{полугедезическим}, если для любого фиксированного $v$ отображение $u\mapsto s(u,v)$ является геодезической, параметризованной длиной, и $s_u\perp s_v$ для любых $(u,v)$.
+
+По лемме Гаусса (\ref{lem:palar-perp}), полярные координаты на $\Sigma$ задаются полугедезическим отображением.
+
+Пусть $\Norm=\Norm(u,v)$ --- нормаль к $\Sigma$ в точке $s(u,v)$.
+Векторы $\Norm$, $\vec u\z=s_u$ и $\vec v\z=\Norm\times \vec u$ образуют ортонормированный базис для каждой пары $(u,v)$.
+Напомним, что $s_v\perp \vec u$ и $s_v\perp \Norm$, ведь вектор $s_v(u,v)$ касателен к $\Sigma$ в $s(u,v)$. 
+Следовательно, $s_v=b\cdot\vec v$ для некоторой гладкой функции $(u,v)\z\mapsto b(u,v)$.%
+\footnote{Для фиксированного значения $v_0$ векторное поле $s_v=b\cdot\vec v$ описывает разницу между $\gamma_0$ и \textit{инфинитоземально близкой} геодезической $\gamma_1\:u\z\mapsto s(u,v_1)$.
+Поля с таким свойством называются \index{поле Якоби}\emph{полями Якоби} вдоль $\gamma_0$.}
+
+
+
+\begin{thm}{Предложение}\label{prop:jaccobi}
+Пусть $(u,v)\mapsto s(u,v)$ --- полугеодезическое отображение на гладкую поверхность $\Sigma$, для которого $\Norm$, $\vec u$, $\vec v$, и $b$ определены выше.
+Тогда 
+\[b\cdot K+b_{uu}=0,\]
+где $K=K(u,v)$ --- гауссова кривизна $\Sigma$ в точке $s(u,v)$.
+
+Более того, 
+\[
+\langle\vec u_u,\vec u\rangle=
+\langle\vec u_u,\vec v\rangle=
+\langle\vec u_v,\vec u\rangle=0,
+\quad\text{и}\quad
+\langle\vec u_v,\vec v\rangle=b_u.
+\]
+
+\end{thm}
+
+Доказательство проводится длинным, но несложным вычислением.
+
+
+\parbf{Доказательство.}
+Пусть $\ell=\ell(u,v)$, $m=m(u,v)$ и $n=n(u,v)$ --- компоненты матрицы, описывающей оператор формы в базисе $\vec u, \vec v$;
+то есть
+\[
+\begin{aligned}
+\Shape\vec u&=\ell\cdot \vec u+ m\cdot \vec v,
+&
+\Shape\vec v&=m\cdot \vec u+ n\cdot \vec v.
+\end{aligned}
+\eqlbl{eq:Shape(u,v)}
+\]
+Напомним, что (см.~\ref{sec:More curvatures})
+\[K=\ell\cdot n-m^2.\]
+
+Сначала давайте выведем предложение из следующие тождеств
+\[
+\begin{aligned}
+\vec u_u&=\ell\cdot \Norm,
+&
+\vec u_v&=\phantom{-}b_u\cdot \vec v+b\cdot m\cdot\Norm,
+\\
+\vec v_u&=m\cdot \Norm,
+&
+\vec v_v&=-b_u\cdot \vec u+b\cdot n\cdot\Norm.
+\end{aligned}
+\eqlbl{eq:uu-vv}
+\]
+Действительно, 
+\begin{align*}
+b\cdot K&=b\cdot (\ell\cdot n-m^2)=
+\\
+&=\langle\vec u_u,\vec v_v\rangle-\langle\vec u_v,\vec v_u\rangle=
+\tag{по \ref{eq:uu-vv}}
+\\
+&= 
+\left(
+\tfrac{\partial}{\partial v}
+\langle\vec u_u,\vec v\rangle
+-
+\cancel{\langle\vec u_{uv},\vec v\rangle}
+\right)-
+\left(
+\tfrac{\partial}{\partial u}
+\langle\vec u_v,\vec v\rangle
+-
+\cancel{\langle\vec u_{uv},\vec v\rangle}
+\right)=
+\\
+&=0-b_{uu}.
+\tag{по \ref{eq:uu-vv}}
+\end{align*}
+Остальные тождества в предложении прямо следуют из \ref{eq:uu-vv}.
+Остаётся доказать четыре тождества в \ref{eq:uu-vv}.
+
+
+\parit{Вывод $\vec u_u=\ell\cdot \Norm$.}
+Поскольку базис $\Norm$, $\vec u$ и $\vec v$ ортонормирован, это векторное тождество можно переписать в виде  трёх скалярных
+\[
+\begin{aligned}
+\langle\vec u_u,\vec u\rangle&=0,
+&
+\langle\vec u_u,\vec v\rangle&=0,
+&
+\langle\vec u_u,\Norm\rangle&=\ell.
+\end{aligned}
+\]
+Поскольку $u\mapsto s(u,v)$ --- геодезическая, $\vec u_u=s_{uu}(u,v)\perp\T_{s(u,v)}$.
+Отсюда следуют первые два тождества.
+Далее,
+\begin{align*}
+\langle\vec u_u,\Norm\rangle
+&=\langle s_{uu},\Norm\rangle=
+\tag{по \ref{thm:shape-chart}}
+\\
+&=    \langle \Shape s_u,s_u\rangle=
+\tag{поскольку $\vec u=s_u$}
+\\
+&=\langle \Shape \vec u,\vec u\rangle=
+\tag{по \ref{eq:Shape(u,v)}}
+\\
+&=\ell.
+\end{align*}
+
+
+\parit{Вывод $\vec u_v= b_u\cdot \vec v+b\cdot m\cdot\Norm$.}
+Перепишем его в виде скалярных тождеств:
+\[
+\begin{aligned}
+\langle\vec u_v,\vec u\rangle&=0,
+&
+\langle\vec u_v,\vec v\rangle&=b_u,
+&
+\langle\vec u_v,\Norm\rangle&=b\cdot m.
+\end{aligned}
+\eqlbl{eq:uu-vv:2}
+\]
+
+Поскольку $\langle\vec u,\vec u\rangle=1$, имеем
+$0=\tfrac{\partial}{\partial v}\langle\vec u,\vec u\rangle=2\cdot\langle\vec u_v,\vec u\rangle$.
+Отсюда вытекает первое тождество в \ref{eq:uu-vv:2}.
+Далее,
+\begin{align*}
+\langle\vec u_v,\vec v\rangle&=\langle s_{vu},\vec v\rangle=
+\tag{$s_v=b\cdot \vec v$}
+\\
+&=\langle \tfrac{\partial}{\partial u} (b\cdot\vec v),\vec v\rangle =
+\\
+&=b_u\cdot \langle \vec v,\vec v\rangle+b\cdot \langle \vec v_u,\vec v\rangle=
+\tag*{($\langle \vec v,\vec v\rangle=1$ и $\qquad\qquad\qquad$} 
+\\
+&=b_u. 
+\tag*{$0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle$)}
+\end{align*}
+Получили второе тождество в \ref{eq:uu-vv:2}.
+Наконец,
+\begin{align*}
+\langle\vec u_v,\Norm\rangle
+&=\langle s_{uv},\Norm\rangle=
+\tag{по \ref{thm:shape-chart}}
+\\
+&=\langle \Shape s_u,s_v\rangle=
+\tag{$\vec u=s_u$ и $s_v=b\cdot \vec v$}
+\\
+&=\langle \Shape \vec u,b\cdot \vec v\rangle=
+\tag{по \ref{eq:Shape(u,v)}}
+\\
+&=b\cdot m.
+\end{align*}
+
+
+\parit{Вывод $\vec v_u=m\cdot \Norm$ и $\vec v_v=-b_u\cdot \vec u+b\cdot n\cdot\Norm$.}
+Напомним, что $\vec v=\Norm\times \vec u$.
+Следовательно,
+\[
+\vec v_u=\Norm_u\times \vec u+\Norm\times \vec u_u,
+\qquad\qquad
+\vec v_v=\Norm_v\times \vec u+\Norm\times \vec u_v.
+\eqlbl{eq:uu-vv:3+4}
+\]
+Выражения для $\vec u_u$ и $\vec u_v$ в \ref{eq:uu-vv} уже доказаны.
+Далее,
+\begin{align*}
+-\Norm_u&=\Shape s_u=
+&
+-\Norm_v&=\Shape s_v=
+\\
+&=\Shape \vec u=
+&
+&=b\cdot\Shape \vec v=
+\\
+&=\ell\cdot\vec u+m\cdot\vec v,
+&
+&=b\cdot(m\cdot \vec u+ n\cdot \vec v),
+\end{align*}
+Остаётся подставить в \ref{eq:uu-vv:3+4} выражения для $\vec u_u$, $\vec u_v$, $\Norm_u$ и~$\Norm_v$. 
+\qeds
+
+
+Карта $(u,v)\mapsto s(u,v)$ и её локальные координаты называются \index{полугеодезические}\emph{полугеодезическими}, если отображение $(u,v)\z\mapsto s(u,v)$ является полугеодезическим.
+Заметим, что функция $b=b(u,v)$ в полугеодезических координатах имеет постоянный знак.
+Поэтому, обратив знак $\Norm$, можно (и должно) считать, что $b>0$;
+иными словами, $b=|s_v|$.
+
+\begin{thm}{Упражнение}\label{ex:semigeodesc-chart}
+Покажите, что любую точку $p$ на гладкой поверхности $\Sigma$ можно покрыть полугеодезической картой.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:inj-rad}
+{\sloppy
+Пусть $p$ --- точка на гладкой поверхности~$\Sigma$.
+Предположим, что отображение $\exp_p$ инъективно в шаре $B=B(0,r_0)_{\T_p}$.
+Пусть полугеодезическое отображение $(r,\theta)\mapsto s(r,\theta)$ задаёт полярные координаты с началом в $p$, а функция $(r,\theta)\mapsto b(r,\theta)$ та же, что выше.
+
+}
+
+Докажите следующие утверждения:
+
+\begin{subthm}{ex:inj-rad:sign}
+$b(r,\theta)$ не меняет знак при $0\z\le r\z<r_0$.
+\end{subthm}
+
+\begin{subthm}{ex:inj-rad:0}
+$b(r,\theta)\ne0$, если $0< r<r_0$.
+\end{subthm}
+
+\begin{subthm}{ex:inj-rad:prop:inj-rad}
+Примените \ref{SHORT.ex:inj-rad:sign} и \ref{SHORT.ex:inj-rad:0}, чтобы доказать \ref{prop:inj-rad}.
+\end{subthm}
+ 
+\end{thm}
+
+
+Карта $(u,v)\mapsto s(u,v)$ называется \index{ортогональная карта}\emph{ортогональной}, если $s_u\perp s_v$ для любого $(u,v)$.
+Например, любая полугеодезическая карта ортогональна.
+
+Решение следующего упражнения похоже на \ref{prop:jaccobi}.
+
+\begin{thm}{Упражнение}\label{lem:K(orthogonal)}
+Пусть $(u,v)\mapsto s(u,v)$ --- ортогональная карта гладкой поверхности~$\Sigma$.
+Обозначим через $K=K(u,v)$ гауссову кривизну $\Sigma$ в точке $s(u,v)$.
+Определим 
+\begin{align*}
+a=a(u,v)&\df|s_u|,&
+b=b(u,v)&\df|s_v|,\\
+\vec u=\vec u(u,v)&\df\tfrac{s_u}a,&
+\vec v=\vec v(u,v)&\df\tfrac{s_v}b.
+\end{align*}
+Пусть $\Norm=\Norm(u,v)$ --- единичный нормальный вектор в точке $s(u,v)$.
+
+\begin{subthm}{lem:K(orthogonal):uu-vv}
+Покажите, что 
+\begin{align*}
+\vec u_u
+&=
+-\tfrac1{b}\cdot a_v
+\cdot
+\vec v 
++
+a\cdot \ell\cdot \Norm
+,
+&
+\vec v_u
+&=
+\tfrac1{b}\cdot a_v
+\cdot \vec u
++
+a\cdot m\cdot \Norm
+\\
+\vec u_v
+&=
+\tfrac1{a}\cdot b_u\cdot\vec v
++
+b\cdot m\cdot \Norm
+,
+&
+\vec v_v
+&=
+-\tfrac1{a}\cdot b_u\cdot\vec u
++
+b\cdot n\cdot \Norm,
+\end{align*}
+где $\ell=\ell(u,v)$, $m=m(u,v)$ и $n=n(u,v)$ --- компоненты матрицы, описывающей оператор формы в базисе $\vec u, \vec v$.
+\end{subthm}
+
+\begin{subthm}{lem:K(orthogonal):K}
+Покажите, что
+\[K=-\frac1{a\cdot b}\cdot
+\left(
+\frac{\partial}{\partial u}
+\left(\frac{b_u}a \right)
++
+\frac{\partial}{\partial v}
+\left(\frac{a_v}b\right)
+\right).\]
+\end{subthm}
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:conformal}
+Предположим, что $(u,v)\mapsto s(u,v)$ --- это \index{конформная карта}\emph{конформная карта};
+то есть существует функция $(u,v)\mapsto b(u,v)$ такая, что $b=|s_u|=|s_v|$ и $s_u\perp s_v$ для любого $(u,v)$.
+(Функция $b$ называется {}\emph{конформным множителем} карты.)
+
+Используя \ref{lem:K(orthogonal)}, покажите, что  
+\[K=-\frac{\triangle (\ln b)}{b^2},\]
+где $\triangle$ --- \index{лапласиан}\emph{лапласиан}; то есть $\triangle=\tfrac{\partial^2}{\partial u^2}+\tfrac{\partial^2}{\partial v^2}$, и 
+ $K=K(u,v)$ --- гауссова кривизна $\Sigma$ в точке $s(u,v)$.
+\end{thm}
+
+Полезно знать, что \textit{любую точку гладкой поверхности можно покрыть конформной картой},
+соответственные локальные координаты называются \index{изотермические координаты}\emph{изотермическими}.
+
+\section{Вращение векторного поля}
+
+Пусть $\gamma\:[0,1]\to \Sigma$ --- простая петля на гладкой ориентированной поверхности~$\Sigma$,
+и $\vec u$ --- поле единичных касательных векторов на $\Sigma$, определённое в окрестности~$\gamma$.
+Обозначим через $\vec v$ поворот $\vec u$ против часовой стрелки на угол $\tfrac{\pi}2$ в касательной плоскости в каждой точке; поле $\vec v$ можно также определить как $\vec v\df\Norm\times\vec u$, где $\Norm$ --- поле нормалей к $\Sigma$.
+Тогда \index{вращение}\emph{вращение} $\vec u$ вдоль $\gamma$ определяется через интеграл
+\[\rot_\gamma\vec u
+\df
+\int_0^1\langle\vec u'(t),\vec v(t)\rangle\cdot dt.\]
+
+\begin{thm}{Лемма}\label{lem:rotation-parallel}
+Пусть $\gamma\:[0,1]\to \Sigma$ --- простая петля с базовой точкой $p$ на гладкой ориентированной поверхности~$\Sigma$, а $\vec u$ --- поле касательных единичных векторов к $\Sigma$, определённое в окрестности~$\gamma$.
+Тогда параллельный перенос $\iota_\gamma\:\T_p\to\T_p$ есть поворот по часовой стрелке на угол $\rot_\gamma\vec u$.
+
+В частности, вращения различных векторных полей вдоль $\gamma$ могут различаться только на числа кратные $2\cdot\pi$.
+\end{thm}
+
+\parbf{Доказательство.}
+Как и ранее, пусть $\vec v=\Norm\times\vec u$. 
+Будем обозначать через $\vec u(t)$ и $\vec v(t)$ векторы полей $\vec u$ и $\vec v$ в точке $\gamma(t)$.
+
+Пусть $t\mapsto \vec x(t)\in \T_{\gamma(t)}$ --- это параллельное векторное поле вдоль $\gamma$ с  $\vec x(0)\z=\vec u(0)$, и $\vec y\df\Norm\times\vec x$.
+
+Заметим, что существует непрерывная функция $t\mapsto \phi(t)$ такая, что 
+$\vec u(t)$ --- это поворот $\vec x(0)$ против часовой стрелки на угол $\phi(t)$.
+Так как $\vec x(0)=\vec u(0)$, можно считать, что $\phi(0)=0$.
+Тогда
+\begin{align*}
+\vec u&=\cos\phi\cdot \vec x+\sin\phi\cdot \vec y,
+\\
+\vec v&=-\sin\phi\cdot \vec x+\cos\phi\cdot \vec y.
+\end{align*}
+Отсюда
+\begin{align*}
+\langle\vec u',\vec v\rangle
+=\phi'\cdot\biggl(&(\sin \phi)^2\cdot \langle\vec x,\vec x\rangle+(\cos \phi)^2\cdot \langle\vec y,\vec y\rangle
+\biggr)=
+\phi'.
+\end{align*}
+
+Следовательно,
+\begin{align*}
+\rot_\gamma\vec u&=\int_0^1\langle\vec u'(t),\vec v(t)\rangle\cdot dt=
+\\
+&=\int_0^1\phi'(t)\cdot dt=
+\\
+&=\phi(1).
+\end{align*}
+
+Заметим, что 
+\begin{itemize}
+\item $\iota_\gamma(\vec x(0))=\vec x(1)$,
+
+\item  $\vec x (0) = \vec u (0) = \vec u (1),$ 
+
+\item $\vec u(1)$ --- поворот $\vec x(1)$ против часовой стрелки на угол $\phi(1)\z=\rot_\gamma\vec u$,
+
+\end{itemize}
+Отсюда вытекает, что $\vec x(1)$ --- это \textit{поворот по часовой стрелке} $\vec x(0)$ на угол $\rot_\gamma\vec u$, и результат следует.
+
+Последнее утверждение следует из \ref{prop:pt+tgc}.
+\qeds
+
+
+Следующая лемма пригодится при доказательстве формулы Гаусса --- Бонне.
+
+\begin{thm}{Лемма}\label{lem:rotation-semigeoesic}
+Пусть $(u,v)\mapsto s(u,v)$ --- полугеодезическая карта на гладкой поверхности~$\Sigma$.
+Предположим, что простая замкнутая кривая $\gamma$ ограничивает диск $\Delta$, который полностью покрывается отображением~$s$.
+Тогда 
+\[\rot_\gamma\vec u+\iint_\Delta K=0,\]
+где $\vec u=s_u$, а $K$ обозначает гауссову кривизну поверхности~$\Sigma$.
+\end{thm}
+
+Вычисления ниже используют так называемую \index{формула Грина}\emph{формулу Грина}, формулирующейся следующим образом.
+
+\textit{Пусть $D$ --- компактная область на $(u,v)$-плоскости, ограниченная кусочно гладким простым замкнутым путём $\alpha\:t\mapsto (u(t),v(t))$.
+Предположим, что $\alpha$ ориентирована так, что $D$ находится слева от неё.
+Тогда}
+\[\iint_D (Q_u- P_v)\cdot du\cdot dv=\int_\alpha (P\cdot du+Q\cdot dv)\df \int_0^1 (P\cdot u'+Q\cdot v')\cdot dt\]
+\textit{для любых двух гладких функций $P$ и $Q$, определённых на $D$.}
+
+Формулы Грина и Гаусса --- Бонне похожи, обе связывают интеграл по области с интегралом по граничной кривой, и неудивительно, что одна помогает доказать другую.
+
+\parbf{Доказательство.}
+Пусть $\vec u$, $\vec v$ и $b$ определены, как в~\ref{sec:jacobi-formula}.
+Запишем $\gamma$ в $(u,v)$-координатах: $\gamma(t)=s(u(t),v(t))$.
+Тогда
+\begin{align*}
+\rot_\gamma \vec u&=\int_0^1\langle\vec u',\vec v\rangle\cdot dt=
+\tag{поскольку $\vec u'=\vec u_u\cdot u'+\vec u_v\cdot v'$}
+\\
+&=\int_0^1[\langle\vec u_u,\vec v\rangle\cdot u'+\langle\vec u_v,\vec v\rangle\cdot v']\cdot dt=\tag{по \ref{prop:jaccobi}}
+\\
+&=\int_0^1b_u\cdot v'\cdot dt=\int_{s^{-1}\circ\gamma}b_u\cdot dv=
+\tag{по формуле Грина}
+\\
+&=\iint_{s^{-1}(\Delta)}b_{uu}\cdot du\cdot dv=
+\tag{$s_u\perp s_v \Longrightarrow \jac s=|s_u|\cdot|s_v|=b$}
+\\
+&=\iint_\Delta\frac{b_{uu}}{b}=
+\tag{по \ref{prop:jaccobi}}
+\\
+&=-\iint_{\Delta}K.
+\end{align*}
+\qedsf
+
+\section{Вывод формулы Гаусса --- Бонне}\label{sec:gauss--bonnet:formal}
+
+{\sloppy
+
+Напомним, что формула Гаусса --- Бонне записывается как $\GB(\Delta)\z=0$, где 
+\[\GB(\Delta)\df\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,\]
+$\Delta$ --- топологический диск на гладкой ориентированной поверхности,
+ограниченный кусочно гладкой кривой $\partial \Delta$ ориентированной так, что $\Delta$ лежит от неё слева.
+
+}
+
+\parbf{Вывод формулы Гаусса --- Бонне (\ref{thm:gb}).}
+Предположим, что $\Delta$ покрывается полугеодезической картой.
+Из \ref{prop:pt+tgc}, \ref{lem:rotation-parallel} и \ref{lem:rotation-semigeoesic},
+\[\GB(\Delta)
+=
+2\cdot n\cdot \pi,
+\eqlbl{eq:gb(n)}\]
+где $n=n(\Delta)$ --- целое число.
+
+Согласно \ref{ex:semigeodesc-chart}, полугеодезической картой можно покрыть любую точку поверхности.
+Таким образом, применив аддитивность $\GB$ (\ref{lem:GB-sum}) конечное число раз, получим \ref{eq:gb(n)} для любого диска $\Delta$ на~$\Sigma$.
+Точнее, мы можем разрезать $\Delta$ гладкой кривой, которая проходит от границы до границы,
+и повторить такое разбиение рекурсивно для полученных дисков;
+см. рисунок.
+\begin{figure}[!ht]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1700}
+\vskip-0mm
+\end{figure}
+После нескольких таких шагов каждый малый диск покроется полугеодезической картой.
+В частности, \ref{eq:gb(n)} выполняется для каждого малого диска.
+Затем, применив \ref{lem:GB-sum} несколько раз, получим \ref{eq:gb(n)} для исходного диска.
+
+Остаётся показать, что $n=0$.
+Предположим, что $\Delta$ лежит в локальной реализации нашей поверхности графиком $z = f(x,y)$.
+Рассмотрим однопараметрическое семейство графов $z = t \cdot f(x,y)$;
+обозначим через $\Delta_t$ соответствующий диск на $\Sigma_t$, так что $\Delta_1 = \Delta$, а $\Delta_0$ --- его проекция на плоскость $(x,y)$.
+Функция $h \: t \mapsto \GB (\Delta_t )$ непрерывна.
+Согласно \ref{eq:gb(n)}, $h(t)$ --- целое кратное $2 \cdot \pi$ для любого $t$.
+Значит $h$ постоянна.
+Следовательно,
+\[\GB (\Delta ) = \GB (\Delta_0) = 0;\]
+последнее равенство следует из \ref{prop:total-signed-curvature}.
+
+Итак, мы доказали, что 
+\[\GB (\Delta ) = 0
+\eqlbl{eq:GB=0}\]
+если $\Delta$ лежит на графике $z = f(x,y)$ в некоторой системе координат $(x,y,z)$.
+Любая точка поверхности~$\Sigma$ имеет окрестность, которая покрывается таким графиком, и, применив аддитивность $\GB$ (\ref{lem:GB-sum}), как выше, получаем, что \ref{eq:GB=0} выполняется для любого диска~$\Delta$ на~$\Sigma$.
+\qeds
+
+\section{Сравнение Рауха}
+
+Следующее предложение является частным случаем так называемой \index{теорема сравнения Рауха}\emph{теоремы сравнения Рауха}.
+
+\begin{thm}{Предложение}\label{prop:rauch}
+Пусть $p$ --- точка на гладкой поверхности $\Sigma$, и $r\le \inj(p)$.
+Далее, пусть $\tilde\gamma$ --- кривая в $r$-окрестности нуля касательной плоскости $\T_p$,
+и $\gamma$ --- кривая на~$\Sigma$, определяемая как
+\[\gamma=\exp_p\circ\tilde\gamma,
+\quad
+\text{что эквивалентно}
+\quad
+\log_p\circ\gamma=\tilde\gamma.\]
+
+\begin{subthm}{prop:rauch:K=<0}
+Если поверхность $\Sigma$ имеет неположительную гауссову кривизну, то логарифмическое отображение $\log_p$ не увеличивает длину в $r$-окрестности точки $p$ на~$\Sigma$;
+то есть
+\[\length \gamma\ge \length \tilde\gamma\]
+для любой кривой $\gamma$ в открытом шаре $B(p,r)_{\Sigma}$.
+\end{subthm}
+
+{\sloppy
+
+\begin{subthm}{prop:rauch:K>=0}
+Если поверхность $\Sigma$ имеет неотрицательную гауссову кривизну, то экспоненциальное отображение $\exp_p$ не увеличивает длину в $r$-окрестности нуля в $\T_p$;
+то есть
+\[\length \gamma\le \length \tilde\gamma\]
+для любой кривой $\tilde\gamma$ в открытом шаре $B(0,r)_{\T_p}$.
+\end{subthm}
+
+}
+
+\end{thm}
+
+\parbf{Доказательство.}
+Пусть $(r(t),\theta(t))$ --- полярные координаты $\tilde\gamma(t)$.
+Тогда $(r(t),\theta(t))$ --- полярные координаты $\gamma(t)$ с началом в $p$ на~$\Sigma$;
+то есть $\gamma(t)\z=s(r(t),\theta(t))$, где $s$ как в \ref{sec:Polar coordinates}.
+
+Докажем, что $b(0,\theta)=0$ и $b_r(0,\theta)=1$ для любого $\theta$.
+Можно предположить, что $\theta=0$.
+Выберем стандартный базис $\vec v,\vec w$ в $\T_p$, с $\vec v$ направленным по кривой $t\mapsto s(t,0)$.
+Заметим, что%
+\footnote{Напомним, что $(D_{\vec w}\exp_p)(r\cdot \vec v)\df h'(0)$, где $h(t)=\exp_p(r\cdot \vec v+t\cdot \vec w)$; см.~\ref{sec:dirder}.}
+\[b(r,0)=r\cdot |(D_{\vec w}\exp_p)(r\cdot \vec v)|.\]
+В частности, $b(0,0)=0$.
+Согласно \ref{obs:d(exp)=1}, $|(D_{\vec w}\exp_p)(0)|=1$,
+и, значит, $|(D_{\vec w}\exp_p)(r\cdot \vec v)|\z\ne 0$ при малых $r$.
+Отсюда следует, что функция $r\mapsto|(D_{\vec w}\exp_p)(r\cdot \vec v)|$ дифференцируема при $r=0$.
+Взяв частную производную от выражения для $b(r,0)$, получаем $b_r(0,0)=1$.
+
+Пусть $b(r,\theta)\df|s_\theta|$.
+Согласно \ref{prop:jaccobi},
+\[b_{rr}=-K\cdot b.\]
+Если $K\ge 0$, то  для фиксированного $\theta$ функция $r\mapsto b(r,\theta)$ вогнута,
+а если $K\le 0$, то $r\mapsto b(r,\theta)$ выпукла.
+Поскольку $b(0,\theta)=0$ и $b_r(0,\theta)=1$,
+\[
+\begin{aligned}
+b(r,\theta)\ge r\quad\text{если}\quad K&\le 0;
+\\
+b(r,\theta)\le r\quad\text{если}\quad K&\ge 0.
+\end{aligned}
+\eqlbl{eq:b-K}
+\]
+
+Можно считать, что $\tilde\gamma\:[a,b]\to \T_p$ параметризована длиной;
+в частности, она липшицева.
+Заметим, что
+\begin{align*}
+\length\tilde\gamma&=\int_a^b\sqrt{r'(t)^2+r(t)^2\cdot\theta'(t)^2}\cdot dt.
+\shortintertext{Применив \ref{lem:palar-perp}, получим}
+\length\gamma&=\int_a^b\sqrt{r'(t)^2+b(r(t),\theta(t))^2\cdot\theta'(t)^2}\cdot dt.
+\end{align*}
+А теперь утверждения в \ref{SHORT.prop:rauch:K=<0} и \ref{SHORT.prop:rauch:K>=0} следуют из \ref{eq:b-K}.
+\qeds
+
+\section{Внутренние изометрии}
+
+Пусть $\Sigma$ и $\Sigma^{*}$ --- две гладкие поверхности.
+Будем говорить, что отображение $f\:\Sigma\to \Sigma^{*}$ \index{сохраняющее длину}\emph{сохраняет длины}, если для любой кривой $\gamma$ на $\Sigma$ кривая $\gamma^{*}=f\circ\gamma$ на $\Sigma^{*}$ имеет ту же длину. 
+Если $f$ ещё и гладкая и биекция, то она будет называться \index{внутренняя изометрия}\emph{внутренней изометрией}. 
+
+Пример сохраняющего длину отображения можно получить, сворачивая плоскость в цилиндр при помощи отображения $s\:\mathbb{R}^2\to\mathbb{R}^3$, заданного как 
+\[s(x,y)=(\cos x,\sin x,y).\]
+
+\begin{thm}{Упражнение}\label{ex:K=0}
+Пусть гауссова кривизна гладкой поверхности $\Sigma$ равна нулю.
+Покажите, что $\Sigma$ является \index{локально плоская поверхность}\emph{локально плоской} поверхностью;
+то есть некоторая окрестность любой точки на $\Sigma$ допускает внутреннюю изометрию на открытое множество евклидовой плоскости.  
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:K=1}
+Пусть гауссова кривизна гладкой поверхности $\Sigma$ равна 1 в каждой точке.
+Покажите, что малая окрестность любой точки на $\Sigma$ допускает внутреннюю изометрию на открытое подмножество единичной сферы.
+\end{thm}
+
+
+\begin{thm}{Упражнение}\label{ex:deformation}
+Для данного $a>0$, покажите, что существует гладкая кривая с единичной скоростью 
+$\gamma(t)=(x(t),y(t))$, такая что $y(t) = a\cdot \cos t$ и $y>0$.
+Найдите её интервал определения.
+
+Пусть $\Sigma_a$ --- поверхность вращения кривой $\gamma$ вокруг оси $x$.
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{asy/deformation(1.2)}
+\lbl[t]{8,-.5;$a=2$}
+\lbl[t]{24,3;$a=\sqrt{2}$}
+\lbl[t]{41,4;$a=1$}
+\lbl[t]{57,7;$a=\tfrac1{\sqrt{2}}$}
+\lbl[t]{73,8;$a=\tfrac12$}
+\end{lpic}
+\vskip-0mm
+\end{figure}
+Покажите, что поверхность $\Sigma_a$ имеет единичную гауссову кривизну в каждой точке.
+
+Воспользуйтесь этим построением и \ref{ex:K=1}, чтобы построить гладкую сохраняющую длину деформацию малого диска $\Delta$ на $\mathbb{S}^2$;
+то есть однопараметрическое семейство $\Delta_t$ поверхностей с границей, для которого $\Delta_0=\Delta$ и $\Delta_t$ не конгруэнтна $\Delta_0$ для $t\ne0$.%
+\footnote{На самом деле, любой диск на $\mathbb{S}^2$ допускает гладкую сохраняющую длину деформацию.
+Однако если диск больше полусферы, то доказательство требует дополнительных усилий;
+оно выводится из двух результатов Александра Александрова: теоремы о склеивании и теоремы о существовании выпуклой поверхности с абстрактно заданной метрикой \cite[с. 44]{pogorelov}.
+}
+\end{thm}
+
+Следующее упражнение иллюстрирует заключительный шаг в доказательстве того, что \textit{любая открытая поверхность с нулевой гауссовой кривизной является цилиндрической поверхностью}.
+См. обсуждение после \ref{ex:flat-plane}.
+
+\begin{thm}{Продвинутое упражнение}\label{ex:line-cylinder} 
+Пусть $(u,v)\mapsto f(u,v)$ задаёт внутреннюю изометрию из плоскости со стандартными $(u,v)$-координатами на поверхность $\Sigma$ в $\mathbb{R}^3$.
+Предположим, что $f$ изометрически отображает $v$-ось на $z$-ось.
+Покажите, что $\Sigma$ является цилиндрической поверхностью;
+точнее, $\Sigma$ есть объединение семейства прямых, параллельных $z$-оси.
+\end{thm}
+
+\section{Замечательная теорема}
+
+\begin{thm}{Теорема}\label{thm:remarkable}
+Предположим, что $f\:\Sigma\to \Sigma^{*}$ является внутренней изометрией между двумя гладкими поверхностями; $p\in \Sigma$ и $p^{*}\z=f(p)\in \Sigma^{*}$.
+Тогда 
+\[K(p)_{\Sigma}=K(p^{*})_{\Sigma^{*}};\]
+то есть в точке $p$ гауссова кривизна у $\Sigma$ та же, что в точке $p^{*}$ у~$\Sigma^{*}$.
+\end{thm}
+
+Напомним, что гауссова кривизна определяется как произведение главных кривизн, которые могут быть различными в точках $p$ и $p^*$; однако, согласно теореме, их произведения одинаковы.
+Другими словами, гауссова кривизна является \textit{внутренним инвариантом}.
+Эта теорема была доказана Карлом Фридрихом Гауссом \cite{gauss}, и справедливо названа {}\emph{замечательной} ({}\emph{Theorema Egregium}).
+
+На самом деле, кривизну $K(p)$ можно получить из \textit{внутренних} измерений.
+Например, она появляется в следующей формуле для длины окружности $c(r)$ геодезической окружности с центром в точке $p$ на поверхности: 
+\[c(r)=2\cdot\pi\cdot r-\tfrac\pi3\cdot K(p)\cdot r^3+o(r^3).\]
+
+Из теоремы следует, например, что не существует гладкого сохраняющего длину отображения, которое отправляет открытую область на единичной сфере в плоскость.%
+\footnote{Гладкость существенна --- существует множество негладких отображений из сферы в плоскость сохраняющих длину; см. \cite{petrunin-yashinski} и ссылки в там.}
+Это следует из того, что гауссова кривизна плоскости равна нулю, а гауссова кривизна единичной сферы равна 1.
+В частности, любая географическая карта обязана иметь искажения.
+
+
+\parbf{Доказательство.}
+Выберем карту $(u,v)\mapsto s(u,v)$ на $\Sigma$ и пусть
+$s^{*}\z=f\circ s$.
+Заметим, что $s^{*}$ --- карта на $\Sigma^{*}$, и 
+\begin{align*}
+\langle s_u,s_u\rangle
+&=
+\langle s_u^{*}, s_u^{*}\rangle,
+&
+\langle s_u, s_v\rangle
+&=
+\langle s_u^{*}, s_v^{*}\rangle,
+&
+\langle s_v, s_v\rangle
+&=
+\langle s_v^{*}, s_v^{*}\rangle
+\end{align*}
+в любой точке $(u,v)$.
+Действительно, поскольку $f$ сохраняет длины координатных линий $\gamma\:t\mapsto s(t,v)$ и  $\gamma\:t\z\mapsto s(u,t)$, мы получаем первое и третье равенства.
+Теперь, поскольку $f$ сохраняет длины кривых $\gamma\:t\z\mapsto s(t,c-t)$ для любой константы~$c$, первое и третье равенства влекут второе.
+
+Из \ref{prop:gamma''}, если $s$ --- полугеодезическая ката, то и $s^{*}$ таковая.
+Остаётся применить \ref{prop:jaccobi} и \ref{ex:semigeodesc-chart}.
+\qeds
+

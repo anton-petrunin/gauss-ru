@@ -1,0 +1,82 @@
+%Lualatex+needs P22UndergroundCYBookSC.tt and P22-Underground-Reg.ttf
+\documentclass[
+coverheight=9in,
+coverwidth=6in,
+spinewidth=0.515in,
+bleedwidth=.125in,%.125in,
+marklength=0in,
+markcolor=black]{bookcover}
+\usepackage[russian]{babel}
+
+\usepackage{xcolor}
+\usepackage{background}
+\usepackage{blindtext}
+\usepackage{fontspec}
+
+\newbookcoverpart{pfront}{
+\setpartposx{\marklength+\bleedwidth+\spinewidth+\coverwidth+6mm}
+\setpartposy{\marklength+\bleedwidth+6mm}\setpartheight{\coverheight-12mm}
+\setpartwidth{\coverwidth-12mm}
+\settrimmedpart{0mm}{0mm}{0pt}{0pt}
+}
+
+\newbookcoverpart{pback}{
+\setpartposx{\marklength+\bleedwidth+6mm}
+\setpartposy{\marklength+\bleedwidth+6mm}\setpartheight{\coverheight-12mm}
+\setpartwidth{\coverwidth-12mm}
+\settrimmedpart{0mm}{0mm}{0pt}{0pt}
+}
+
+\begin{document}
+
+\begin{bookcover}
+
+\definecolor{textcolor}{HTML}{FFFFFF}
+
+\bookcovercomponent{normal}{bg whole}{
+\includegraphics[width=.35cm+\textwidth]{drawing}
+\vfill
+}
+
+\setmainfont{P22UndergroundCY-Heavy}
+
+\bookcovercomponent{center}{spine}
+{\rotatebox[origin=c]{-90}{
+\color{textcolor}
+\fontsize{18}{25}\selectfont
+КРИВЫЕ И ПОВЕРХНОСТИ}}
+
+
+\bookcovercomponent{normal}{pfront}{
+\begin{center}
+{\color{textcolor}\fontsize{23}{28}\selectfont
+ЧТО ТАКОЕ ДИФФЕРЕНЦИАЛЬНАЯ ГЕОМЕТРИЯ?\\[5mm]
+}
+{{\color{textcolor}\fontsize{30}{28}\selectfont
+КРИВЫЕ И ПОВЕРХНОСТИ}\hskip-1mm
+}
+\end{center}
+\vfill
+\begin{center}
+{\color{textcolor}\fontsize{17}{28}\selectfont
+\ Серхио Замора Баррера и Антон Петрунин 
+}
+\end{center}
+}
+
+\bookcovercomponent{normal}{pback}{
+\begin{flushleft}
+\parbox{.35\textwidth}{
+\color{textcolor}\fontsize{16}{18}\selectfont
+Этот учебник рассчитан на тех, кто решил заниматься дифференциальной геометрией или же хочет иметь вескую причину этого не делать.}
+\end{flushleft}
+\vfill
+\begin{flushleft}
+{\color{textcolor}\fontsize{15}{28}\selectfont
+arXiv:2012.11814v5\\
+github.com/anton-petrunin/gauss}
+\end{flushleft}
+}
+\end{bookcover}
+
+\end{document}

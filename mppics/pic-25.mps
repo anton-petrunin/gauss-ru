@@ -1,0 +1,75 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: -11 -1 50 22 
+%%HiResBoundingBox: -10.1712 -0.25 49.85605 21.59242 
+%%Creator: MetaPost 2.01
+%%CreationDate: 2024.09.13:2231
+%%Pages: 1
+%%DocumentResources: procset mpost-minimal
+%%DocumentSuppliedResources: procset mpost-minimal
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset mpost-minimal
+/bd{bind def}bind def/fshow {exch findfont exch scalefont setfont show}bd
+/fcp{findfont dup length dict begin{1 index/FID ne{def}{pop pop}ifelse}forall}bd
+/fmc{FontMatrix dup length array copy dup dup}bd/fmd{/FontMatrix exch def}bd
+/Amul{4 -1 roll exch mul 1000 div}bd/ExtendFont{fmc 0 get Amul 0 exch put fmd}bd
+/ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
+/SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1
+ 0 0 0 setrgbcolor 0 0.5 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 0 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 4.9606 moveto
+-3.30708 4.9606 -3.30708 9.92122 0 9.92122 curveto
+6.61415 9.92122 6.61415 0 0 0 curveto
+-13.22829 0 -13.22829 19.84242 0 19.84242 curveto
+15.61386 19.84242 24.07098 0 39.68484 0 curveto
+52.91313 0 52.91313 19.84242 39.68484 19.84242 curveto
+33.07071 19.84242 33.07071 9.92122 39.68484 9.92122 curveto
+42.99191 9.92122 42.99191 14.88182 39.68484 14.88182 curveto stroke
+newpath -7.93684 19.84242 moveto
+47.62169 19.84242 lineto stroke
+newpath 1.75 19.84242 moveto
+1.75 20.30658 1.5656 20.75166 1.23741 21.07983 curveto
+0.90924 21.40802 0.46416 21.59242 0 21.59242 curveto
+-0.46416 21.59242 -0.90924 21.40802 -1.23741 21.07983 curveto
+-1.5656 20.75166 -1.75 20.30658 -1.75 19.84242 curveto
+-1.75 19.37827 -1.5656 18.93318 -1.23741 18.60501 curveto
+-0.90924 18.27682 -0.46416 18.09242 0 18.09242 curveto
+0.46416 18.09242 0.90924 18.27682 1.23741 18.60501 curveto
+1.5656 18.93318 1.75 19.37827 1.75 19.84242 curveto closepath fill
+ 1 setgray
+newpath 1.25 19.84242 moveto
+1.25 20.17397 1.11829 20.49188 0.88387 20.72629 curveto
+0.64946 20.96071 0.33154 21.09242 0 21.09242 curveto
+-0.33154 21.09242 -0.64946 20.96071 -0.88387 20.72629 curveto
+-1.11829 20.49188 -1.25 20.17397 -1.25 19.84242 curveto
+-1.25 19.51088 -1.11829 19.19296 -0.88387 18.95856 curveto
+-0.64946 18.72414 -0.33154 18.59242 0 18.59242 curveto
+0.33154 18.59242 0.64946 18.72414 0.88387 18.95856 curveto
+1.11829 19.19296 1.25 19.51088 1.25 19.84242 curveto closepath fill
+ 0 0 0 setrgbcolor
+newpath 41.43484 19.84242 moveto
+41.43484 20.30658 41.25044 20.75166 40.92226 21.07983 curveto
+40.59409 21.40802 40.149 21.59242 39.68484 21.59242 curveto
+39.22069 21.59242 38.7756 21.40802 38.44743 21.07983 curveto
+38.11925 20.75166 37.93484 20.30658 37.93484 19.84242 curveto
+37.93484 19.37827 38.11925 18.93318 38.44743 18.60501 curveto
+38.7756 18.27682 39.22069 18.09242 39.68484 18.09242 curveto
+40.149 18.09242 40.59409 18.27682 40.92226 18.60501 curveto
+41.25044 18.93318 41.43484 19.37827 41.43484 19.84242 curveto closepath fill
+ 1 setgray
+newpath 40.93484 19.84242 moveto
+40.93484 20.17397 40.80313 20.49188 40.56871 20.72629 curveto
+40.3343 20.96071 40.01639 21.09242 39.68484 21.09242 curveto
+39.3533 21.09242 39.03539 20.96071 38.80098 20.72629 curveto
+38.56656 20.49188 38.43484 20.17397 38.43484 19.84242 curveto
+38.43484 19.51088 38.56656 19.19296 38.80098 18.95856 curveto
+39.03539 18.72414 39.3533 18.59242 39.68484 18.59242 curveto
+40.01639 18.59242 40.3343 18.72414 40.56871 18.95856 curveto
+40.80313 19.19296 40.93484 19.51088 40.93484 19.84242 curveto closepath fill
+showpage
+%%EOF

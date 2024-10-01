@@ -1,0 +1,653 @@
+\chapter{Кривизна}
+\label{chap:curve-curvature}
+
+
+
+Кривизной полагается называть способ мерить как геометрический объект отклоняется от \textit{прямого}, чего бы последнее ни значило.
+Соответственно, кривизна кривой мерит насколько она отклоняется от прямой в данной точке.
+
+
+\section{Ускорение и скорость}
+
+Напомним, что любую гладкую кривую можно параметризовать длиной (\ref{prop:arc-length-smooth}).
+Полученная кривая, пусть это будет $\gamma$, остаётся гладкой и имеет единичную скорость;
+то есть $|\gamma'|=1$.
+Из курса механики должно быть известно, что при равномерном движении скорость перпендикулярна ускорению;
+сейчас мы это переформулируем.
+
+
+\begin{thm}{Предложение}\label{prop:a'-pertp-a''}
+Пусть $\gamma$ --- гладкая пространственная кривая с единичной скоростью.
+Тогда $\gamma'(s)\perp \gamma''(s)$ для любого~$s$.
+\end{thm}
+
+\index{скалярное произведение}\emph{Скалярное произведение} двух векторов $\vec v$ и $\vec w$ будет обозначаться $\langle \vec v,\vec w\rangle$.
+Напомним, что производная скалярного произведения удовлетворяет правилу произведения (также известное как тождество Лейбница);
+то есть, если $\vec v=\vec v(t)$ и $\vec w=\vec w(t)$ --- гладкие векторознаные функции вещественной переменной $t$, то
+\[\langle \vec v,\vec w\rangle'=\langle \vec v',\vec w\rangle+\langle \vec v,\vec w'\rangle.\]
+
+\parbf{Доказательство.}
+Продифференцировав тождество $\langle\gamma',\gamma'\rangle\z=1$, получим
+$2\cdot \langle\gamma'',\gamma' \rangle=\langle\gamma',\gamma'\rangle'=0$;
+следовательно, $\gamma''\perp\gamma'$.
+\qeds
+
+\section{Кривизна}\label{sec:curvature}
+
+Пусть $\gamma$ --- гладкая пространственная кривая с единичной скоростью.
+Тогда величина $|\gamma''(s)|$ называется \index{10k@$\kur$ (кривизна)}\index{кривизна}\emph{кривизной} $\gamma$ в момент времени~$s$.
+Можно также сказать, что $|\gamma''(s)|$ --- кривизна в точке $p=\gamma(s)$;
+если наша кривая простая, то это не приводит к неоднозначности.
+Кривизна обозначается через $\kur(s)$ или $\kur(s)_\gamma$;
+в случае простых кривых можно также пользоваться обозначениями $\kur(p)$ или $\kur(p)_\gamma$.
+
+{\sloppy
+
+\begin{thm}{Упражнение}\label{ex:zero-curvature-curve}
+Покажите, что среди гладких простых пространственных кривых, только отрезки прямой 
+имеет нулевую кривизну в каждой точке.
+\end{thm}
+
+}
+
+\begin{thm}{Упражнение}\label{ex:scaled-curvature}
+Пусть $\gamma$ --- гладкая простая пространственная кривая и $\gamma_{\lambda}$ --- её гомотетия с коэффициентом $\lambda >0$;
+то есть $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ для любого~$t$.
+Покажите, что
+\[\kur(\lambda \cdot p )_{\gamma_{\lambda}}
+= \frac{\kur(p)_{\gamma}}\lambda\]
+для любого $p \in \gamma$.
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:curvature-of-spherical-curve}
+Покажите, что кривизна любой гладкой сферической кривая не меньше 1.
+\end{thm}
+
+\section{Касательная индикатриса}\label{sec:Tangent indicatrix}
+
+Пусть $\gamma$ --- гладкая пространственная кривая.
+Кривая 
+\[\tan(t)=\tfrac{\gamma'(t)}{|\gamma'(t)|};
+\eqlbl{eq:tantrix}\] 
+называется её \index{касательная!индикатриса}\emph{касательной индикатрисой}.
+Заметим, что $|\tan(t)|\z=1$ для любого $t$;
+то есть $\tan$ --- это сферическая кривая.
+
+Если $s\mapsto \gamma(s)$ --- параметризация длиной, то $\tan(s)=\gamma'(s)$.
+В этом случае у нас есть следующее выражение для кривизны:
+\[\kur(s)\z=|\tan'(s)|\z=|\gamma''(s)|.\]
+
+Для общей параметризации $t\mapsto \gamma(t)$,
+кривизна выражается как
+\[ \kur(t)=\frac{|\tan'(t)|}{|\gamma'(t)|}.\eqlbl{eq:curvature}\]
+Действительно, если $s(t)$ --- параметр длины, то $s'(t)=|\gamma'(t)|$, и
+\begin{align*}
+\kur&=\left|\frac{d\tan}{ ds}\right|=
+\left|\frac{d\tan}{ dt}\right|/\left|\frac{ds}{ dt}\right|=
+\frac{|\tan'|}{|\gamma'|}.
+\end{align*}
+В частности, если кривизна гладкой кривой не обнуляется, то её касательная индикатриса гладкая.
+
+%Применив \ref{eq:curvature}, к другой параметризации длиной, получаем что кривизна не зависит от выбора параметризации.
+
+\begin{thm}{Упражнение}\label{ex:curvature-formulas}
+Пусть $\gamma$ --- гладкая пространственная кривая.
+Используя \ref{eq:tantrix} и \ref{eq:curvature}, выведите следующие формулы для её кривизны:
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+
+\begin{subthm}{ex:curvature-formulas:a} 
+\[\kur=\frac{|\vec w|}{|\gamma'|^2},\]
+где $\vec w$ --- проекция $\gamma''(t)$ на нормальную плоскость к $\gamma'(t)$;
+\end{subthm}
+
+\columnbreak
+
+\begin{subthm}{ex:curvature-formulas:b}
+\[\kur=\frac{|\gamma''\times \gamma'|}{|\gamma'|^{3}},\]
+где $\times$ обозначает \index{векторное произведение}\emph{векторное произведение}.
+\end{subthm}
+
+\vfill\null
+\end{multicols}
+\end{thm}
+
+{\sloppy
+
+\begin{thm}{Упражнение}\label{ex:curvature-graph}
+Пусть $f$ --- гладкая вещественная функция.
+Применив формулы предыдущего упражнения, докажите, что 
+\[\kur=\frac{|f''(x)|}{(1+f'(x)^2)^{\frac32}}\]
+есть кривизна графика $y=f(x)$ в точке $(x,f(x))$. 
+\end{thm}
+
+}
+
+\begin{thm}{Продвинутое упражнение}\label{ex:approximation-const-curvature}
+Покажите, что любую гладкую кривую $\gamma\:\mathbb{I}\z\to\mathbb{R}^3$ с кривизной не более 1 можно аппроксимировать гладкими кривыми с постоянной кривизной~1.
+
+То есть, найдётся последовательность $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ гладких кривых с постоянной кривизной 1 такая, что $\gamma_n(t)\to \gamma(t)$ для любого~$t$.
+\end{thm}
+
+
+\section{Касательные}
+
+{
+
+\begin{wrapfigure}[6]{r}{32 mm}
+\vskip-14mm
+\centering
+\includegraphics{mppics/pic-3400}
+\vskip0mm
+\end{wrapfigure}
+
+Пусть $\gamma$ --- гладкая пространственная кривая, и $\tan$ --- её касательная индикатриса.
+Прямая, проходящая через $\gamma(t)$ в направлении $\tan(t)$, называется \index{касательная!прямая}\emph{касательной} к $\gamma$ при~$t$.
+Любой вектор, пропорциональный $\tan(t)$, называется \index{касательная!вектор}\emph{касательным} к $\gamma$ при~$t$.
+
+Касательную прямую можно также определить как единственную прямую \index{порядок касания}\emph{первого порядка касания} с $\gamma$ при $t$;
+то есть $\rho(\ell)=o(\ell)$, где $\rho(\ell)$ обозначает расстояние от $\gamma(t+\ell)$ до прямой.
+
+}
+
+\begin{thm}{Продвинутое упражнение}\label{ex:no-parallel-tangents}
+Постройте гладкую замкнутую пространственную кривую без параллельных касательных прямых.
+\end{thm}
+
+Говорят, что гладкие кривые $\gamma_1$ и $\gamma_2$ \index{касательная!кривые}\emph{касаются} при $s_1$ и $s_2$, если $\gamma_1(s_1)=\gamma_2(s_2)$ и касательная к $\gamma_1$ при $s_1$ совпадает с касательной к $\gamma_2$ при $s_2$.
+Можно также сказать, что эти кривые касаются друг друга в точке $p=\gamma_1(s_1)\z=\gamma_2(s_2)$;
+если обе кривые простые, то это не приводит к неоднозначности.
+
+
+\section{Полная кривизна}\label{sec:Total curvature}
+
+Пусть $\gamma\:\mathbb{I}\to\mathbb{R}^3$ --- гладкая кривая с единичной скоростью.
+Интеграл 
+\[\tc\gamma\df\int_{\mathbb{I}}\kur(s)\cdot ds\]
+называется \index{полная!кривизна}\emph{полной кривизной}\label{page:total curvature of:smooth-def}
+$\gamma$.
+Полная кривизна мерит на сколько кривая поворачивает;
+её также называют \index{вариацией поворота}\emph{вариацией поворота}. 
+
+Формула замены переменной позволяет выразить полную кривизну кривой с общей параметризацией $t\mapsto \gamma(t)$:
+\[\tc\gamma\df\int_{\mathbb{I}}\kur(t)\cdot|\gamma'(t)| \cdot dt.
+\eqlbl{eq:tocurv}\]
+
+\begin{thm}{Упражнение}\label{ex:helix-curvature}
+Найдите кривизну винтовой линии 
+\[\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot \sin t,b\cdot t),\]
+её касательную индикатрису и полную кривизну её дуги $\gamma_{a,b}|_{[0,2\cdot\pi]}$.
+\end{thm}
+
+Поскольку у гладкой кривой параметризованной длиной, кривизна равна скорости касательной индикатрисы,
+получаем следующее.
+
+\begin{thm}{Наблюдение}\label{obs:tantrix}
+Полная кривизна гладкой кривой равна длине её касательной индикатрисы.
+\end{thm}
+
+{\sloppy
+
+\begin{thm}{Теорема Фенхеля}
+\label{thm:fenchel}
+\index{теорема Фенхеля}
+Полная кривизна любой замкнутой гладкой пространственной кривой не меньше $2\cdot\pi$.
+\end{thm}
+
+}
+
+\parbf{Доказательство.}
+Пусть $\gamma$ --- замкнутая гладкая пространственная кривая.
+Давайте считать, что $\gamma$ описывается петлёй $\gamma\:[a,b]\z\to \mathbb{R}^3$, параметризованной длиной;
+в этом случае, $\gamma(a)=\gamma(b)$ и $\gamma'(a)\z=\gamma'(b)$.
+
+Рассмотрим её касательную индикатрису $\tan=\gamma'$.
+Напомним, что $|\tan(s)|=1$ для любого $s$; то есть $\tan$ --- замкнутая сферическая кривая.
+
+Покажем, что $\tan$ не может лежать в полусфере.
+Рассуждая от противного, можно предположить, что она лежит в полусфере, определяемой неравенством $z>0$ в координатах $(x,y,z)$.
+Другими словами, если $\gamma(t)=(x(t), y(t), z(t))$, то $z'(t)>0$ для любого~$t$.
+Следовательно,
+\[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
+В частности, $\gamma(a)\ne \gamma(b)$ --- противоречие.
+
+Применив наблюдение (\ref{obs:tantrix}) и лемму о полусфере (\ref{lem:hemisphere}), получим  
+\[\tc\gamma=\length \tan\ge2\cdot\pi.\]
+\qedsf
+
+
+\begin{thm}{Упражнение}\label{ex:length>=2pi}
+Докажите, что замкнутая пространственная кривая $\gamma$ с кривизной не более~$1$ не короче единичной окружности;
+то есть
+\[\length\gamma\ge 2\cdot \pi.\]
+
+\end{thm}
+
+\begin{thm}{Продвинутое упражнение}\label{ex:gamma/|gamma|}
+{\sloppy
+Предположим, что гладкая пространственная кривая $\gamma$ не проходит через начало координат.
+Рассмотрим сферическую кривую $\sigma(t)\z\df\frac{\gamma(t)}{|\gamma(t)|}$.
+Докажите, что
+\[\length \sigma< \tc\gamma+\pi.\]
+Более того, если $\gamma$ замкнута, то
+\[\length \sigma\le \tc\gamma.\]
+
+}
+\end{thm}
+
+Последнее неравенство даёт другое доказательство теоремы Фенхеля.
+Действительно, можно предположить, что начало координат лежит на хорде~$\gamma$.
+В этом случае, замкнутая сферическая кривая $\sigma$ идёт от одной точки к её антиподу и возвращается обратно,
+преодолевая расстояние $\pi$ в каждую сторону.
+Значит
+\[\length\sigma\ge 2\cdot\pi.\]
+
+Напомним, что кривизна сферической кривой хотя бы 1
+(см. \ref{ex:curvature-of-spherical-curve}).
+В частности, длина сферической кривой не может превышать её полной кривизны.
+Следующая теорема показывает, что то же неравенство выполняется для \textit{замкнутых} кривых в единичном шаре.
+
+\begin{thm}{Теорема о ДНК}\label{thm:DNA}
+Пусть $\gamma$ --- гладкая замкнутая кривая, которая лежит в единичном шаре.
+Тогда
+\[\tc\gamma\ge \length\gamma.\]
+
+\end{thm}
+
+Несколько доказательст этой теоремы собраны в статье Сергея Табачникова~\cite{tabachnikov}.
+Двумерный случай был доказан Иштваном Фари \cite{fary1950}.
+Дон Чакериан \cite{chakerian1962} обобщил теорему на старшие размерности.
+Следующее упражнение основано на другом его доказательстве \cite{chakerian1964},
+и ещё одно обсуждается в~\ref{sec:DNA-poly}.
+
+\begin{thm}{Упражнение}\label{ex:DNA}
+Рассмотрим гладкую кривую с единичной скоростью $\gamma\:[0,\ell]\to\mathbb{R}^3$, лежащую в единичном шаре; то есть $|\gamma|\le 1$.
+
+\begin{subthm}{ex:DNA:c''c>=k}
+Докажите, что
+\[\langle\gamma''(s),\gamma(s)\rangle\ge-\kur(s)\]
+для любого~$s$.
+\end{subthm}
+
+\begin{subthm}{ex:DNA:int>=length-tc}
+Воспользовавшись \ref{SHORT.ex:DNA:c''c>=k}, докажите, что
+\[\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds\ge
+\ell-\tc\gamma.\]
+
+\end{subthm}
+
+\begin{subthm}{ex:DNA:end}
+Пусть $\gamma(0)=\gamma(\ell)$ и $\gamma'(0)=\gamma'(\ell)$.
+Докажите, что
+\[\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds=0.\]
+Докажите \ref{thm:DNA}, воспользовавшись \ref{SHORT.ex:DNA:int>=length-tc} и этим равенством.
+\end{subthm}
+\end{thm}
+
+
+\section{Выпуклые кривые}
+
+В этом разделе мы покажем, что касательная индикатриса выпуклой кривой вращается монотонно.
+Следующее упражнение будет использовано в доказательстве.
+
+\begin{thm}{Упражнение}\label{ex:tangent-support}
+Пусть $F$ --- выпуклое множество на плоскости с гладкой граничной кривой $\gamma$.
+Докажите, что прямая $\ell$ касатется $\gamma$ в точке $p$ тогда и только тогда, когда $\ell$ --- \index{опорная прямая}\emph{подпирает} $F$ в точке $p$;
+то есть $\ell\ni p$ и $F$ лежит в полуплоскости, ограниченной~$\ell$.
+\end{thm}
+
+Напомним, что отображение монотонно, если прообраз любой точки в целевом пространстве связен (и в частности не пуст).
+
+\begin{thm}{Предложение}\label{prop:convex-monotone}
+Пусть $\gamma$ --- гладкая выпуклая плоская кривая.
+
+\begin{subthm}{prop:convex-monotone:closed}
+Предположим, что $\gamma$ замкнута и $\gamma\:\mathbb{S}^1\to \mathbb{R}^2$ --- её параметризация.
+Тогда её касательная индикатриса $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ --- монотонное отображение.
+\end{subthm}
+
+\begin{subthm}{prop:convex-monotone:open}
+Пусть $\gamma$ открыта и $\gamma\:\mathbb{R}\to \mathbb{R}^2$ --- её параметризация.
+Тогда её касательная индикатриса $\tan\:\mathbb{R}\to\mathbb{S}^1$ определяет монотонное отображение на интервал в замкнутой полуокружности.
+\end{subthm}
+
+\end{thm}
+
+Согласно следствию ниже, \textit{для выпуклых кривых выполняется равенство в теореме Фенхеля} (\ref{thm:fenchel}).
+Позже, в \ref{prop:fenchel=}, мы покажем, что равенство выполняется \textit{только} для выпуклых кривых.
+
+\begin{thm}{Следствие}\label{cor:fenchel=convex}
+Пусть $\gamma$ --- выпуклая кривая на плоскости.
+
+\begin{subthm}{}
+Если $\gamma$ замкнута, то $\tc\gamma=2\cdot\pi$.
+\end{subthm}
+
+\begin{subthm}{}
+Если $\gamma$ открыта, то $\tc\gamma\le\pi$.
+\end{subthm}
+
+\end{thm}
+
+
+\parbf{Доказательство.}
+Следует из \ref{prop:convex-monotone:closed}, \ref{obs:tantrix} и \ref{ex:integral-length-0}.
+\qeds
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-3500}
+\vskip0mm
+\end{wrapfigure}
+
+\parbf{Доказательство \ref{prop:convex-monotone}; \ref{SHORT.prop:convex-monotone:closed}.}
+Так как $\gamma$ замкнута, она ограничивает компактное выпуклое множество $F$.
+Можно предположить, что $F$ лежит слева от $\gamma$.
+
+Выберем единичный вектор $\vec u$ и координаты, с осью $x$ направленной по $\vec u$.
+
+Из упражнения~\ref{ex:tangent-support} вытекает, что $\vec u=\tan(s)$ тогда и только тогда, когда $p=\gamma(s)$ является точкой минимума $y$-координаты на~$F$.
+Действительно, пусть $p$ --- точка минимума.
+Проведём через $p$ горизонтальную прямую $\ell$; она подпирает $F$ в $p$.
+Согласно упражнению, $\ell$ касается $\gamma$ в $p$.
+Так как $F$ лежит слева от $\gamma$, получаем, что $\tan(s)=\vec u$.
+И наоборот, если $\tan(s)=\vec u$, то касательная в точке $p=\gamma(s)$ горизонтальна,
+и, согласно упражнению, она подпирает $F$.
+Так как $F$ лежит от $\gamma$ слева, $y$-координата достигает минимума на $F$ в точке $p$.
+
+Поскольку множество $F$ компактно, $y$-координата достигает минимума на $F$ в некоторой точке $p=\gamma(s)$.
+Точка $p$ может оказаться единственной, в этом случае, $\tan^{-1}\{\vec u\}=s$,
+или же $f$ может иметь отрезок минимальных точек на $\gamma$, в этом случае, $\tan^{-1}\{\vec u\}$ --- дугa в~$\mathbb{S}^1$.
+Следовательно, $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ монотонно.
+
+\parit{\ref{SHORT.prop:convex-monotone:open}} 
+То же рассуждение, что и в \ref{SHORT.prop:convex-monotone:closed}, показывает, что $\tan$ является монотонным отображением на свой образ.
+Ясно, что образ связен в $\mathbb{S}^1$.
+Остаётся показать, что образ лежит в полуокружности;
+другими словами,  
+\[\measuredangle(\vec w,\tan(s))\ge\tfrac\pi2
+\quad\text{для некоторого}\quad \vec w\quad\text{и любого}\quad
+s.
+\eqlbl{eq:<(w,tan).pi/2}
+\]
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-3502}
+\end{figure}
+
+Поскольку $\gamma$ открыта, она ограничивает некомпактное выпуклое замкнутое множество $F$.
+Как и прежде, считаем, что $F$ лежит слева от $\gamma$.
+
+Докажем, что существует луч, скажем $h$, лежащий в~$F$.
+Можно предположить, что начало координат $o$ лежит в~$F$.
+Рассмотрим последовательность точек $q_n\in F$ таких, что $|q_n|\z\to \infty$ при $n\to \infty$.
+Обозначим через $\vec v_n$ единичный вектор в направлении $q_n$; то есть~$\vec v_n=\tfrac{q_n}{|q_n|}$.
+
+Так как единичная окружность компактна, перейдя к подпоследовательности $q_n$, можно считать, что $\vec v_n$ сходится к единичному вектору, скажем к $\vec v$.
+Проведём луч $h$ из $o$ в направлении $\vec v$.
+Любую точку на $h$ можно приблизить точками из отрезков $[o,q_n]$ при $n\to\infty$.
+Значит луч $h$ лежит в $F$, ведь это множество замкнуто.
+
+Пусть $\vec w$ --- поворот $\vec v$ против часовой стрелки на угол $\tfrac\pi 2$,
+$\ell$ --- касательная прямая к $\gamma$ в точке $p=\gamma(s)$,
+и $H$ --- замкнутая левая полуплоскость ограниченная $\ell$;
+то есть $H$ лежит слева от $\ell$ по направлению $\tan(s)$.
+То же рассуждение, что и в \ref{SHORT.prop:convex-monotone:closed}, показывает, что $F$, а значит, и $h$,
+лежат в $H$.
+В частности, $\vec v$ указывает из $p$ в $H$, а это эквивалентно~\ref{eq:<(w,tan).pi/2}.
+\qeds
+
+
+\section{Лемма о луке}
+
+Следующая лемма была доказана Эрхардом Шмидтом \cite{schmidt}; она обобщает результат Акселя Шура \cite{shur}.
+
+\begin{wrapfigure}[9]{r}{39 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-3510}
+\vskip0mm
+\end{wrapfigure}
+
+{\sloppy
+
+Лемма является дифференциально-геометрическим аналогом так называемой {}\emph{леммы о руке} Огюстена-Луи Коши, согласно которой, \textit{если для выпуклого многоугольника
+$p_0\dots p_n$ на плоскости и пространственной ломаной $q_0\dots q_n$ выполняется 
+\begin{align*}
+|p_i-p_{i-1}|&=|q_i-q_{i-1}|,
+\\
+\measuredangle\hinge{p_i}{p_{i+1}}{p_{i-1}}&\le \measuredangle\hinge{q_i}{q_{i+1}}{q_{i-1}}
+\end{align*}
+для всех $i$, то $|p_0-p_n|\le |q_0-q_n|$.}
+(Можно думать про это так: если распрямлять все суставы руки, то расстояние от плеча до кончика среднего пальца увеличится.)
+
+}
+
+\begin{thm}{Лемма}\label{lem:bow}\index{лемма о луке}
+Пусть $\gamma_1\:[a,b]\to\mathbb{R}^2$ и $\gamma_2\:[a,b] \to\mathbb{R}^3$ --- две гладкие кривые с единичной скоростью.
+Предположим, что $\kur(s)_{\gamma_1}\ge\kur(s)_{\gamma_2}$ для любого $s$ 
+и кривая
+$\gamma_1$ --- дуга выпуклой кривой; то есть она идёт по границе выпуклой плоской фигуры.
+Тогда расстояние между конечными точками $\gamma_1$ не может превышать расстояние между конечными точками $\gamma_2$; то есть
+\[|\gamma_1(b)-\gamma_1(a)|\le |\gamma_2(b)-\gamma_2(a)|.\]
+
+\end{thm}
+
+Следующее упражнение говорит, что выпуклость $\gamma_1$ необходима.
+Его стоит решить прежде чем читать доказательство.
+
+\begin{thm}{Упражнение}\label{ex:anti-bow}
+Постройте две простые гладкие кривые с единичной скоростью $\gamma_1,\gamma_2\:[a,b]\to\mathbb{R}^2$, что $\kur(s)_{\gamma_1}>\kur(s)_{\gamma_2}>0$ для любого $s$ и
+\[|\gamma_1(b)-\gamma_1(a)|> |\gamma_2(b)-\gamma_2(a)|.\]
+
+\end{thm}
+
+\parbf{Доказательство.}
+Можно предположить, что $\gamma_1(a)\ne \gamma_1(b)$;
+иначе нечего доказывать.
+По выпуклости, кривая $\gamma_1$ лежит с одной стороны от прямой $\ell$, проходящей через $\gamma(a)$ и $\gamma(b)$;
+будем думать, что $\ell$ направлена горизонтально и $\gamma_1$ лежит под ней.
+
+Пусть $s_0$ будет самой низкой точкой на $\gamma_1$;
+то есть $\gamma_1(s_0)$ имеет минимальную $y$-координату.
+
+Обозначим через $\tan_1$ и $\tan_2$ касательные индикатрисы $\gamma_1$ и $\gamma_2$, соответственно.
+Рассмотрим два единичных вектора 
+\[
+\vec u_1=\tan_1(s_0)=\gamma_1'(s_0),
+\quad\text{и}\quad
+\vec u_2=\tan_2(s_0)=\gamma_2'(s_0).
+\]
+Отметим, что $\gamma_1(b)$ лежит в направлении $\vec u_1$ от $\gamma_1(a)$.
+
+\begin{wrapfigure}[10]{r}{39 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-57}
+\vskip0mm
+\end{wrapfigure}
+
+Покажем, что 
+\[\measuredangle(\gamma'_1(s),\vec u_1)\ge \measuredangle(\gamma'_2(s),\vec u_2)
+\eqlbl{<gamma',u}
+\]
+для любого $s$.
+Давайте считать, что $s\le s_0$; случай $s\ge s_0$ аналогичен.
+
+Заметим, что
+\[
+\begin{aligned}
+\measuredangle(\gamma'_1(s),\vec u_1)&=\measuredangle(\tan_1(s),\vec u_1)=
+\\
+&=\length (\tan_1|_{[s,s_0]}).
+\end{aligned}
+\eqlbl{<=length}\]
+для любого $s\le s_0$.
+Действительно, по \ref{ex:tangent-support}, $y$-координата $\gamma_1$ не убывает на интервале $[a,s_0]$.
+Следовательно, дуга $\tan_1|_{[a,s_0]}$ лежит в одном из единичных полукругов с концами $\vec u_1$ и $-\vec u_1$.
+Остаётся применить \ref{obs:tantrix}, \ref{prop:convex-monotone} и \ref{ex:integral-length-0}.
+
+Из \ref{obs:S2-length}, также получаем, что 
+\[\measuredangle(\gamma'_2(s),\vec u_2)=\measuredangle(\tan_2(s),\vec u_2)\le \length (\tan_2|_{[s,s_0]}).
+\eqlbl{<=<length}\]
+
+{
+
+Далее,
+\begin{align*}
+\length (\tan_1|_{[s,s_0]})
+&=\int_s^{s_0}|\tan_1'(t)|\cdot d t=
+\\
+&=\int_s^{s_0}\kur_1(t)\cdot d t\ge
+\int_s^{s_0}\kur_2(t)\cdot d t=
+\\
+&=\int_s^{s_0}|\tan_2'(t)|\cdot d t= 
+\length (\tan_2|_{[s,s_0]}).
+\end{align*}
+Это неравенство, вместе с \ref{<=length} и \ref{<=<length}, влечёт \ref{<gamma',u}.
+}
+
+Поскольку $1=|\gamma_1'(s)|=|\gamma_2'(s)|=|\vec u_1|=|\vec u_2|$,
+\[\langle\gamma'_1(s),\vec u_1\rangle=\cos \measuredangle(\gamma'_1(s),\vec u_1)
+\quad\text{и}\quad
+\langle\gamma'_2(s),\vec u_2\rangle=\cos \measuredangle(\gamma'_2(s),\vec u_2).
+\]
+Косинус убывает на интервале $[0,\pi]$; следовательно, \ref{<gamma',u} влечёт 
+\[\langle\gamma'_1(s),\vec u_1\rangle\le \langle\gamma'_2(s),\vec u_2\rangle\eqlbl{<gamma',u>}\]
+для любого~$s$.
+Далее, 
+\[|\gamma_1(b)-\gamma_1(a)|=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle,\]
+ведь $\gamma_1(b)$ лежит в направлении $\vec u_1$ от $\gamma_1(a)$.
+Поскольку $\vec u_2$ --- единичный вектор,
+\[|\gamma_2(b)-\gamma_2(a)|\ge\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle.\]
+
+Проинтегрировав \ref{<gamma',u>}, получим 
+\begin{align*}
+|\gamma_1(b)-\gamma_1(a)|&=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle=
+\\
+&=
+\int_a^b\langle \vec u_1,\gamma'_1(s)\rangle\cdot ds \le 
+\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
+=
+\\
+&=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle
+\le |\gamma_2(b)-\gamma_2(a)|.
+\end{align*}
+\qedsf
+
+\begin{thm}{Продвинутое упражнение}\label{ex:bow'}
+Предположим, что $\gamma_1$ и $\gamma_2$ как в лемме о луке (\ref{lem:bow}),
+а  $\tan_1$ и $\tan_2$ --- их касательные индикатрисы как.
+
+{
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-251}
+\vskip-4mm
+\end{wrapfigure}
+
+Пусть 
+%\[\vec w_i=\gamma_i(b)-\gamma_i(a),\quad \alpha_i=\measuredangle(\tan_i(a),\vec w_i)\quad\text{и}\quad\beta_i&=\measuredangle(\tan_i(b),\vec w_i).\]
+\begin{align*}
+\vec w_i&=\gamma_i(b)-\gamma_i(a),
+\\
+\alpha_i&=\measuredangle(\tan_i(a),\vec w_i),
+\\
+\beta_i&=\measuredangle(\tan_i(b),\vec w_i).
+\end{align*}
+%\begin{align*}
+%\vec w_1&=\gamma_1(b)-\gamma_1(a),
+%&
+%\vec w_2&=\gamma_2(b)-\gamma_2(a),
+%\\
+%\alpha_1&=\measuredangle(\tan_1(a),\vec w_1),
+%&
+%\alpha_2&=\measuredangle(\tan_2(a),\vec w_2),
+%\\
+%\beta_1&=\measuredangle(\tan_1(b),\vec w_1),
+%&
+%\beta_2&=\measuredangle(\tan_2(b),\vec w_2).
+%\end{align*}
+
+}
+
+\begin{subthm}{ex:bow'+}
+Предположим, что $\beta_1\le\tfrac\pi2$.
+Покажите, что $\alpha_1\ge \alpha_2$.
+\end{subthm}
+
+\begin{subthm}{ex:bow'-} Постройте пример, показывающий, что неравенство $\alpha_1\ge \alpha_2$ не выполняется в общем случае.
+\end{subthm}
+
+\end{thm}
+
+\pagebreak
+
+\begin{thm}{Упражнение}\label{ex:length-dist}
+Пусть $\gamma\:[a,b]\to \mathbb{R}^3$ --- гладкая кривая и $0\z<\theta\z\le\tfrac\pi2$.
+Предположим, что
+\[\tc\gamma\le 2\cdot\theta.\]
+
+\begin{subthm}{ex:length-dist:>} Покажите, что
+\[|\gamma(b)-\gamma(a)|> \cos\theta\cdot\length\gamma.\]
+\end{subthm}
+
+\begin{subthm}{ex:length-dist:self-intersection:>pi}
+Покажите, что $\tc\gamma>\pi$ если $\gamma$ самопересекается.
+Нарисуйте гладкую кривую $\gamma$ с $\tc\gamma<2\cdot\pi$ и самопересечением.
+\end{subthm}
+
+%\begin{subthm}{ex:sef-intersection:<2pi}
+%Нарисуйте гладкую кривую $\gamma$ на плоскости с самопересечением такую, что $\tc\gamma<2\cdot\pi$.
+%\end{subthm}
+
+\begin{subthm}{ex:length-dist:=} Покажите, что неравенство в \ref{SHORT.ex:length-dist:>} оптимально; то есть для заданного 
+$\theta$ существует гладкая кривая $\gamma$, такая что $\tc\gamma\z\le 
+2\cdot\theta$, и $\frac{|\gamma(b)-\gamma(a)|}{\length\gamma}$ произвольно 
+близко к $\cos\theta$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:schwartz}
+Пусть $p$ и $q$ --- точки на единичной окружности, делящие её на две дуги с длинами $\ell_1<\ell_2$.
+Предположим, что пространственная кривая $\gamma$ соединяет $p$ с $q$ и имеет кривизну не более 1.
+Покажите, что 
+\[\length \gamma\le \ell_1
+\quad\text{либо}\quad
+\length \gamma\ge \ell_2.
+\]
+\end{thm}
+
+Следующее упражнение обобщает \ref{ex:length>=2pi}.
+
+\begin{thm}{Упражнение}\label{ex:loop}
+Предположим, что $\gamma\:[a,b]\to \mathbb{R}^3$ --- гладкая петля с кривизной не более 1.
+Покажите, что 
+\[\length\gamma\ge2\cdot\pi.\]
+
+\end{thm}
+
+\begin{thm}{Упражнение}\label{ex:bow-upper}
+Пусть $\kur$ --- гладкая неотрицательная функция, определённая на интервале $[0,\ell]$.
+Постройте гладкую кривую $\gamma\:[0,\ell]\to\mathbb{R}^3$ с единичной скоростью и кривизной $\kur(s)$ при любом $s$ так, чтобы расстояние $|\gamma(\ell)-\gamma(0)|$ было произвольно близко к $\ell$.
+\end{thm}
+
+\begin{wrapfigure}{r}{41 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-283}
+\vskip0mm
+\end{wrapfigure}
+
+\begin{thm}{Продвинутое упражнение}\label{ex:gromov-twist}\\
+Пусть $\gamma$ --- замкнутая гладкая пространственная кривая с кривизной не более 2.
+Предположим, что $|\gamma(t)|\le 1$ для любого $t$.
+Покажите, что если $\gamma(t)\ne 0$, то 
+\[|\gamma(t)| \le \sin [\alpha(t)],\]
+где $\alpha(t)$ обозначает угол между $\gamma(t)$ и $\gamma'(t)$.
+\end{thm}

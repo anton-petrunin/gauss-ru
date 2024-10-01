@@ -1,0 +1,165 @@
+\documentclass[twoside]{book}
+\usepackage{lectures-ru}
+
+\newcommand{\arxiv}[2]{#1} %for arxiv
+%\newcommand{\arxiv}[2]{#2} %for print
+
+\arxiv{\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}}{\geometry{top=1.025in, bottom=1.025in,inner=0.9in, outer=0.825in, paperwidth=6.125in, paperheight=9.25in}}
+\makeindex
+
+%\overfullrule=100mm
+%\tolerance=1\emergencystretch=\maxdimen\hyphenpenalty=10000\hbadness=10000\def\emph{\textit}%removes hyphernation
+
+\begin{document}
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\def\emph{\textit}\renewcommand\footnote[1]{\ (#1)}\renewcommand\z{}\renewcommand\section[1]{SECTION. {#1} SECTION.}
+
+\addtocontents{toc}{\cftpagenumbersoff{part}}
+
+\input{title.tex}
+
+\input{intro.tex}
+
+\input{prelim.tex}
+
+\input{part-curves.tex}
+
+\input{curves.tex}
+\input{length-new.tex}
+\input{curve-curvature-new.tex}
+\input{poly.tex}
+\input{torsion-new.tex}
+\input{plane-curves.tex}
+\input{supporting-curves.tex}
+
+\input{part-surfaces.tex}
+
+\input{surfaces-def.tex}
+\input{first-order.tex}
+\input{surfaces-curvature.tex}
+\input{saddle.tex}
+
+\input{part-geodesics.tex}
+
+\input{shortest-path.tex}
+\input{geodesics-new.tex}
+\input{parallel-new.tex}
+\input{gauss-bonnet.tex}
+\input{polar-chart.tex}
+\input{comparison.tex}
+
+\backmatter
+
+\arxiv{\newgeometry{top=0.85in, bottom=0.85in,inner=0.52in, outer=0.52in}}{\newgeometry{top=0.975in, bottom=0.975in,inner=0.52in, outer=0.645in}}
+
+\chapter{Указки}
+
+
+{
+\scriptsize
+
+\input{sol-new.tex}
+\end{multicols}
+
+}
+
+\arxiv{\newgeometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in}}{\newgeometry{top=1.025in, bottom=1.025in,inner=0.9in, outer=0.825in}}
+
+\input{afterword.tex}
+
+\arxiv{\newgeometry{top=0.83in, bottom=0.83in,inner=0.52in, outer=0.52in}}{\newgeometry{top=0.955in, bottom=0.955in,inner=0.52in, outer=0.645in}}
+
+{
+\newpage
+\phantomsection
+\footnotesize\sloppy
+\input{curves-and-surfaces-ru.ind}
+
+}
+
+{
+
+\sloppy
+
+\def\emph{\textit}
+\setlength\bibitemsep{.80\itemsep}
+\printbibliography[heading=bibintoc]
+
+\fussy
+
+}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{part}{\texorpdfstring{}{Оглавление}}
+{\sloppy
+\tableofcontents
+
+}
+
+\vfill
+
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=.25,
+  thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
+
+  \node[main node] (1) at (0,0) {\ref{chap:curves-def}};
+  \node[main node] (2) at (3,-5) {\ref{chap:length}};
+  \node[main node] (3) at (6,-10) {\ref{chap:curve-curvature}};
+  \node[main node] (4) at (9,-5) {\ref{chap:poly}};
+  \node[main node] (5) at (9,-15) {\ref{chap:torsion}};
+  \node[main node] (6) at (12,-10) {\ref{chap:signed-curvature}};
+  \node[main node] (7) at (15,-15) {\ref{chap:supporting-curves}};
+  \node[main node] (8) at (18,0) {\ref{chap:surfaces-def}};
+  \node[main node] (9) at (15,-5) {\ref{chap:first-order}};
+  \node[main node] (10) at (18,-10) {\ref{chap:surface-curvature}};
+  \node[main node] (11) at (21,-15) {\ref{chap:Curves in a surface}};  
+  \node[main node] (12) at (18,-20) {\ref{chap:surface-support}};
+  \node[main node] (13) at (21,-5) {\ref{chap:shortest}};
+  \node[main node] (14) at (24,-10) {\ref{chap:geodesics}};
+  \node[main node] (15) at (27,-15) {\ref{chap:parallel-transport}};
+  \node[main node] (16) at (33,-15) {\ref{chap:gauss-bonnet}};
+  \node[main node] (17) at (30,-10) {\ref{chap:semigeodesic}};
+  \node[main node] (18) at (36,-10) {\ref{chap:comparison}};
+  
+  \path[every node/.style={font=\sffamily\small}]
+   (1) edge node{}(2)
+   (2) edge node{}(3)
+   (3) edge node{}(5)
+   (3) edge node{}(4)
+   (3) edge node{}(6)
+   (4) edge[dashed] node{}(6)
+   (6) edge node{}(7)
+   (6) edge node{}(10)
+   (7) edge node{}(12)
+   (8) edge node{}(9)
+   (8) edge node{}(13)
+   (9) edge node{}(10)
+   (10) edge node{}(11)
+   (11) edge node{}(12)
+   (10) edge node{}(14)
+   (13) edge node{}(14)
+   (14) edge node{}(15)   
+   (14) edge[bend left= 15] node{}(17)
+(17) edge[dashed, bend left= 15] node{}(14)
+   (15) edge node{}(16)
+   (16) edge[dashed] node{}(18)
+   (17) edge[dashed] node{}(15)
+   (17) edge[dashed] node{}(16)
+   (17) edge node{}(18);
+\end{tikzpicture}
+\end{figure}
+
+\vfill
+
+\newpage
+
+\end{document}
+
+
+
+
+
+
+
