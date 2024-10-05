@@ -224,7 +224,10 @@ $\vec w \mapsto D_{\vec w} s$ определяет линейное отобра
 Напомним, что якобиан $\jac_ps$ определён в предыдущем разделе.
 Допустим, что существует карта $(u,v)\mapsto s(u,v)$ для $\Sigma$, определённая на открытом множестве $U\subset\mathbb{R}^2$, такая что $R\subset s(U)$.
 В этом случае, определим
-\[\iint_R h\df \iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s \cdot du\cdot dv.\eqlbl{eq:area-def}\]
+\[\iint_R h
+\df
+\iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s \cdot du\cdot dv.
+\eqlbl{eq:area-def}\]
 
 По правилу замены переменной (\ref{thm:mult-substitution}), правая часть в \ref{eq:area-def} не зависит от выбора~$s$.
 То есть, если $s_1\:U_1\to \Sigma$ --- другая карта, такая что $s_1(U_1)\supset R$, то 
