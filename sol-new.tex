@@ -338,6 +338,21 @@ $a_1=t_0\le t_1\le\z\dots\le t_k=b_1$.
 \end{align*}
 Ответы: $k_1=2$ и $k_2=\tfrac4\pi$.
 
+\parbf{\ref{ex:induced-is-length}.}
+Пусть $d$ — исходная метрика на $\spc{X}$.
+Пусть $\gamma\:[a,b]\to (\spc{X},\ell)$ непрерывно.
+Докажите, что $\gamma\:[a,b]\to (\spc{X},d)$ также непрерывно.
+
+Выберем кривую $\gamma$ в $(\spc{X},\ell)$.
+Пусть $r$ и $s$ --- её $d$-длина и $\ell$-длина соответственно.
+Докажите, что $s\ge r\ge s-\epsilon$ для любого $\epsilon>0$.
+Выведите отсюда, что $d$-длина и $\ell$-длина любой кривая в $(\spc{X},\ell)$ равны.
+Сделайте ещё шаг.
+
+\parit{Замечание.} Обратное к первому утверждению в общем случае неверно.
+Рассмотрите, например, следующую метрику на верхней полуплоскости:
+\[d(x,y)=\min\{|x|+|y|,\bigl||x|-|y|\bigr|+\sqrt{\measuredangle(x,y)}\}.\]
+
 \parbf{\ref{ex:intrinsic-convex}.}
 Необходимость очевидна.
 Чтобы доказать достаточность, допустим, что $A$ не выпукло;
@@ -1027,17 +1042,18 @@ f'''
 \parit{Замечание.}
 Сравните с \ref{ex:moon-rad}.
 
-\begin{wrapfigure}{r}{32 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-268}
-\vskip0mm
-\end{wrapfigure}
-
 \parbf{\ref{ex:convex small}.}
 Достаточно рассмотреть случай когда $\gamma$ ограничивает выпуклую фигуру, скажем~$F$.
 В противном случае, по \ref{prop:convex}, её кривизна меняет знак.
 Следовательно, $\gamma$ имеет нулевую кривизну в некоторой точке.
+
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-268}
+\vskip0mm
+\end{wrapfigure}
 
 Выберите внутри $F$ такие две точки $x$ и $y$, что $|x\z-y|\z>2$.
 Рассмотрите максимальную линзу, ограниченную двумя дугами с общей хордой $xy$, которая лежит в~$F$.
@@ -1771,17 +1787,17 @@ f(x,y)&=a(x)^2-b(x,y)^2=
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\begin{wrapfigure}{r}{24 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-1250}
-\vskip-0mm
-\end{wrapfigure}
-
 \parbf{\ref{ex:lasso}.}
 Разрежьте боковую поверхность горы по отрезку от ковбоя до вершины и
 разверните её на плоскости (см. рисунок).
 Подумайте, как может выглядеть образ натянутого лассо.
+
+\begin{wrapfigure}{r}{24 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-1250}
+\vskip-4mm
+\end{wrapfigure}
 
 \parit{Источник:}
 Эту задачу мы узнали от Джоэля Файна, который приписывает её Фредерику Буржуа \cite{fine}.
