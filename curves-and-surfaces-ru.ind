@@ -3,7 +3,7 @@
   \item $\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$ (расстояние), 
 		\hyperpage{6}
   \item $\lvert x-y\rvert_A$ (внутренняя метрика), 
-		\hyperpage{38}
+		\hyperpage{39}
   \item $\measuredangle\hinge yxz$ (мера угла), \hyperpage{11}
   \item $\modangle yxz$ (модельный угол), \hyperpage{174}
   \item $[p,q]$, $[p,q]_\Sigma$ (кратчайшая), \hyperpage{131}
@@ -100,7 +100,8 @@
     \subitem поверхность, \hyperpage{88}
     \subitem функция, \hyperpage{27}, \hyperpage{88}, 
 		\hyperpage{92}
-  \item гладкое отображение, \hyperpage{17}
+  \item гладкое отображение, \hyperpage{17}, 
+		\hyperpage{97}
   \item гомеоморфизм, \hyperpage{9}
   \item горбушка, \hyperpage{124}
   \item граница, \hyperpage{9}
@@ -197,6 +198,8 @@
   \item модельный
     \subitem треугольник, \hyperpage{174}
   \item монотонное отображение, \hyperpage{26}
+  \item натуральная параметризация, 
+		\hyperpage{33}
   \item непрерывный, \hyperpage{8}
   \item непрерывный аргумент, \hyperpage{69}
   \item неравенство Йенсена, \hyperpage{20}
