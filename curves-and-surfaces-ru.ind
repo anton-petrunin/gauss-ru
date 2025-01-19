@@ -88,7 +88,7 @@
   \item геликоид, \hyperpage{113}
   \item геодезическая, \hyperpage{135}
     \subitem кривизна, \hyperpage{110}
-  \item геодезически полная, \hyperpage{136}
+  \item геодезически полная, \hyperpage{137}
   \item геодезический треугольник, 
 		\hyperpage{175}
   \item главные кривизны и направления, 
@@ -171,7 +171,7 @@
   \item кусочно-гладкая кривая, \hyperpage{54}
   \item лапласиан, \hyperpage{167}
   \item лемма Александрова, \hyperpage{183}
-  \item лемма Либермана, \hyperpage{142}
+  \item лемма Либермана, \hyperpage{143}
   \item лемма Морса, \hyperpage{200}
   \item лемма о луке, \hyperpage{49}
   \item лемма о спирали, \hyperpage{74}
@@ -181,7 +181,7 @@
   \item линия кривизны, \hyperpage{105}
   \item линия откоса, \hyperpage{63}
   \item липшицева функция, \hyperpage{14}
-  \item логарифм, \hyperpage{141}
+  \item логарифм, \hyperpage{142}
   \item локальная опорная, \hyperpage{116}
   \item локально гомеоморфно, \hyperpage{25}
   \item локально плоская поверхность, 
@@ -193,7 +193,7 @@
   \item метрическое пространство, \hyperpage{5}
   \item минимальная поверхность, \hyperpage{106}
   \item минимизирующая геодезическая, 
-		\hyperpage{140}
+		\hyperpage{141}
   \item модельная сторона, \hyperpage{180}
   \item модельный
     \subitem треугольник, \hyperpage{175}
@@ -275,7 +275,7 @@
   \item равномерная сходимость, \hyperpage{15}
   \item равностепенно непрерывная последовательность, 
 		\hyperpage{15}
-  \item радиус инъективности, \hyperpage{139}
+  \item радиус инъективности, \hyperpage{140}
   \item радиус кривизны, \hyperpage{74}
   \item разбиение, \hyperpage{30}
   \item регулярная
@@ -322,7 +322,7 @@
   \item теорема Ионина --- Пестова, \hyperpage{82}
   \item теорема Мёнье, \hyperpage{112}
   \item теорема Фенхеля, \hyperpage{45}
-  \item теорема Хопфа --- Ринова, \hyperpage{136}
+  \item теорема Хопфа --- Ринова, \hyperpage{137}
   \item теорема о неявной функции, \hyperpage{18}
   \item теорема о разделяющей гиперплоскости, 
 		\hyperpage{13}
@@ -363,7 +363,7 @@
   \item эволюта, \hyperpage{76}
   \item эйлерова характеристика, \hyperpage{158}
   \item экспоненциальное отображение, 
-		\hyperpage{138}
+		\hyperpage{139}
   \item якобиан, \hyperpage{19}, \hyperpage{98}
 
 \end{theindex}
