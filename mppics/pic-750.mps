@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -33 -32 46 32 
 %%HiResBoundingBox: -32.19801 -31.99802 45.80449 31.74802 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.16:2206
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.01.23:2317
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font IZUYNC-CMMI7 VETAFR-CMR7
+%%+ font IZUYNC-CMMI7 AYZCYC-CMR7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font IZUYNC-CMMI7 VETAFR-CMR7
+%%+ font IZUYNC-CMMI7 AYZCYC-CMR7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -276,7 +276,7 @@ F47A91B5EAE34401F071681D4DFD9C760FCC2F78E9D404CC0D698D82FEEDC201
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font VETAFR-CMR7
+%%BeginResource: font AYZCYC-CMR7
 %!PS-AdobeFont-1.0: CMR7 003.002
 %%Title: CMR7
 %Version: 003.002
@@ -288,7 +288,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/VETAFR-CMR7 known{/VETAFR-CMR7 findfont dup/UniqueID known{dup
+FontDirectory/AYZCYC-CMR7 known{/AYZCYC-CMR7 findfont dup/UniqueID known{dup
 /UniqueID get 5000790 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

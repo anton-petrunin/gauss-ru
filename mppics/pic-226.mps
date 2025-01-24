@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -7 -11 161 56 
 %%HiResBoundingBox: -6.9712 -10.38799 160.04231 55.47595 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.16:2206
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.01.23:2317
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font JCMPSG-CMR5 TOCEMT-CMR7
+%%+ font JCMPSG-CMR5 FYDGAV-CMR7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font JCMPSG-CMR5 TOCEMT-CMR7
+%%+ font JCMPSG-CMR5 FYDGAV-CMR7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -293,7 +293,7 @@ E0DB490967ABE6230B599DF5F560D427405D48BABBE287E036469627154EDD43
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font TOCEMT-CMR7
+%%BeginResource: font FYDGAV-CMR7
 %!PS-AdobeFont-1.0: CMR7 003.002
 %%Title: CMR7
 %Version: 003.002
@@ -305,7 +305,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/TOCEMT-CMR7 known{/TOCEMT-CMR7 findfont dup/UniqueID known{dup
+FontDirectory/FYDGAV-CMR7 known{/FYDGAV-CMR7 findfont dup/UniqueID known{dup
 /UniqueID get 5000790 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

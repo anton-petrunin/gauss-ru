@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -37 -8 41 171 
 %%HiResBoundingBox: -36.26675 -7.3586 40.7214 170.5287 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.16:2206
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.01.23:2317
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font LFEGAV-CMMI7 DRMNLU-CMR5 DHZLJB-CMR7 IHBJAZ-CMMI5 DKDEMC-SFCC0700
+%%+ font LFEGAV-CMMI7 DRMNLU-CMR5 DHZLJB-CMR7 CPBTUN-CMMI5 DKDEMC-SFCC0700
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font LFEGAV-CMMI7 DRMNLU-CMR5 DHZLJB-CMR7 IHBJAZ-CMMI5 DKDEMC-SFCC0700
+%%+ font LFEGAV-CMMI7 DRMNLU-CMR5 DHZLJB-CMR7 CPBTUN-CMMI5 DKDEMC-SFCC0700
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -768,7 +768,7 @@ B5F4B6EA086C4EE5BB7C04B7977512790F26B2B2D59DBC9E0B7A45F355845308
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font IHBJAZ-CMMI5
+%%BeginResource: font CPBTUN-CMMI5
 %!PS-AdobeFont-1.0: CMMI5 003.002
 %%Title: CMMI5
 %Version: 003.002
@@ -780,7 +780,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/IHBJAZ-CMMI5 known{/IHBJAZ-CMMI5 findfont dup/UniqueID known{dup
+FontDirectory/CPBTUN-CMMI5 known{/CPBTUN-CMMI5 findfont dup/UniqueID known{dup
 /UniqueID get 5087380 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

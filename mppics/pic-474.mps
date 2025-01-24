@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -118 -31 8 31 
 %%HiResBoundingBox: -117.97063 -30.09645 7.2353 30.09645 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.16:2206
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.01.23:2317
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font PDCVMQ-CMMI7
+%%+ font HDGRCE-CMMI7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font PDCVMQ-CMMI7
+%%+ font HDGRCE-CMMI7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font PDCVMQ-CMMI7
+%%BeginResource: font HDGRCE-CMMI7
 %!PS-AdobeFont-1.0: CMMI7 003.002
 %%Title: CMMI7
 %Version: 003.002
@@ -30,7 +30,7 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/PDCVMQ-CMMI7 known{/PDCVMQ-CMMI7 findfont dup/UniqueID known{dup
+FontDirectory/HDGRCE-CMMI7 known{/HDGRCE-CMMI7 findfont dup/UniqueID known{dup
 /UniqueID get 5087382 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
