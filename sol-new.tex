@@ -1959,6 +1959,54 @@ $\dist{p}{q}\Sigma\z\le |p-x|\z+|x-q|$.
 
 \parit{Источник:} Задача Али Тагави \cite{taghavi}.
 
+\parbf{\ref{ex:rad=2}}; \ref{SHORT.ex:rad=2:a}.
+Пусть\( \gamma \) --- геодезическая на \( \Sigma \).
+Убедитесь, что её кривизна не превышает \( 1 \).
+Рассуждая как в \ref{ex:gromov-twist}, покажите, что существует \( \epsilon > 0 \), такое что
+\[\epsilon<|\gamma(t)|<2\cdot\sin[\measuredangle(\gamma'(t),\gamma(t))]\]
+для любого \( t \).
+Выведите отсюда, что найдётся такое поле нормалей \(\Norm\) на \(\Sigma\), что
+\[\epsilon<|x|<2\cdot\cos[\measuredangle(\Norm(x),x)] \eqlbl{eq:|gamma(t)|}\]
+для любой точки \( x \in \Sigma \).
+
+Воспользовавшись \ref{eq:|gamma(t)|}, покажите, что отображение \( \Sigma \to \Theta \), заданное как \( x\mapsto 2\cdot\tfrac x{|x|} \), локально обратимо.
+Сделайте вывод, что оно обратимо.
+Обратное к нему отображение и есть радиальная проекция \( \rho\:\Theta\to\Sigma \).
+
+\parit{\ref{SHORT.ex:rad=2:b}.}
+Предположим, что \( x=\rho(p) \) и \( \vec v \in \T_p\Theta \).
+Покажите, что
+\[2\cdot\cos[\measuredangle(\Norm(x),x)]\cdot|d_p\rho(\vec v)|
+\le
+|x|\cdot|\vec v|.\]
+Применив \ref{eq:|gamma(t)|}, убедитесь, что \( |d_p\rho(\vec v)| \le|\vec v| \), и заключите, что \( \rho \) не увеличивает длину.
+
+\parit{\ref{SHORT.ex:rad=2:c}.}
+Предположим, что \( y\in \Sigma \) минимизирует расстояние до \( \tfrac x2 \).
+Пусть \( x=\rho(p) \) и \( y=\rho(q) \).
+
+Рассуждая от противного, предположим, что
+\[\dist{\tfrac x2}{y}{}\z<|\tfrac x2|.\]
+Убедитесь, что \(\Norm\: \Sigma\to \mathbb{S}^2 \) неувеличивает длины кривых.
+Используя всё это и \ref{SHORT.ex:rad=2:b}, выведите следующее:
+\begin{align*}
+\measuredangle(\Norm(x),\Norm(y))&= \measuredangle(x,y-\tfrac x2)>
+\\
+&>2\cdot\measuredangle\hinge 0pq=
+\\
+&=\dist{p}{q}{\Theta}\ge
+\\
+&\ge\dist{x}{y}{\Sigma}\ge
+\\
+&\ge\measuredangle(\Norm(x),\Norm(y));
+\end{align*}
+что даёт противоречие.
+
+Наконец, заметим, что поверхность \( \Sigma \) можно сдвинуть так, чтобы точка \( x \) стала сколь угодно близка к \( \Theta \).
+Применив рассуждение выше, получим, что наша область содержит единичный шар, касающийся \(\Sigma\) в точке \(x\).
+
+\parit{Источник:} Задача навеяна работами Хонгды Цю.
+
 \parbf{\ref{ex:closed-liberman}.}
 Пусть $t\mapsto \gamma(t)=(x(t),y(t),z(t))$ --- замкнутая геодезическая с единичной скоростью на графике $z=f(x,y)$.
 По лемме Либермана, функция $t\mapsto z'(t)$ монотонна.
