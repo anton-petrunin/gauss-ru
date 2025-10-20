@@ -114,8 +114,8 @@
 По основной теореме анализа, $\theta'(s)\z=\skur(s)$ для всех~$s$.
 
 Пусть 
-$\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])$,
-и $\norm(s)=(-\sin[\theta(s)],\cos[\theta(s)])$;
+$\tan(s)=(\,\cos(\theta(s)),\,\sin(\theta(s))\,)$,
+и $\norm(s)=(\,-\sin(\theta(s)),\,\cos(\theta(s))\,)$;
 то есть $\norm(s)$ --- поворот $\tan(s)$ на угол $\tfrac\pi2$ против часовой стрелки.
 Рассмотрим кривую 
 \[\gamma(s)=\int_{s_0}^s\tan(s)\cdot ds.\]
@@ -125,9 +125,9 @@ $\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])$,
 \begin{align*}
 \gamma''(s)&=\tan'(s)=
 \\
-&=(\cos[\theta(s)]',\sin[\theta(s)]')=
+&=(\,\cos(\theta(s))',\,\sin(\theta(s))'\,)=
 \\
-&=\theta'(s)\cdot (-\sin[\theta(s)],\cos[\theta(s)])=
+&=\theta'(s)\cdot (\,-\sin(\theta(s)),\,\cos(\theta(s))\,)=
 \\
 &=\skur(s)\cdot \norm(s).
 \end{align*}
@@ -154,7 +154,7 @@ $\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])$,
 
 Пусть $\gamma\:\mathbb{I}\z\to\mathbb{R}^2$ --- кривая с единичной скоростью.
 Функция $\theta\:\mathbb{I}\z\to\mathbb{R}$ называется \index{непрерывный аргумент}\emph{непрерывным аргументом} $\gamma$, если она непрерывна~и
-\[\gamma'(s)=(\cos [\theta(s)],\sin[\theta(s)])\]
+\[\gamma'(s)=(\,\cos (\theta(s)),\,\sin(\theta(s))\,)\]
 для любого $s$.
 Из доказательства теоремы видно следующее.
 
@@ -374,13 +374,13 @@ $\tgc\gamma=2\cdot\pi$ и $\tc\gamma=4\cdot\pi$.
 \end{align*}
 является непрерывным аргументом $\gamma$, см. \ref{cor:2D-angle}.
 Следовательно,
-\[\sigma'(s)=(\cos[\skur\cdot s],\sin[\skur\cdot s]).\]
+\[\sigma'(s)=(\,\cos(\skur\cdot s),\,\sin(\skur\cdot s)\,).\]
 Остаётся проинтегрировать последнее равенство.
 Если $\skur=0$, то получаем $\sigma(s)=(s,0)$,
 что описывает прямую $\sigma(s)=p+s\cdot \tan$.
 
 Если $\skur\ne 0$, то получаем
-\[\sigma(s)=(\tfrac1\skur\cdot\sin[\skur\cdot s], \tfrac1\skur\cdot(1-\cos[\skur\cdot s]));\]
+\[\sigma(s)=(\,\tfrac1\skur\cdot\sin(\skur\cdot s),\, \tfrac1\skur\cdot(1-\cos(\skur\cdot s))\,);\]
 это окружность радиуса $r=\tfrac1{|\skur|}$ и центром в $(0,\tfrac1\skur)=p+\tfrac1\skur\cdot\norm$.
 \qeds
 
