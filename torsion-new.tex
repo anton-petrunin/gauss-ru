@@ -4,7 +4,8 @@
 Эта глава в основном предоставляет практику в вычислениях.
 За исключением определений в разделе~\ref{sec:frenet-frame}, она не будет использоваться в дальнейшем.
 
-Так же как кривизна показывает, насколько кривая отклоняется от прямой линии, кручение показывает, насколько пространственная кривая отклоняется от плоской (см. \ref{ex:lancret}).
+Кручение во многом напоминает кривизну.
+Кривизна показывает, насколько кривая отклоняется от прямой линии, а кручение показывает, насколько пространственная кривая отклоняется от плоской (см. \ref{ex:lancret}).
 
 \section{Базис Френе}\label{sec:frenet-frame}
 
@@ -65,7 +66,7 @@ $\kur(s_0)\z\ne 0$ означает, что $\kur(s)\z\ne 0$ для всех $s$
 Поэтому производная $\norm'(s_0)$ определена, а, значит, определено и кручение.
 
 \begin{thm}{Упражнение}\label{ex:helix-torsion}
-По данным $a$ и $b$,
+При данных $a$ и $b$,
 вычислите кривизну и кручение винтовой линии
 $\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$.
 
@@ -101,7 +102,7 @@ $\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$.
 Применив \ref{eq:frenet-tau}, получим первое тождество в \ref{eq:<N',?>}.
 
 Дифференцируя третье тождество в \ref{eq:orthornomal}, получаем, что $\bi'\perp\bi$.
-Продифференцировав остальные две тождества с $\bi$ в \ref{eq:orthornomal}, получим
+Продифференцировав остальные два тождества с $\bi$ в \ref{eq:orthornomal}, получим
 \begin{align*}
 \langle\bi',\tan\rangle&=-\langle\bi,\tan'\rangle=-\kur\cdot\langle\bi,\norm\rangle=0,
 \\
@@ -110,7 +111,7 @@ $\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$.
 И поскольку базис $\tan,\norm,\bi$ ортонормирован, получаем, что
 \[\bi'=-\tor\cdot\norm.\eqlbl{eq:frenet-beta}\]
 
-Уравнения \ref{eq:frenet-tau}, \ref{eq:frenet-nu}, и \ref{eq:frenet-beta} называются \index{формулы Френе}\emph{формулами Френе}.
+Уравнения \ref{eq:frenet-tau}, \ref{eq:frenet-nu} и \ref{eq:frenet-beta} называются \index{формулы Френе}\emph{формулами Френе}.
 Все три можно записать в виде одного матричного тождества:
 \[
 \begin{pmatrix}
@@ -152,7 +153,8 @@ $\bi=\tan\times \norm$.
 \end{thm}
 
 \begin{thm}{Упражнение}\label{ex:+B}
-Пусть $\gamma_0\:[a,b]\to \mathbb{R}^3$ --- гладкая пространственная кривая, и $\tan,\norm,\bi$ --- её базис Френе.
+Пусть $\tan,\norm,\bi$ --- базис Френе гладкой кривой
+$\gamma_0\:[a,b]\to \mathbb{R}^3$.
 Рассмотрим кривую $\gamma_1(t)\z\df\gamma_0(t)\z+\bi(t)$.
 Докажите, что
 \[\length\gamma_1\ge\length\gamma_0.\]
@@ -170,7 +172,7 @@ $\tan,\norm,\bi$ --- её базис Френе, и $\tor$ --- её кручен
 \end{thm}
 
 \begin{thm}{Упражнение}\label{ex:moment-curve}
-Найдите кривизну $\kur(t)$ и кручение $\tor(t)$ \index{кривая моментнов}\emph{кривой моментнов} $\gamma\:t\z\mapsto (t,t^2,t^3)$ в точке $\gamma(t)$.
+Найдите кривизну $\kur(t)$ и кручение $\tor(t)$ \index{кривая моментов}\emph{кривой моментов} $\gamma\:t\z\mapsto (t,t^2,t^3)$ в точке $\gamma(t)$.
 \end{thm}
 
 Следующее упражнение тесно связано с леммой о луке (\ref{lem:bow}).
@@ -233,7 +235,7 @@ $\tan,\norm,\bi$ --- её базис Френе, и $\tor$ --- её кручен
 \[\alpha(s)=\gamma(s)+(s_0-s)\cdot \gamma'(s)\]
 называется \index{эвольвента}\emph{эвольвентой}~$\gamma$.
 Заметим, что если $\ell(s)$ обозначает касательную к $\gamma$ в точке $s$,
-то $\alpha(s)\in \ell(s)$ и $\alpha'(s)\perp \ell$ для всех~$s$.
+то $\alpha(s)\in \ell(s)$ и $\alpha'(s)\perp \ell(s)$ для всех~$s$.
 
 \begin{thm}{Упражнение}\label{ex:evolvent-constant-slope}
 Докажите, что эвольвента линии откоса лежит на плоскости.
@@ -330,9 +332,9 @@ $\tan,\norm,\bi$ --- её базис Френе,
 &
 \langle\bi,\bi\rangle&=1,
 \\
-\langle\tan,\norm\rangle&=0,&
-\langle\tan,\norm\rangle&=0,&
-\langle\bi,\tan\rangle&=0
+\langle\bi,\norm\rangle&=0,&
+\langle\tan,\bi\rangle&=0,&
+\langle\norm,\tan\rangle&=0
 \end{aligned}
 \eqlbl{eq:111000}
 \]
@@ -419,7 +421,7 @@ $\gamma(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$
 
 \begin{thm}{Продвинутое упражнение}\label{ex:const-dist}
 Пусть $\gamma$ --- гладкая пространственная кривая такая, что расстояние $|\gamma(t)-\gamma(t+\ell)|$ зависит только от $\ell$.
-Покажите, что $\gamma$ является винтовой линией, возможно, вырождающуюся в прямую или окружность.
+Покажите, что $\gamma$ является винтовой линией, возможно, вырождающейся в прямую или окружность.
 \end{thm}
 
 
