@@ -1,8 +1,8 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -38 -40 37 39 
 %%HiResBoundingBox: -37.04034 -39.93724 36.58835 38.00005 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font WONUDT-CMMI10 OYASEB-CMR10

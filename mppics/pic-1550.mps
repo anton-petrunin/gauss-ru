@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -201 -19 32 37 
 %%HiResBoundingBox: -200.27509 -18.82852 31.97449 36.78224 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font UUOANR-CMMI10 PVJGAV-CMR10 DRMNLU-CMR7
+%%+ font LBFIPX-CMMI10 PVJGAV-CMR10 FWLNPJ-CMR7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font UUOANR-CMMI10 PVJGAV-CMR10 DRMNLU-CMR7
+%%+ font LBFIPX-CMMI10 PVJGAV-CMR10 FWLNPJ-CMR7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font UUOANR-CMMI10
+%%BeginResource: font LBFIPX-CMMI10
 %!PS-AdobeFont-1.0: CMMI10 003.002
 %%Title: CMMI10
 %Version: 003.002
@@ -30,13 +30,13 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/UUOANR-CMMI10 known{/UUOANR-CMMI10 findfont dup/UniqueID known{dup
+FontDirectory/LBFIPX-CMMI10 known{/LBFIPX-CMMI10 findfont dup/UniqueID known{dup
 /UniqueID get 5087385 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /KNJFED-CMMI10 def
+/FontName /IITAFR-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -493,7 +493,7 @@ DC6A54185FA0ED296A87C94EE719CF
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font DRMNLU-CMR7
+%%BeginResource: font FWLNPJ-CMR7
 %!PS-AdobeFont-1.0: CMR7 003.002
 %%Title: CMR7
 %Version: 003.002
@@ -505,7 +505,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/DRMNLU-CMR7 known{/DRMNLU-CMR7 findfont dup/UniqueID known{dup
+FontDirectory/FWLNPJ-CMR7 known{/FWLNPJ-CMR7 findfont dup/UniqueID known{dup
 /UniqueID get 5000790 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -732,7 +732,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /KNJFED-CMMI10 def
+ /cmmi10 /IITAFR-CMMI10 def
  /cmr10 /FYDGAV-CMR10 def
  /cmr7 /TJAOWE-CMR7 def
 %%EndSetup

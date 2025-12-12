@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -38 -2 29 143 
 %%HiResBoundingBox: -37.77496 -1.75 28.79645 142.18225 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font EDAEMT-CMMI10 DHZLJB-CMR10
+%%+ font EHOWPF-CMMI10 MBMMBT-CMR10
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font EDAEMT-CMMI10 DHZLJB-CMR10
+%%+ font EHOWPF-CMMI10 MBMMBT-CMR10
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font EDAEMT-CMMI10
+%%BeginResource: font EHOWPF-CMMI10
 %!PS-AdobeFont-1.0: CMMI10 003.002
 %%Title: CMMI10
 %Version: 003.002
@@ -30,7 +30,7 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/EDAEMT-CMMI10 known{/EDAEMT-CMMI10 findfont dup/UniqueID known{dup
+FontDirectory/EHOWPF-CMMI10 known{/EHOWPF-CMMI10 findfont dup/UniqueID known{dup
 /UniqueID get 5087385 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -280,7 +280,7 @@ B799B33BB0596F4D3D526176535E50B46A18F0B652E8F724D0331CE947A8C4A0
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font DHZLJB-CMR10
+%%BeginResource: font MBMMBT-CMR10
 %!PS-AdobeFont-1.0: CMR10 003.002
 %%Title: CMR10
 %Version: 003.002
@@ -292,7 +292,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/DHZLJB-CMR10 known{/DHZLJB-CMR10 findfont dup/UniqueID known{dup
+FontDirectory/MBMMBT-CMR10 known{/MBMMBT-CMR10 findfont dup/UniqueID known{dup
 /UniqueID get 5000793 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

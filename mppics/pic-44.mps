@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -42 -42 42 42 
 %%HiResBoundingBox: -41.21558 -41.21568 41.21568 41.21558 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font FYDGAV-CMR10 LREGAV-CMSY10
+%%+ font OYASEB-CMR10 LREGAV-CMSY10
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font FYDGAV-CMR10 LREGAV-CMSY10
+%%+ font OYASEB-CMR10 LREGAV-CMSY10
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font FYDGAV-CMR10
+%%BeginResource: font OYASEB-CMR10
 %!PS-AdobeFont-1.0: CMR10 003.002
 %%Title: CMR10
 %Version: 003.002
@@ -30,7 +30,7 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/FYDGAV-CMR10 known{/FYDGAV-CMR10 findfont dup/UniqueID known{dup
+FontDirectory/OYASEB-CMR10 known{/OYASEB-CMR10 findfont dup/UniqueID known{dup
 /UniqueID get 5000793 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

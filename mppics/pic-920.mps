@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -48 -86 103 15 
 %%HiResBoundingBox: -47.47006 -85.28943 102.29745 14.42325 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font SWNKLT-CMMI10 PBFZMH-CMR7
+%%+ font MEDCKC-CMMI10 PBFZMH-CMR7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font SWNKLT-CMMI10 PBFZMH-CMR7
+%%+ font MEDCKC-CMMI10 PBFZMH-CMR7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font SWNKLT-CMMI10
+%%BeginResource: font MEDCKC-CMMI10
 %!PS-AdobeFont-1.0: CMMI10 003.002
 %%Title: CMMI10
 %Version: 003.002
@@ -30,13 +30,13 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/SWNKLT-CMMI10 known{/SWNKLT-CMMI10 findfont dup/UniqueID known{dup
+FontDirectory/MEDCKC-CMMI10 known{/MEDCKC-CMMI10 findfont dup/UniqueID known{dup
 /UniqueID get 5087385 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /EDAEMT-CMMI10 def
+/FontName /EHOWPF-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -518,7 +518,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /EDAEMT-CMMI10 def
+ /cmmi10 /EHOWPF-CMMI10 def
  /cmr7 /FWLNPJ-CMR7 def
 %%EndSetup
 %%Page: 1 1

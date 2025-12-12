@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -1 4 79 86 
 %%HiResBoundingBox: -0.25 4.94653 78.01723 85.4983 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font QOBWCC-CMMI10 VGUEDR-SFCC1000
+%%+ font QOBWCC-CMMI10 XGUEDR-SFCC1000
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font QOBWCC-CMMI10 VGUEDR-SFCC1000
+%%+ font QOBWCC-CMMI10 XGUEDR-SFCC1000
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -284,7 +284,7 @@ B3FA2BA8EDE06405AFA4C1CA
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font VGUEDR-SFCC1000
+%%BeginResource: font XGUEDR-SFCC1000
 %!FontType1-1.0: SFCC1000 0.3
 %%CreationDate: Wed Sep 12 2001
 % Copyright (c) 2001 Vladimir Volovich <vvv@vsu.ru>.

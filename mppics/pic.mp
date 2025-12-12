@@ -2013,7 +2013,7 @@ save u;
 u:=1.4cm;
 
 z.a0=(0,0)*u;
-z.a1=(1,-2.5)*u;
+z.a1=(1,-2)*u;
 z.a2=(1.5,0)*u;
 z.b0=.5*u*unitvector(-1,-.5);
 z.b1=.5*u*unitvector(1,0);

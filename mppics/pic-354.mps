@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: 1 -32 59 21 
 %%HiResBoundingBox: 1.74124 -31.91353 58.64107 20.93219 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font HDGRCE-CMMI10 AYZCYC-CMR10 TOCEMT-CMSY7
+%%+ font KDYDUA-CMMI10 MBMMBT-CMR10 TOCEMT-CMSY7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font HDGRCE-CMMI10 AYZCYC-CMR10 TOCEMT-CMSY7
+%%+ font KDYDUA-CMMI10 MBMMBT-CMR10 TOCEMT-CMSY7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -18,7 +18,7 @@
 /ScaleFont{dup fmc 0 get Amul 0 exch put dup dup 3 get Amul 3 exch put fmd}bd
 /SlantFont{fmc 2 get dup 0 eq{pop 1}if Amul FontMatrix 0 get mul 2 exch put fmd}bd
 %%EndResource
-%%BeginResource: font HDGRCE-CMMI10
+%%BeginResource: font KDYDUA-CMMI10
 %!PS-AdobeFont-1.0: CMMI10 003.002
 %%Title: CMMI10
 %Version: 003.002
@@ -30,13 +30,13 @@
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/HDGRCE-CMMI10 known{/HDGRCE-CMMI10 findfont dup/UniqueID known{dup
+FontDirectory/KDYDUA-CMMI10 known{/KDYDUA-CMMI10 findfont dup/UniqueID known{dup
 /UniqueID get 5087385 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /AJJODF-CMMI10 def
+/FontName /GZBTPQ-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -278,7 +278,7 @@ EAA568B97B64DED47A8651BBA91C058C68FD781BBD3A23A967E5AB5B8B
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font AYZCYC-CMR10
+%%BeginResource: font MBMMBT-CMR10
 %!PS-AdobeFont-1.0: CMR10 003.002
 %%Title: CMR10
 %Version: 003.002
@@ -290,7 +290,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/AYZCYC-CMR10 known{/AYZCYC-CMR10 findfont dup/UniqueID known{dup
+FontDirectory/MBMMBT-CMR10 known{/MBMMBT-CMR10 findfont dup/UniqueID known{dup
 /UniqueID get 5000793 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -758,7 +758,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /AJJODF-CMMI10 def
+ /cmmi10 /GZBTPQ-CMMI10 def
  /cmr10 /MBMMBT-CMR10 def
  /cmsy7 /TOCEMT-CMSY7 def
 %%EndSetup

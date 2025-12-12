@@ -1,8 +1,8 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -35 -35 47 35 
 %%HiResBoundingBox: -34.26523 -34.26523 46.64253 34.26523 
-%%Creator: MetaPost 2.01
-%%CreationDate: 2024.09.13:2231
+%%Creator: MetaPost 2.02
+%%CreationDate: 2025.12.11:1549
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font CITAFR-CMMI10 FYDGAV-CMR10 TJAOWE-CMR7
