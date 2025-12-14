@@ -1,369 +1,374 @@
 \begin{theindex}
 
   \item $\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$ (расстояние), 
-		\hyperpage{6}
+		\hyperpage{173}
   \item $\lvert x-y\rvert_A$ (внутренняя метрика), 
-		\hyperpage{39}
-  \item $\measuredangle\hinge yxz$ (мера угла), \hyperpage{11}
-  \item $\modangle yxz$ (модельный угол), \hyperpage{175}
-  \item $[p,q]$, $[p,q]_\Sigma$ (кратчайшая), \hyperpage{131}
-  \item $\hinge yxz$ (створка), \hyperpage{175}
+		\hyperpage{25}
+  \item $\measuredangle\hinge yxz$ (мера угла), \hyperpage{177}
+  \item $\modangle yxz$ (модельный угол), \hyperpage{161}
+  \item $[p,q]$, $[p,q]_\Sigma$ (кратчайшая), \hyperpage{117}
+  \item $\hinge yxz$ (створка), \hyperpage{161}
   \item $[xyz]$, $[xyz]_\Sigma$ (геодезический треугольник), 
-		\hyperpage{175}
+		\hyperpage{161}
   \item $\tilde\triangle$ (модельный треугольник), 
-		\hyperpage{175}
+		\hyperpage{161}
   \item $B(p,R)_{\spc{X}}$, $\bar B[p,R]_{\spc{X}}$ (шар), 
-		\hyperpage{7}
+		\hyperpage{174}
   \item $D_{\vec{w}}f$ (производная по направлению), 
-		\hyperpage{95}
-  \item $d_p f$ (дифференциал), \hyperpage{98}
-  \item $f_x$ (частная производная), \hyperpage{28}
+		\hyperpage{81}
+  \item $d_p f$ (дифференциал), \hyperpage{84}
+  \item $f_x$ (частная производная), \hyperpage{14}
   \item $\GB$ (формула Гаусса --- Бонне), 
-		\hyperpage{154}
-  \item $H$ (средняя кривизна), \hyperpage{105}
+		\hyperpage{140}
+  \item $H$ (средняя кривизна), \hyperpage{91}
   \item $\vec i$, $\vec j$, $\vec k$ (стандартный базис), 
-		\hyperpage{107}
-  \item $\Jac$ (матрица Якоби), \hyperpage{17}
-  \item $\jac$ (определитель Якоби), \hyperpage{19}
-  \item $K$ (гауссова кривизна), \hyperpage{105}
-  \item $\kur$ (кривизна), \hyperpage{43}
+		\hyperpage{93}
+  \item $\Jac$ (матрица Якоби), \hyperpage{180}
+  \item $\jac$ (определитель Якоби), \hyperpage{182}
+  \item $K$ (гауссова кривизна), \hyperpage{91}
+  \item $\kur$ (кривизна), \hyperpage{29}
   \item $\skur$ (ориентированная кривизна), 
-		\hyperpage{67}
-  \item $k_1$, $k_2$ (главные кривизны), \hyperpage{104}
+		\hyperpage{53}
+  \item $k_1$, $k_2$ (главные кривизны), \hyperpage{90}
   \item $k_g$ геодезическая кривизна, 
-		\hyperpage{110}
-  \item $k_n$ (нормальная кривизна), \hyperpage{110}
+		\hyperpage{96}
+  \item $k_n$ (нормальная кривизна), \hyperpage{96}
   \item $k_{\vec v}$ (нормальная кривизна), 
-		\hyperpage{111}
+		\hyperpage{97}
   \item $\ell$, $m$, $n$ (компоненты матрицы Гессе), 
-		\hyperpage{104}
-  \item $M_p$ (матрица Гессе), \hyperpage{104}
-  \item $\Norm$ (поле нормалей), \hyperpage{100}
-  \item $\tc{\gamma}$ (полная кривизна), \hyperpage{54}
+		\hyperpage{90}
+  \item $M_p$ (матрица Гессе), \hyperpage{90}
+  \item $\Norm$ (поле нормалей), \hyperpage{86}
+  \item $\tc{\gamma}$ (полная кривизна), \hyperpage{40}
   \item $\tgc\gamma$ (полная ориентированная кривизна), 
-		\hyperpage{70}
+		\hyperpage{56}
   \item $\tgc\gamma_\Sigma$ (полная геодезическая кривизна), 
-		\hyperpage{149}
+		\hyperpage{135}
   \item $\sigma_s$ (соприкасающаяся окружность), 
-		\hyperpage{74}
-  \item $\tor$ (кручение), \hyperpage{61}
-  \item $\tan$, $\mu$, $\Norm$ (базис Дарбу), \hyperpage{110}
-  \item $\tan$, $\norm$, $\bi$ (базис Френе), \hyperpage{60}
+		\hyperpage{60}
+  \item $\tor$ (кручение), \hyperpage{47}
+  \item $\tan$, $\mu$, $\Norm$ (базис Дарбу), \hyperpage{96}
+  \item $\tan$, $\norm$, $\bi$ (базис Френе), \hyperpage{46}
 
   \indexspace
 
-  \item аквариум Лагунова, \hyperpage{113}
+  \item аквариум Лагунова, \hyperpage{99}
   \item асимптотическое направление и линия, 
-		\hyperpage{123}
-  \item аффиннoe преобразование, \hyperpage{125}
-  \item базис Дарбу, \hyperpage{110}
-  \item базис Френе, \hyperpage{60}, \hyperpage{67}
-  \item базовая точка, \hyperpage{26}
-  \item бинормальный, \hyperpage{61}
-  \item борелевские подмножества, \hyperpage{19}
-  \item вариацией поворота, \hyperpage{45}
-  \item вектор скорости, \hyperpage{27}
-  \item векторное произведение, \hyperpage{44}
-  \item вершина кривой, \hyperpage{78}
-  \item винтовая линия, \hyperpage{34}
-  \item вложение, \hyperpage{9}
-  \item внешний угол, \hyperpage{53}
-  \item внешняя геометрия, \hyperpage{130}
-  \item внутренний диаметр, \hyperpage{134}
-  \item внутренняя геометрия, \hyperpage{130}
-  \item внутренняя изометрия, \hyperpage{172}
-  \item внутренняя метрика, \hyperpage{38}, 
-		\hyperpage{175}
-  \item вписанная ломаная, \hyperpage{30}
-  \item вращение, \hyperpage{167}
+		\hyperpage{109}
+  \item аффинное преобразование, \hyperpage{111}
+  \item базис Дарбу, \hyperpage{96}
+  \item базис Френе, \hyperpage{47}, \hyperpage{53}
+  \item базовая точка, \hyperpage{12}
+  \item бинормальный, \hyperpage{47}
+  \item борелевские подмножества, 
+		\hyperpage{182}
+  \item вариацией поворота, \hyperpage{31}
+  \item вектор скорости, \hyperpage{13}
+  \item векторное произведение, \hyperpage{30}
+  \item вершина кривой, \hyperpage{64}
+  \item винтовая линия, \hyperpage{20}
+  \item вложение, \hyperpage{175}
+  \item внешний угол, \hyperpage{39}
+  \item внешняя геометрия, \hyperpage{116}
+  \item внутренний диаметр, \hyperpage{120}
+  \item внутренняя геометрия, \hyperpage{116}
+  \item внутренняя изометрия, \hyperpage{158}
+  \item внутренняя метрика, \hyperpage{24}, 
+		\hyperpage{161}
+  \item вписанная ломаная, \hyperpage{16}
+  \item вращение, \hyperpage{153}
   \item выпуклая
-    \subitem кривая, \hyperpage{34}, \hyperpage{80}
-    \subitem оболочка, \hyperpage{13}, \hyperpage{35}
-    \subitem поверхность, \hyperpage{118}
-    \subitem функция, \hyperpage{20}
-  \item выпуклое множество, \hyperpage{12}, 
-		\hyperpage{134}
-  \item гауссова кривизна, \hyperpage{105}
-  \item гауссово отображение, \hyperpage{101}
-  \item геликоид, \hyperpage{113}
-  \item геодезическая, \hyperpage{135}
-    \subitem кривизна, \hyperpage{110}
-  \item геодезически полная, \hyperpage{137}
+    \subitem кривая, \hyperpage{20}, \hyperpage{66}
+    \subitem оболочка, \hyperpage{22}, \hyperpage{177}
+    \subitem поверхность, \hyperpage{104}
+    \subitem функция, \hyperpage{182}
+  \item выпуклое множество, \hyperpage{120}, 
+		\hyperpage{177}
+  \item гауссова кривизна, \hyperpage{91}
+  \item гауссово отображение, \hyperpage{87}
+  \item геликоид, \hyperpage{99}
+  \item геодезическая, \hyperpage{121}
+    \subitem кривизна, \hyperpage{96}
+  \item геодезически полная, \hyperpage{123}
   \item геодезический треугольник, 
-		\hyperpage{175}
+		\hyperpage{161}
   \item главные кривизны и направления, 
-		\hyperpage{104}
+		\hyperpage{90}
   \item гладкая
-    \subitem кривая, \hyperpage{27}
-    \subitem параметризация, \hyperpage{27}, 
-		\hyperpage{91}
-    \subitem поверхность, \hyperpage{88}
-    \subitem функция, \hyperpage{27}, \hyperpage{88}, 
-		\hyperpage{92}
-  \item гладкое отображение, \hyperpage{17}, 
-		\hyperpage{97}, \hyperpage{136}
-  \item гомеоморфизм, \hyperpage{9}
-  \item горбушка, \hyperpage{124}
-  \item граница, \hyperpage{9}
-  \item движение, \hyperpage{7}
-  \item диаметр, \hyperpage{41}
-  \item диффеоморфизм, \hyperpage{93}
-  \item дифференциал, \hyperpage{98}
-  \item длина кривой, \hyperpage{30}
-  \item долгота, \hyperpage{92}
-  \item дуга, \hyperpage{26}
+    \subitem кривая, \hyperpage{13}
+    \subitem параметризация, \hyperpage{13}, 
+		\hyperpage{77}
+    \subitem поверхность, \hyperpage{74}
+    \subitem функция, \hyperpage{13}, \hyperpage{74}, 
+		\hyperpage{78}
+  \item гладкое отображение, \hyperpage{83}, 
+		\hyperpage{122}, \hyperpage{180}
+  \item гомеоморфизм, \hyperpage{175}
+  \item горбушка, \hyperpage{110}
+  \item граница, \hyperpage{175}
+  \item движение, \hyperpage{174}
+  \item диаметр, \hyperpage{27}
+  \item диффеоморфизм, \hyperpage{79}
+  \item дифференциал, \hyperpage{84}
+  \item длина кривой, \hyperpage{16}
+  \item долгота, \hyperpage{78}
+  \item дуга, \hyperpage{12}
   \item естественная параметризация, 
-		\hyperpage{33}
+		\hyperpage{19}
   \item замкнутая
-    \subitem кривая, \hyperpage{26}
-    \subitem поверхность, \hyperpage{90}
+    \subitem кривая, \hyperpage{12}
+    \subitem поверхность, \hyperpage{76}
   \item замкнутое
-    \subitem множество, \hyperpage{8}
+    \subitem множество, \hyperpage{175}
   \item замкнутый
-    \subitem шар, \hyperpage{7}
-  \item звёздное множество, \hyperpage{123}, 
-		\hyperpage{139}
-  \item избыток треугольника, \hyperpage{12}
-  \item измеримая функция, \hyperpage{14}
+    \subitem шар, \hyperpage{174}
+  \item звёздное множество, \hyperpage{109}, 
+		\hyperpage{125}
+  \item избыток треугольника, \hyperpage{177}
+  \item измеримая функция, \hyperpage{179}
   \item изометричные пространства, 
-		\hyperpage{7}
-  \item изометрия, \hyperpage{7}
+		\hyperpage{174}
+  \item изометрия, \hyperpage{174}
   \item изотермические координаты, 
-		\hyperpage{167}
-  \item инверсия, \hyperpage{74}
+		\hyperpage{153}
+  \item инверсия, \hyperpage{60}
   \item индуцированная внутренняя метрика, 
-		\hyperpage{38}
-  \item интервал, \hyperpage{25}
-  \item инъективное отображение, \hyperpage{7}
-  \item карта, \hyperpage{91}
+		\hyperpage{24}
+  \item интервал, \hyperpage{11}
+  \item инъективное отображение, \hyperpage{174}
+  \item карта, \hyperpage{77}
   \item касание
-    \subitem поверхности, \hyperpage{116}
+    \subitem поверхности, \hyperpage{102}
   \item касательная
-    \subitem вектор, \hyperpage{44}
-    \subitem индикатриса, \hyperpage{43}
-    \subitem кривые, \hyperpage{44}
-    \subitem плоскость, \hyperpage{94}
-    \subitem прямая, \hyperpage{44}
-  \item касательная плоскость, \hyperpage{94}
+    \subitem вектор, \hyperpage{30}
+    \subitem индикатриса, \hyperpage{29}
+    \subitem кривые, \hyperpage{30}
+    \subitem плоскость, \hyperpage{80}
+    \subitem прямая, \hyperpage{30}
+  \item касательная плоскость, \hyperpage{80}
   \item касательно-нормальные координаты, 
-		\hyperpage{103}
+		\hyperpage{89}
   \item касательное
-    \subitem поле, \hyperpage{146}
-  \item касательный, \hyperpage{61}
-  \item касательный вектор, \hyperpage{94}
-  \item катеноид, \hyperpage{113}
-  \item колокольчик, \hyperpage{16}
-  \item компактное множество, \hyperpage{9}
-  \item конформная карта, \hyperpage{167}
-  \item короткая проекция, \hyperpage{132}
-  \item край, \hyperpage{89}
-  \item кратчайшая, \hyperpage{131}
-  \item кривая, \hyperpage{25}
-  \item кривая Вивиани, \hyperpage{188}
-  \item кривая моментнов, \hyperpage{63}
+    \subitem поле, \hyperpage{132}
+  \item касательный, \hyperpage{47}
+  \item касательный вектор, \hyperpage{80}
+  \item катеноид, \hyperpage{99}
+  \item колокольчик, \hyperpage{180}
+  \item компактное множество, \hyperpage{175}
+  \item конформная карта, \hyperpage{153}
+  \item короткая проекция, \hyperpage{118}
+  \item край, \hyperpage{75}
+  \item кратчайшая, \hyperpage{117}
+  \item кривая, \hyperpage{12}
+  \item кривая Вивиани, \hyperpage{184}
+  \item кривая моментов, \hyperpage{49}
   \item кривая с единичной скоростью, 
-		\hyperpage{33}
-  \item кривизна, \hyperpage{43}, \hyperpage{70}, 
-		\hyperpage{105}, \hyperpage{110}
-    \subitem  ориентированная, \hyperpage{67}
-    \subitem без знака, \hyperpage{67}
-  \item кручение, \hyperpage{61}
-  \item кусочно-гладкая кривая, \hyperpage{54}
-  \item лапласиан, \hyperpage{167}
-  \item лемма Александрова, \hyperpage{183}
-  \item лемма Либермана, \hyperpage{143}
-  \item лемма Морса, \hyperpage{200}
-  \item лемма о луке, \hyperpage{49}
-  \item лемма о спирали, \hyperpage{74}
+		\hyperpage{19}
+  \item кривизна, \hyperpage{29}, \hyperpage{56}, 
+		\hyperpage{91}, \hyperpage{96}
+    \subitem  ориентированная, \hyperpage{53}
+    \subitem без знака, \hyperpage{53}
+  \item кручение, \hyperpage{47}
+  \item кусочно-гладкая кривая, \hyperpage{40}
+  \item лапласиан, \hyperpage{153}
+  \item лемма Александрова, \hyperpage{169}
+  \item лемма Либермана, \hyperpage{129}
+  \item лемма Морса, \hyperpage{196}
+  \item лемма о луке, \hyperpage{35}
+  \item лемма о спирали, \hyperpage{60}
   \item линейно связное множество, 
-		\hyperpage{10}
-  \item линейчатая поверхность, \hyperpage{122}
-  \item линия кривизны, \hyperpage{105}
-  \item линия откоса, \hyperpage{63}
-  \item липшицева функция, \hyperpage{14}
-  \item логарифм, \hyperpage{142}
-  \item локальная опорная, \hyperpage{116}
-  \item локально гомеоморфно, \hyperpage{25}
-  \item локально плоская поверхность, 
-		\hyperpage{172}
-  \item локальные координаты, \hyperpage{91}
-  \item ломаная геодезическая, \hyperpage{150}
-  \item матрица Гессе, \hyperpage{104}
-  \item меридиан, \hyperpage{92}
-  \item метрическое пространство, \hyperpage{5}
-  \item минимальная поверхность, \hyperpage{106}
-  \item минимизирующая геодезическая, 
-		\hyperpage{141}
-  \item модельная сторона, \hyperpage{180}
-  \item модельный
-    \subitem треугольник, \hyperpage{175}
-  \item монотонное отображение, \hyperpage{26}
-  \item натуральная параметризация, 
-		\hyperpage{33}
-  \item непрерывный, \hyperpage{8}
-  \item непрерывный аргумент, \hyperpage{69}
-  \item неравенство Йенсена, \hyperpage{20}
-  \item нерастягивающее отображение, 
-		\hyperpage{100}
-  \item неявно заданная кривая, \hyperpage{28}
-  \item нормаль, \hyperpage{100}
-  \item нормальная
-    \subitem кривизна, \hyperpage{110}
-  \item нормальный, \hyperpage{61}
-    \subitem вектор, \hyperpage{60}
-  \item образующая, \hyperpage{92}
-  \item односвязная поверхность, \hyperpage{153}, 
 		\hyperpage{176}
-  \item окрестность, \hyperpage{9}
-  \item оператор формы, \hyperpage{106}
+  \item линейчатая поверхность, \hyperpage{108}
+  \item линия кривизны, \hyperpage{91}
+  \item линия откоса, \hyperpage{49}
+  \item липшицева функция, \hyperpage{179}
+  \item логарифм, \hyperpage{128}
+  \item локальная опорная, \hyperpage{102}
+  \item локально гомеоморфно, \hyperpage{11}
+  \item локально плоская поверхность, 
+		\hyperpage{158}
+  \item локальные координаты, \hyperpage{77}
+  \item ломаная геодезическая, \hyperpage{136}
+  \item матрица Гессе, \hyperpage{90}
+  \item меридиан, \hyperpage{78}
+  \item метрическое пространство, 
+		\hyperpage{173}
+  \item минимальная поверхность, \hyperpage{92}
+  \item минимизирующая геодезическая, 
+		\hyperpage{127}
+  \item модельная сторона, \hyperpage{166}
+  \item модельный
+    \subitem треугольник, \hyperpage{161}
+  \item монотонное отображение, \hyperpage{12}
+  \item натуральная параметризация, 
+		\hyperpage{19}
+  \item непрерывный, \hyperpage{174}
+  \item непрерывный аргумент, \hyperpage{55}
+  \item неравенство Йенсена, \hyperpage{182}
+  \item нерастягивающее отображение, 
+		\hyperpage{86}
+  \item неявно заданная кривая, \hyperpage{14}
+  \item нормаль, \hyperpage{86}
+  \item нормальная
+    \subitem кривизна, \hyperpage{96}
+  \item нормальный, \hyperpage{47}
+    \subitem вектор, \hyperpage{46}
+  \item образующая, \hyperpage{78}
+  \item односвязная поверхность, \hyperpage{139}, 
+		\hyperpage{162}
+  \item окрестность, \hyperpage{175}
+  \item оператор формы, \hyperpage{92}
   \item опорная
-    \subitem поверхность, \hyperpage{116}
-  \item опорная кривая, \hyperpage{78}
-  \item опорная плоскость, \hyperpage{13}
-  \item опорная прямая, \hyperpage{47}
-  \item ориентированная кривизна, \hyperpage{67}
+    \subitem поверхность, \hyperpage{102}
+  \item опорная кривая, \hyperpage{64}
+  \item опорная плоскость, \hyperpage{178}
+  \item опорная прямая, \hyperpage{33}
+  \item ориентированная кривизна, \hyperpage{53}
   \item ориентированная поверхность, 
-		\hyperpage{100}
-  \item ортогональная карта, \hyperpage{166}
+		\hyperpage{86}
+  \item ортогональная карта, \hyperpage{152}
   \item открытая
-    \subitem кривая, \hyperpage{29}
-    \subitem поверхность, \hyperpage{90}
+    \subitem кривая, \hyperpage{15}
+    \subitem поверхность, \hyperpage{76}
   \item открытое
-    \subitem множество, \hyperpage{8}
+    \subitem множество, \hyperpage{175}
   \item открытый
-    \subitem шар, \hyperpage{7}
-  \item параллель, \hyperpage{92}
-  \item параллельная кривая, \hyperpage{73}
+    \subitem шар, \hyperpage{174}
+  \item параллель, \hyperpage{78}
+  \item параллельная кривая, \hyperpage{59}
   \item параллельные поле и перенос, 
-		\hyperpage{146, 147}
-  \item параметризация, \hyperpage{25}, \hyperpage{90}, 
-		\hyperpage{93}
-    \subitem длиной, \hyperpage{33}
-  \item параметризованная кривая, \hyperpage{25}
-  \item петля, \hyperpage{26}
-  \item поверхность, \hyperpage{88}
-    \subitem вращения, \hyperpage{92}
-    \subitem с краем, \hyperpage{89}
-  \item поле Якоби, \hyperpage{164}
-  \item поле нормалей, \hyperpage{100}
+		\hyperpage{132, 133}
+  \item параметризация, \hyperpage{11}, \hyperpage{76}, 
+		\hyperpage{79}
+    \subitem длиной, \hyperpage{19}
+  \item параметризованная кривая, \hyperpage{11}
+  \item петля, \hyperpage{12}
+  \item поверхность, \hyperpage{74}
+    \subitem вращения, \hyperpage{78}
+    \subitem с краем, \hyperpage{75}
+  \item поле Якоби, \hyperpage{150}
+  \item поле нормалей, \hyperpage{86}
   \item полная
     \subitem геодезическая кривизна, 
-		\hyperpage{150}
-    \subitem кривизна, \hyperpage{45}
+		\hyperpage{136}
+    \subitem кривизна, \hyperpage{31}
     \subitem ориентированная кривизна, 
-		\hyperpage{70}
-  \item полугеодезические, \hyperpage{164}, 
-		\hyperpage{166}
-  \item полукубическая парабола, \hyperpage{187}
-  \item полярные координаты, \hyperpage{161}
-  \item порядок касания, \hyperpage{44}, \hyperpage{61}, 
-		\hyperpage{65}, \hyperpage{74}, \hyperpage{94}, 
-		\hyperpage{104}
-  \item поток, \hyperpage{196}
-  \item почти все, \hyperpage{17}
-  \item произведение кривых, \hyperpage{53}
+		\hyperpage{56}
+  \item полугеодезические, \hyperpage{150}, 
+		\hyperpage{152}
+  \item полукубическая парабола, \hyperpage{184}
+  \item полярные координаты, \hyperpage{147}
+  \item порядок касания, \hyperpage{30}, \hyperpage{47}, 
+		\hyperpage{51}, \hyperpage{60}, \hyperpage{80}, 
+		\hyperpage{90}
+  \item поток, \hyperpage{193}
+  \item почти все, \hyperpage{181}
+  \item произведение кривых, \hyperpage{39}
   \item производная по направлению, 
-		\hyperpage{20}, \hyperpage{96}
-  \item простая кривая, \hyperpage{25}
-  \item псевдосфера, \hyperpage{113}
-  \item путь, \hyperpage{10}, \hyperpage{26}
+		\hyperpage{82}, \hyperpage{182}
+  \item простая кривая, \hyperpage{11}
+  \item противонаправленное касание, 
+		\hyperpage{63}
+  \item псевдосфера, \hyperpage{99}
+  \item путь, \hyperpage{12}, \hyperpage{176}
 
   \indexspace
 
   \item равномерная непрерывность, 
-		\hyperpage{15}
-  \item равномерная сходимость, \hyperpage{15}
+		\hyperpage{179}
+  \item равномерная сходимость, \hyperpage{179}
   \item равностепенно непрерывная последовательность, 
-		\hyperpage{15}
-  \item радиус инъективности, \hyperpage{140}
-  \item радиус кривизны, \hyperpage{74}
-  \item разбиение, \hyperpage{30}
+		\hyperpage{179}
+  \item радиус инъективности, \hyperpage{126}
+  \item радиус кривизны, \hyperpage{60}
+  \item разбиение, \hyperpage{16}
   \item регулярная
-    \subitem параметризация, \hyperpage{27}, 
-		\hyperpage{90}
-  \item регулярная точка, \hyperpage{17}
-  \item регулярное значение, \hyperpage{17}, 
-		\hyperpage{28}
-  \item репараметризация, \hyperpage{26}
-  \item самосопряжённый оператор, 
-		\hyperpage{107}
-  \item связное множество, \hyperpage{10}
-  \item седловая поверхность, \hyperpage{122}
-  \item сигмоид, \hyperpage{16}
-  \item скалярное произведение, \hyperpage{42}
-  \item снежинка Коха, \hyperpage{31}
+    \subitem параметризация, \hyperpage{13}, 
+		\hyperpage{76}
+  \item регулярная точка, \hyperpage{180}
+  \item регулярное значение, \hyperpage{14}, 
+		\hyperpage{180}
+  \item репараметризация, \hyperpage{12}
+  \item самосопряжённый оператор, \hyperpage{93}
+  \item связное множество, \hyperpage{176}
+  \item седловая поверхность, \hyperpage{108}
+  \item сигмоид, \hyperpage{180}
+  \item скалярное произведение, \hyperpage{28}
+  \item снежинка Коха, \hyperpage{17}
   \item собственная
-    \subitem кривая, \hyperpage{29}
-    \subitem поверхность, \hyperpage{89}
+    \subitem кривая, \hyperpage{15}
+    \subitem поверхность, \hyperpage{75}
+  \item сонаправленное касание, \hyperpage{63}
   \item сонаправленные и противонаправленные
-    \subitem кривые, \hyperpage{77}
-    \subitem поверхности, \hyperpage{116}
-  \item соотношение Клеро, \hyperpage{135}
+    \subitem поверхности, \hyperpage{102}
+  \item соотношение Клеро, \hyperpage{121}
   \item соприкасающаяся
-    \subitem окружность, \hyperpage{74}
-    \subitem плоскость, \hyperpage{61}
-    \subitem сфера, \hyperpage{65}
+    \subitem окружность, \hyperpage{60}
+    \subitem плоскость, \hyperpage{47}
+    \subitem сфера, \hyperpage{51}
   \item соприкасающийся параболоид, 
-		\hyperpage{104}
-  \item сохраняющее длину, \hyperpage{172}
-  \item сохраняющее расстояние, \hyperpage{7}
-  \item спрямляемая кривая, \hyperpage{30}
-  \item средняя кривизна, \hyperpage{105}
-  \item створка, \hyperpage{175}
-  \item степень вершины, \hyperpage{159}
+		\hyperpage{90}
+  \item сохраняющее длину, \hyperpage{158}
+  \item сохраняющее расстояние, \hyperpage{174}
+  \item спрямляемая кривая, \hyperpage{16}
+  \item средняя кривизна, \hyperpage{91}
+  \item створка, \hyperpage{161}
+  \item степень вершины, \hyperpage{145}
   \item стереографическая проекция, 
-		\hyperpage{196}
+		\hyperpage{192}
   \item сферическая
-    \subitem кривая, \hyperpage{39}
+    \subitem кривая, \hyperpage{25}
   \item сферическое
-    \subitem отображение, \hyperpage{101}
-  \item теорема Бернштейна, \hyperpage{125}
-  \item теорема Жордана, \hyperpage{10}
-  \item теорема Ионина --- Пестова, \hyperpage{82}
-  \item теорема Мёнье, \hyperpage{112}
-  \item теорема Фенхеля, \hyperpage{45}
-  \item теорема Хопфа --- Ринова, \hyperpage{137}
-  \item теорема о неявной функции, \hyperpage{18}
+    \subitem отображение, \hyperpage{87}
+  \item теорема Бернштейна, \hyperpage{111}
+  \item теорема Жордана, \hyperpage{176}
+  \item теорема Ионина --- Пестова, \hyperpage{68}
+  \item теорема Мёнье, \hyperpage{98}
+  \item теорема Фенхеля, \hyperpage{31}
+  \item теорема Хопфа --- Ринова, \hyperpage{123}
+  \item теорема о неявной функции, 
+		\hyperpage{181}
   \item теорема о разделяющей гиперплоскости, 
-		\hyperpage{13}
+		\hyperpage{178}
   \item теорема о четырёх вершинах, 
-		\hyperpage{84}
+		\hyperpage{70}
   \item теорема об обратной функции, 
-		\hyperpage{18}
-  \item теорема сравнения, \hyperpage{176}
-  \item теорема сравнения Рауха, \hyperpage{171}
+		\hyperpage{181}
+  \item теорема сравнения, \hyperpage{162}
+  \item теорема сравнения Рауха, \hyperpage{157}
   \item толстый/тонкий треугольник, 
-		\hyperpage{184}
-  \item топологическая, \hyperpage{9}
-    \subitem поверхность, \hyperpage{88}
-  \item точка, \hyperpage{5}
-    \subitem возврата, \hyperpage{53}
-    \subitem касания, \hyperpage{77}
-  \item трансверсальность, \hyperpage{123}, 
-		\hyperpage{198}
-  \item тривиальная кривая, \hyperpage{153}
-  \item трохоида, \hyperpage{70}
-  \item трюк Мозера, \hyperpage{196}
-  \item формула Гаусса --- Бонне, \hyperpage{152}, 
-		\hyperpage{158}
-  \item формула Грина, \hyperpage{169}
-  \item формула Крофтона, \hyperpage{36}
-  \item формула Эйлера, \hyperpage{111}
-  \item формула коплощади, \hyperpage{124}
-  \item формулы Френе, \hyperpage{62}, \hyperpage{68}
-  \item фундаментальная форма, \hyperpage{106}
-  \item хорда, \hyperpage{35}
-  \item центр кривизны, \hyperpage{74}
+		\hyperpage{170}
+  \item топологическая, \hyperpage{175}
+    \subitem поверхность, \hyperpage{74}
+  \item точка, \hyperpage{173}
+    \subitem возврата, \hyperpage{39}
+    \subitem касания, \hyperpage{63}
+  \item трактриса, \hyperpage{99}
+  \item трансверсальность, \hyperpage{109}, 
+		\hyperpage{195}
+  \item тривиальная кривая, \hyperpage{139}
+  \item трохоида, \hyperpage{56}
+  \item трюк Мозера, \hyperpage{193}
+  \item формула Гаусса --- Бонне, \hyperpage{138}, 
+		\hyperpage{144}
+  \item формула Грина, \hyperpage{155}
+  \item формула Крофтона, \hyperpage{22}
+  \item формула Эйлера, \hyperpage{97}
+  \item формула коплощади, \hyperpage{110}
+  \item формулы Френе, \hyperpage{48}, \hyperpage{54}
+  \item фундаментальная форма, \hyperpage{92}
+  \item хорда, \hyperpage{21}
+  \item центр кривизны, \hyperpage{60}
   \item цилиндрическая поверхность, 
-		\hyperpage{109}
-  \item частичный предел, \hyperpage{132}
-  \item четырёхкратная секущая, \hyperpage{192}
-  \item широта, \hyperpage{92}
-  \item эвольвента, \hyperpage{64}
-  \item эволюта, \hyperpage{76}
-  \item эйлерова характеристика, \hyperpage{158}
+		\hyperpage{95}
+  \item частичный предел, \hyperpage{118}
+  \item четырёхкратная секущая, \hyperpage{189}
+  \item широта, \hyperpage{78}
+  \item эвольвента, \hyperpage{50}
+  \item эволюта, \hyperpage{62}
+  \item эйлерова характеристика, \hyperpage{144}
   \item экспоненциальное отображение, 
-		\hyperpage{139}
-  \item якобиан, \hyperpage{19}, \hyperpage{98}
+		\hyperpage{125}
+  \item якобиан, \hyperpage{84}, \hyperpage{182}
 
 \end{theindex}
