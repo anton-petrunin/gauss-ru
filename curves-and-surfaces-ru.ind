@@ -23,14 +23,14 @@
   \item $H$ (средняя кривизна), \hyperpage{91}
   \item $\vec i$, $\vec j$, $\vec k$ (стандартный базис), 
 		\hyperpage{93}
-  \item $\Jac$ (матрица Якоби), \hyperpage{180}
+  \item $\Jac$ (матрица Якоби), \hyperpage{181}
   \item $\jac$ (определитель Якоби), \hyperpage{182}
   \item $K$ (гауссова кривизна), \hyperpage{91}
   \item $\kur$ (кривизна), \hyperpage{29}
   \item $\skur$ (ориентированная кривизна), 
 		\hyperpage{53}
   \item $k_1$, $k_2$ (главные кривизны), \hyperpage{90}
-  \item $k_g$ геодезическая кривизна, 
+  \item $k_g$ (геодезическая кривизна), 
 		\hyperpage{96}
   \item $k_n$ (нормальная кривизна), \hyperpage{96}
   \item $k_{\vec v}$ (нормальная кривизна), 
@@ -59,10 +59,10 @@
   \item базис Дарбу, \hyperpage{96}
   \item базис Френе, \hyperpage{47}, \hyperpage{53}
   \item базовая точка, \hyperpage{12}
-  \item бинормальный, \hyperpage{47}
+  \item бинормальный вектор, \hyperpage{47}
   \item борелевские подмножества, 
 		\hyperpage{182}
-  \item вариацией поворота, \hyperpage{31}
+  \item вариация поворота, \hyperpage{31}
   \item вектор скорости, \hyperpage{13}
   \item векторное произведение, \hyperpage{30}
   \item вершина кривой, \hyperpage{64}
@@ -75,6 +75,8 @@
   \item внутренняя изометрия, \hyperpage{158}
   \item внутренняя метрика, \hyperpage{24}, 
 		\hyperpage{161}
+  \item вогнутая
+    \subitem функция, \hyperpage{182}
   \item вписанная ломаная, \hyperpage{16}
   \item вращение, \hyperpage{153}
   \item выпуклая
@@ -106,7 +108,6 @@
   \item гомеоморфизм, \hyperpage{175}
   \item горбушка, \hyperpage{110}
   \item граница, \hyperpage{175}
-  \item движение, \hyperpage{174}
   \item диаметр, \hyperpage{27}
   \item диффеоморфизм, \hyperpage{79}
   \item дифференциал, \hyperpage{84}
@@ -118,8 +119,7 @@
   \item замкнутая
     \subitem кривая, \hyperpage{12}
     \subitem поверхность, \hyperpage{76}
-  \item замкнутое
-    \subitem множество, \hyperpage{175}
+  \item замкнутое множество, \hyperpage{175}
   \item замкнутый
     \subitem шар, \hyperpage{174}
   \item звёздное множество, \hyperpage{109}, 
@@ -137,8 +137,6 @@
   \item интервал, \hyperpage{11}
   \item инъективное отображение, \hyperpage{174}
   \item карта, \hyperpage{77}
-  \item касание
-    \subitem поверхности, \hyperpage{102}
   \item касательная
     \subitem вектор, \hyperpage{30}
     \subitem индикатриса, \hyperpage{29}
@@ -150,8 +148,9 @@
 		\hyperpage{89}
   \item касательное
     \subitem поле, \hyperpage{132}
-  \item касательный, \hyperpage{47}
-  \item касательный вектор, \hyperpage{80}
+  \item касательные поверхности, \hyperpage{102}
+  \item касательный вектор, \hyperpage{47}, 
+		\hyperpage{80}
   \item катеноид, \hyperpage{99}
   \item колокольчик, \hyperpage{180}
   \item компактное множество, \hyperpage{175}
@@ -160,7 +159,7 @@
   \item край, \hyperpage{75}
   \item кратчайшая, \hyperpage{117}
   \item кривая, \hyperpage{12}
-  \item кривая Вивиани, \hyperpage{184}
+  \item кривая Вивиани, \hyperpage{185}
   \item кривая моментов, \hyperpage{49}
   \item кривая с единичной скоростью, 
 		\hyperpage{19}
@@ -197,8 +196,8 @@
   \item минимизирующая геодезическая, 
 		\hyperpage{127}
   \item модельная сторона, \hyperpage{166}
-  \item модельный
-    \subitem треугольник, \hyperpage{161}
+  \item модельный треугольник и угол, 
+		\hyperpage{161}
   \item монотонное отображение, \hyperpage{12}
   \item натуральная параметризация, 
 		\hyperpage{19}
@@ -209,20 +208,19 @@
 		\hyperpage{86}
   \item неявно заданная кривая, \hyperpage{14}
   \item нормаль, \hyperpage{86}
-  \item нормальная
-    \subitem кривизна, \hyperpage{96}
-  \item нормальный, \hyperpage{47}
-    \subitem вектор, \hyperpage{46}
+  \item нормальная кривизна, \hyperpage{96}
+  \item нормальный вектор, \hyperpage{46, 47}
   \item образующая, \hyperpage{78}
   \item односвязная поверхность, \hyperpage{139}, 
 		\hyperpage{162}
   \item окрестность, \hyperpage{175}
   \item оператор формы, \hyperpage{92}
   \item опорная
+    \subitem кривая, \hyperpage{64}
+    \subitem плоскость, \hyperpage{178}
     \subitem поверхность, \hyperpage{102}
+    \subitem прямая, \hyperpage{33}
   \item опорная кривая, \hyperpage{64}
-  \item опорная плоскость, \hyperpage{178}
-  \item опорная прямая, \hyperpage{33}
   \item ориентированная кривизна, \hyperpage{53}
   \item ориентированная поверхность, 
 		\hyperpage{86}
@@ -285,9 +283,9 @@
   \item регулярная
     \subitem параметризация, \hyperpage{13}, 
 		\hyperpage{76}
-  \item регулярная точка, \hyperpage{180}
+  \item регулярная точка, \hyperpage{181}
   \item регулярное значение, \hyperpage{14}, 
-		\hyperpage{180}
+		\hyperpage{181}
   \item репараметризация, \hyperpage{12}
   \item самосопряжённый оператор, \hyperpage{93}
   \item связное множество, \hyperpage{176}
@@ -338,8 +336,8 @@
   \item теорема сравнения Рауха, \hyperpage{157}
   \item толстый/тонкий треугольник, 
 		\hyperpage{170}
-  \item топологическая, \hyperpage{175}
-    \subitem поверхность, \hyperpage{74}
+  \item топологическая поверхность, 
+		\hyperpage{74}, \hyperpage{175}
   \item точка, \hyperpage{173}
     \subitem возврата, \hyperpage{39}
     \subitem касания, \hyperpage{63}

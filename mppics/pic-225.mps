@@ -2,7 +2,7 @@
 %%BoundingBox: -1 -53 282 19 
 %%HiResBoundingBox: -1 -52.55228 281.91214 18.1841 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.12.11:1549
+%%CreationDate: 2025.12.15:2137
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font ECJGUU-CMMI10

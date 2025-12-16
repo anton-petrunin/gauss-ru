@@ -3730,6 +3730,26 @@ dOt origin;
 label.rt(btex $\alpha$ etex, (1,1)*u);
 endfig;
 
+beginfig(1577)
+save u,p;
+path p[];
+u:=.5cm;
+
+z.a=(-1,1)*u;
+z.b=(0,-1)*u;
+z.bb=(0,-.3)*u;
+z.bbb=(0,.3)*u;
+z.c=(1,1)*u;
+z.d1=(.7,1)*u;
+z.d2=(.7,-.5)*u;
+z.d3=(-.7,.5)*u;
+z.d4=(-.7,-1)*u;
+
+draw z.a{1,0}...z.b{-1,.6}..z.bb{1,0}..z.b{-1,-.6}...{1,0}z.c;
+draw (z.a{0,-1}...z.b{1,-.6}..z.bbb{-1,0}..z.b{1,.6}...{0,1}z.c) shifted ((2.5,0)*u);
+draw (z.d1{.2,-1}..z.d2{-1,-1}..tension 1.3..z.d3{1,0}..z.d2{1,0}..tension 1.3..z.d3{-1,-1}..{.2,-1}z.d4) shifted ((5.3,0)*u);
+endfig;
+
 beginfig(1580) 
 save u,p,t;
 path p[];
@@ -4202,6 +4222,13 @@ label.urt(btex $\measuredangle\hinge x p q$ etex rotated (.5*angle(z.C-z.A)), z.
 label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
 label(btex $\dist{x}{p}{\Sigma}$ etex rotated angle(z.C-z.A), .5[z.A,z.C] + 7*unitvector(z.C-z.A) rotated 90 );
 label.bot(btex $\dist{x}{q}{\Sigma}$ etex, .5[z.A,z.B]);
+endfig;
+
+beginfig(2309)
+save u,p;
+path p[];
+u:=1cm;
+
 endfig;
 
 beginfig(2310) 

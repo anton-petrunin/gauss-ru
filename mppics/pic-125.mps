@@ -2,7 +2,7 @@
 %%BoundingBox: -4 -35 119 10 
 %%HiResBoundingBox: -3.39758 -34.73674 118.19992 9.85312 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.12.11:1549
+%%CreationDate: 2025.12.15:2137
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font DAYHCG-SFRM1000
