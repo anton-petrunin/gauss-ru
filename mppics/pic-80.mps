@@ -2,7 +2,7 @@
 %%BoundingBox: -43 -10 56 39 
 %%HiResBoundingBox: -42.96968 -9.2267 55.14699 38.48636 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.12.15:2137
+%%CreationDate: 2025.12.16:2244
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font WQSHGI-CMMI10 PVJGAV-CMR10 QNARSE-CMMI7 POAOWE-CMR7 VGUEDR-SFCC1000
@@ -1138,12 +1138,12 @@ newpath 1.25 0 moveto
 45.51968 12.99707 moveto
 (\015) cmmi10 9.96265 fshow
 50.67769 11.50267 moveto
-(1) cmr7 6.97385 fshow
+(2) cmr7 6.97385 fshow
  0 0 0 setrgbcolor
 31.34645 27.17029 moveto
 (\015) cmmi10 9.96265 fshow
 36.50446 25.67589 moveto
-(2) cmr7 6.97385 fshow
+(1) cmr7 6.97385 fshow
 -17.90923 23.52515 moveto
 (\005) cmr10 9.96265 fshow
 showpage

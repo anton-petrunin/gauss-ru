@@ -2722,8 +2722,8 @@ dOt z.p;
 label.bot(btex $p$ etex, z.p);
 label.rt(btex $\vec w$ etex, z.w);
 label.top(btex $\Norm_p$ etex, z.nu);
-label.rt(btex {\color{darkgray} $\gamma_1$} etex, z.a2);
-label.rt(btex $\gamma_2$ etex, z.b2);
+label.rt(btex {\color{darkgray} $\gamma_2$} etex, z.a2);
+label.rt(btex $\gamma_1$ etex, z.b2);
 label(btex $\Pi$ etex, .5[z.b0,z.nu]);
 endfig;
 
