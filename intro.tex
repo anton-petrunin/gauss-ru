@@ -11,7 +11,11 @@
 
 \thispagestyle{empty}
 \newpage
+\addtocontents{toc}{\cftpagenumbersoff{part}}
 {
+\clearpage
+\phantomsection
+\pdfbookmark[1]{\contentsname}{bm:toc}
 \sloppy
 \footnotesize
 \tableofcontents
