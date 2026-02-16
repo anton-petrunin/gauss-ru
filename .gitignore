@@ -24,8 +24,6 @@ lib/*
 *.pdf
 *.zip
 *.jpeg
-*.jpg
 *.png
-*.ttf
 *eps-converted-to.pdf
 *~
