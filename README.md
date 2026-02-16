@@ -36,6 +36,14 @@ biber curves-and-surfaces-ru
 pdflatex curves-and-surfaces-ru.tex
 ```
 
+Обложка:
+
+```
+cd cover/
+lualatex cover
+cd ..
+```
+
 А ещё можно получить arXiv.tar со всеми файлами нужными для `pdflatex` (включая рисунки):
 
 `tar -cvf arXiv.tar --files-from list-of-files.txt`
