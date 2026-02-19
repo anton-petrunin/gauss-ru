@@ -2,7 +2,7 @@
 
 Следующая команда создаст копию репозитория
 
-`git clone https://github.com/anton-petrunin/gauss.git`
+`git clone https://github.com/anton-petrunin/gauss-ru.git`
 
 ### MetaPost
 
