@@ -21,13 +21,13 @@ pdflatex curves-and-surfaces-ru.tex
 
 ```
 cd cover/
-lualatex cover
+lualatex cover.tex
 cd ..
 ```
 
-### zip
+### tarball
 
-А ещё можно получить arXiv.tar со всеми файлами для основного тексте (включая рисунки):
+А ещё можно получить arXiv.tar со всеми файлами для основного текста (включая рисунки):
 
 `tar -cvf arXiv.tar --files-from list-of-files.txt`
 
