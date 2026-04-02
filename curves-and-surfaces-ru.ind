@@ -38,14 +38,14 @@
   \item $\ell$, $m$, $n$ (компоненты матрицы Гессе), 
 		\hyperpage{92}
   \item $M_p$ (матрица Гессе), \hyperpage{92}
-  \item $\Norm$ (поле нормалей), \hyperpage{88}
+  \item $\Norm$ (поле нормалей), \hyperpage{89}
   \item $\tc{\gamma}$ (полная кривизна), \hyperpage{41}
   \item $\tgc\gamma$ (полная ориентированная кривизна), 
 		\hyperpage{57}
   \item $\tgc\gamma_\Sigma$ (полная геодезическая кривизна), 
 		\hyperpage{137}
   \item $\sigma_s$ (соприкасающаяся окружность), 
-		\hyperpage{62}
+		\hyperpage{61}
   \item $\tor$ (кручение), \hyperpage{48}
   \item $\tan$, $\mu$, $\Norm$ (базис Дарбу), \hyperpage{98}
   \item $\tan$, $\norm$, $\bi$ (базис Френе), \hyperpage{47}
@@ -207,7 +207,7 @@
   \item нерастягивающее отображение, 
 		\hyperpage{88}
   \item неявно заданная кривая, \hyperpage{14}
-  \item нормаль, \hyperpage{88}
+  \item нормаль, \hyperpage{89}
   \item нормальная кривизна, \hyperpage{98}
   \item нормальный вектор, \hyperpage{47, 48}
   \item образующая, \hyperpage{80}
@@ -223,7 +223,7 @@
   \item опорная кривая, \hyperpage{65}
   \item ориентированная кривизна, \hyperpage{54}
   \item ориентированная поверхность, 
-		\hyperpage{88}
+		\hyperpage{89}
   \item ортогональная карта, \hyperpage{154}
   \item открытая
     \subitem кривая, \hyperpage{15}
@@ -245,7 +245,7 @@
     \subitem вращения, \hyperpage{80}
     \subitem с краем, \hyperpage{77}
   \item поле Якоби, \hyperpage{152}
-  \item поле нормалей, \hyperpage{88}
+  \item поле нормалей, \hyperpage{89}
   \item полная
     \subitem геодезическая кривизна, 
 		\hyperpage{138}
@@ -361,7 +361,7 @@
   \item четырёхкратная секущая, \hyperpage{191}
   \item широта, \hyperpage{80}
   \item эвольвента, \hyperpage{51}
-  \item эволюта, \hyperpage{63}
+  \item эволюта, \hyperpage{62}
   \item эйлерова характеристика, \hyperpage{146}
   \item экспоненциальное отображение, 
 		\hyperpage{127}
